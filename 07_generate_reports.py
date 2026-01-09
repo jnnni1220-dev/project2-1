@@ -116,8 +116,28 @@ with open(detailed_report_path, 'w', encoding='utf-8') as f:
     f.write("- **검증 방식 (Backtesting)**:\n")
     f.write(f"    - **목적**: 모델의 예측 정확도를 평가하기 위해 과거의 마지막 4주 데이터를 '미래'라고 가정하고 테스트했습니다.\n")
     f.write(f"    - **실제 예측**: 최종적으로 제공된 향후 12주 예측 결과는 **검증에 사용된 4주를 포함한 전체 데이터**를 모두 학습하여 산출되었습니다.\n")
-    f.write(f"    - **전체 평균 오차 (Mean Absolute Error)**: 약 {avg_mae:.2f} (Units)\n")
-    f.write("    - 오차가 적을수록 모델의 예측 신뢰도가 높음을 의미합니다.\n\n")
+    avg_test_mean = metrics_df['Test_Mean'].mean()
+    avg_mape_approx = (avg_mae / avg_test_mean) * 100 if avg_test_mean > 0 else 0
+
+    f.write(f"    - **검증 결과 상세 (Validation Metrics)**:\n")
+    f.write(f"        - **평균 절대 오차 (MAE)**: 약 {avg_mae:.2f} (단위: 판매량)\n")
+    f.write(f"        - **평균 오차율 (Approx. Error Rate)**: 약 {avg_mape_approx:.1f}% 내외\n")
+    f.write(f"        - *해석*: 주간 평균 판매량 대비 약 {avg_mape_approx:.1f}% 정도의 오차가 발생합니다. 이는 소매업 수요 예측에서 통상적으로 '우수함(Good)' ~ '보통(Fair)' 수준으로 간주됩니다.\n\n")
+
+    f.write("## 2. 모델별 차이 및 시각화 해석 가이드\n")
+    f.write("### A. SARIMA vs Prophet 예측 차이 원인\n")
+    f.write("두 모델은 서로 다른 수학적 가정에 기반하므로 결과에 차이가 발생할 수 있습니다 (이는 **'앙상블(Ensemble)'** 관점에서 상호 보완적입니다).\n")
+    f.write("- **SARIMA (통계적 모델)**: 최근의 추세(Trend)에 보수적입니다. 급격한 변화보다는 과거의 평균적인 이동 경로를 중시합니다.\n")
+    f.write("- **Prophet (트렌드 기반 모델)**: 계절성(Seasonality)과 변곡점(Changepoint)을 적극적으로 반영합니다. 최근 성장이 가파르다면 이를 미래에도 강하게 반영하는 경향이 있습니다.\n")
+    f.write("- **제언**: Prophet이 시장의 역동성을 더 잘 반영하므로 메인 지표로 삼되, SARIMA를 '보수적인 하한선'으로 참고하십시오.\n\n")
+
+    f.write("### B. 검증 그래프(Backtest Validation Plot) 해석법\n")
+    f.write("- **초록색 실선 (Actual)**: 실제 발생한 과거 매출 데이터입니다.\n")
+    f.write("- **빨간색 점선 (Predicted)**: 모델이 예측한 값입니다.\n")
+    f.write("- **인사이트 도출**: \n")
+    f.write("    1. 빨간 선이 초록 선의 **방향성(등락)**을 따라가는지 확인하세요 (타이밍 적중 여부).\n")
+    f.write("    2. 두 선 사이의 **간격(Gap)**이 좁을수록 예측 신뢰도가 높습니다.\n")
+    f.write("    3. 빨간 선이 초록 선보다 항상 높다면 '과대 예측(Over-forecasting)' 경향이 있으므로 재고 과다를 주의해야 합니다.\n\n")
 
     f.write("## 2. 전략적 인사이트 (Strategic Deep Dive)\n")
     f.write("**[데이터 기반 전략 제언]**\n")
