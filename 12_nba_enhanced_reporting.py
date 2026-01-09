@@ -81,25 +81,56 @@ report_content = f"""# NBA (Next Best Action) 강화 분석 리포트
 ## 1. 개요 및 목적
 본 리포트는 협업 필터링(Collaborative Filtering)을 활용하여 도출된 가구별 '차기 구매 권장 상품(Next Best Action)'의 결과를 심층 분석합니다. 단순 추천 리스트 제공을 넘어, 인구통계학적 특성과의 교차 분석을 통해 데이터 뒤에 숨겨진 전략적 인사이트를 도출하는 데 목적이 있습니다.
 
-## 2. 주요 통계 및 시각화
+## 2. 데이터셋 및 분석 환경
+### 2.1 사용 데이터셋: dunnhumby - The Complete Journey
+본 분석에는 고객 구매 행태를 다각도로 분석할 수 있는 **dunnhumby**의 'The Complete Journey' 데이터셋이 사용되었습니다.
+- **transaction_data.csv**: 약 2,500가구의 2년간 구매 이력 (BASKET_ID, household_key, PRODUCT_ID, QUANTITY 등)
+- **product.csv**: 상품 분류 정보 (COMMODITY_DESC, DEPARTMENT, BRAND 등)
+- **hh_demographic.csv**: 가구별 인구통계 정보 (AGE_DESC, INCOME_DESC, HOUSEHOLD_SIZE_DESC 등)
 
-### 2.1 전체 추천 카테고리 분포
+### 2.2 분석 데이터 규모
+- **가구 수**: {df_nba['household_key'].nunique()} 가구 (추천 대상 샘플 100가구 추출 분석)
+- **상품 카테고리(Commodity)**: {df_master['COMMODITY_DESC'].nunique()} 종
+- **총 트랜잭션 수**: 약 200만 건 이상의 구매 이력을 바탕으로 유사도 계산
+
+## 3. 분석 프로세스 및 워크플로우
+개인화 추천을 위해 다음과 같은 단계별 데이터 파이프라인과 분석 흐름을 구축했습니다.
+
+### [Step 1] 데이터 전처리 및 통합 (Data Integration)
+- 가구별 거래 데이터와 상품 마스터, 인구통계 데이터를 `household_key` 및 `PRODUCT_ID` 기준으로 병합하여 통합 분석 테이블(`master_transaction_table`)을 생성합니다.
+- 데이터 정제 과정에서 누락된 카테고리 정보 보정 및 데이터 타입 최적화를 통해 분석 효율을 높였습니다.
+
+### [Step 2] 사용자-아이템 행렬 생성 (User-Item Matrix)
+- 가구(`household_key`)를 행(Row)으로, 상품 카테고리(`COMMODITY_DESC`)를 열(Column)로 하는 희소 행렬(Sparse Matrix)을 생성합니다.
+- 각 셀의 값은 해당 가구가 해당 카테고리 상품을 구매한 횟수(Purchase Frequency)로 채워집니다.
+
+### [Step 3] 가구 간 유사도 계산 (Similarity Calculation)
+- **Cosine Similarity** 알고리즘을 사용하여 가구 간 구매 패턴의 유사성을 수치화합니다.
+- 이를 통해 'A 가구와 가장 유사한 취향을 가진 Top 10 이웃('Twins')'을 식별합니다.
+
+### [Step 4] 협업 필터링 및 NBA 도출 (Recommendation Engine)
+- 유사한 가구들이 많이 구매했지만, 정작 대상 가구는 아직 구매하지 않은 상품 카테고리를 찾습니다.
+- 유사도 점수를 가중치로 활용하여 각 상품별 '추천 점수(Score)'를 산출하고, 상위 N개 상품을 'Next Best Action'으로 선정합니다.
+
+## 4. 주요 통계 및 시각화
+
+### 4.1 전체 추천 카테고리 분포
 ![Top Recommendations](plots/nba_enhanced/top_recommendations.png)
 
 위 그래프는 전체 샘플 고객에게 가장 많이 추천된 상위 10개 카테고리를 나타냅니다. 
 
-### 2.2 연령대별 추천 아이템 교차 분석 (Pivot Table)
+### 4.2 연령대별 추천 아이템 교차 분석 (Pivot Table)
 아래 표는 주요 5개 추천 품목이 연령대별로 어떻게 분포되어 있는지를 보여주는 피벗 테이블입니다.
 
 {pivot_age_top.to_markdown()}
 
-### 2.3 연령대별 추천 히트맵
+### 4.3 연령대별 추천 히트맵
 ![Age Recommendation Heatmap](plots/nba_enhanced/age_recommendation_heatmap.png)
 
-## 3. 심층 인사이트 및 분석 (Detailed Insights)
+## 5. 심층 인사이트 및 분석 (Detailed Insights)
 {insight_summary}
 
-## 4. 결론 및 향후 계획
+## 6. 결론 및 향후 계획
 이번 분석을 통해 개인화 추천이 고객의 인구통계학적 배경과 밀접한 연관이 있음을 확인했습니다. 향후에는 구매 금액(Monetary)과 빈도(Frequency)를 가중치로 활용한 모델 고도화를 진행할 예정이며, 추천 결과의 실제 구매 전환율을 추적하기 위한 A/B 테스트 설계를 제안합니다.
 """
 
