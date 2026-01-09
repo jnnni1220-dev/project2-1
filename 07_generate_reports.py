@@ -90,51 +90,92 @@ with open(summary_report_path, 'w', encoding='utf-8') as f:
 
 print(f"Summary report saved to {summary_report_path}")
 
-# --- 5. Generate Detailed Report ---
+
+# --- 6. Load Backtest Metrics ---
+try:
+    backtest_csv = 'prophet_backtest_metrics.csv'
+    if os.path.exists(backtest_csv):
+        metrics_df = pd.read_csv(backtest_csv)
+        avg_mae = metrics_df['MAE'].mean()
+        avg_rmse = metrics_df['RMSE'].mean()
+        print(f"Loaded backtest metrics. Avg MAE: {avg_mae:.2f}")
+    else:
+        metrics_df = pd.DataFrame()
+        avg_mae = 0
+except Exception as e:
+    metrics_df = pd.DataFrame()
+    print(f"Error loading backtest metrics: {e}")
+
+# --- 7. Generate Detailed Report with Insights ---
 print("Generating Detailed Report...")
 with open(detailed_report_path, 'w', encoding='utf-8') as f:
-    f.write("# 향후 수요 예측 상세 분석 보고서\n\n")
-    f.write("## 1. 분석 방법론\n")
-    f.write("- **데이터셋**: 총 매출 기준 상위 50개 상품의 주간(Weekly) 집계 매출 데이터\n")
-    f.write("- **데이터 전처리**:\n")
-    f.write("    - **집계 방식**: `WEEK_NO`별 `SALES_VALUE` 합계.\n")
-    f.write("    - **결측치 처리**: 매출이 없는 주차는 `0`으로 보간하여 시계열 연속성 유지.\n")
-    f.write("    - **분석 대상**: 전체 기간 데이터를 학습(Train)에 사용하여 예측 정확도 극대화.\n\n")
-
-    f.write("## 2. 모델링 상세\n")
-    f.write("### A. Prophet (Main Model)\n")
-    f.write("- **특징**: Facebook이 개발한 시계열 예측 라이브러리로, 트렌드 변화와 주기성(계절성)을 분해하여 분석.\n")
-    f.write("- **설정**:\n")
-    f.write("    - `yearly_seasonality=True`: 소매 데이터 특성상 연간 주기를 반영.\n")
-    f.write("    - `weekly_seasonality=False`: 주간 데이터이므로 주 단위 계절성은 제외.\n")
-    f.write("    - `changepoint_prior_scale`: 기본값 사용 (트렌드 변화 감지 민감도).\n")
-    f.write("- **장점**: 결측치나 이상치에 강건하며, 비선형적인 성장 추세도 유연하게 포착.\n\n")
-
-    f.write("### B. SARIMA (Reference Model)\n")
-    f.write("- **특징**: 자기회귀(AR), 누적(I), 이동평균(MA)을 결합한 통계적 시계열 모델.\n")
-    f.write("- **설정 (Fast Mode)**:\n")
-    f.write("    - `auto_arima`를 통한 최적 파라미터(`p,d,q`) 자동 탐색.\n")
-    f.write("    - **Non-seasonal**: 대량 처리를 위해 계절성 파라미터(`m`) 탐색 과정을 생략하고 단기 추세 중심 예측 수행.\n")
-    f.write("- **역할**: Prophet 모델의 예측값이 통계적 추세와 크게 벗어나지 않는지 검증하는 기준선(Baseline) 활용.\n\n")
+    f.write("# 향후 수요 예측 상세 분석 보고서 (Detailed Demand Forecasting)\n\n")
     
-    f.write("## 3. 상품별 상세 예측 결과\n")
-    f.write("> **참고**: 그래프는 `plots/future_forecasts/` 디렉토리에 저장되어 있습니다.\n\n")
+    f.write("## 1. 분석 방법론 및 검증 (Methodology & Validation)\n")
+    f.write("- **데이터셋**: 총 매출 기준 상위 50개 상품의 주간(Weekly) 집계 매출 데이터\n")
+    f.write("- **검증 방식 (Backtesting)**:\n")
+    f.write(f"    - 과거 4주 데이터를 학습에서 제외하고 예측한 뒤, 실제값과 비교하여 정확도를 측정했습니다.\n")
+    f.write(f"    - **전체 평균 오차 (Mean Absolute Error)**: 약 {avg_mae:.2f} (Units)\n")
+    f.write("    - 오차가 적을수록 모델의 예측 신뢰도가 높음을 의미합니다.\n\n")
 
-    # Iterate over all products in order of total sales
+    f.write("## 2. 전략적 인사이트 (Strategic Deep Dive)\n")
+    f.write("**[데이터 기반 전략 제언]**\n")
+    f.write("본 예측 모델은 단순히 과거의 평균을 따르는 것이 아니라, 계절적 패턴(Seasonality)과 최근의 트렌드 변화(Trend Changepoints)를 모두 반영합니다. ")
+    f.write("특히 상위 5개 급성장 상품의 경우, 단순 재고 보충(Replenishment) 수준을 넘어선 공격적인 프로모션 전략이 유효할 것으로 보입니다. ")
+    f.write("반면, 하락세가 뚜렷한 상품군은 재고 회전율을 높이기 위한 할인 판매나 번들링(Bundling) 전략(Cross-Selling 리포트 참조)을 병행하여 리스크를 관리해야 합니다. ")
+    f.write(f"검증 단계에서 MAE가 낮게 측정된 상품들은 자동 발주(Auto-Ordering) 시스템 적용을 적극 고려하십시오.\n\n")
+    
+    f.write("## 3. 상품별 상세 예측 및 검증 결과\n")
+    f.write("> **설명**: 왼쪽 그래프는 향후 12주 예측, 오른쪽(또는 하단) 수치는 모델 신뢰도 지표입니다.\n\n")
+
+    # Iterate over all products
     for _, row in product_stats.iterrows():
         pid = int(row['Product_ID'])
         pname = row['COMMODITY_DESC']
-        f.write(f"### {pname} (ID: {pid})\n")
-        f.write(f"- **Total Forecast (12w)**: ${row['Total_Prophet_Forecast']:,.2f}\n")
-        f.write(f"- **Trend (Growth)**: {row['Growth_Rate']:.2f}%\n")
-        f.write(f"- **Models Comparison**:\n")
-        f.write(f"    - Prophet: ${row['Total_Prophet_Forecast']:,.2f}\n")
-        f.write(f"    - SARIMA: ${row['Total_SARIMA_Forecast']:,.2f}\n\n")
         
-        # Embed Plot
+        # Get metric for this product
+        p_metric = metrics_df[metrics_df['Product_ID'] == pid]
+        if not p_metric.empty:
+            mae_val = p_metric.iloc[0]['MAE']
+            test_mean = p_metric.iloc[0]['Test_Mean']
+            # Error percent relative to sales volume
+            if test_mean > 0:
+                err_pct = (mae_val / test_mean) * 100
+                confidence_level = "High" if err_pct < 20 else "Medium" if err_pct < 50 else "Low"
+            else:
+                confidence_level = "N/A"
+                err_pct = 0
+        else:
+            mae_val = 0
+            err_pct = 0
+            confidence_level = "Unknown"
+
+        f.write(f"### {pname} (ID: {pid})\n")
+        f.write(f"- **핵심 지표**:\n")
+        f.write(f"    - **12주 예상 매출**: ${row['Total_Prophet_Forecast']:,.2f}\n")
+        f.write(f"    - **성장률 (Trend)**: {row['Growth_Rate']:.2f}%\n")
+        f.write(f"    - **모델 신뢰도 ({confidence_level})**: 오차율 약 {err_pct:.1f}% (MAE: {mae_val:.1f})\n")
+        
+        f.write(f"- **분석 코멘트**:\n")
+        if row['Growth_Rate'] > 5:
+            f.write(f"    - 뚜렷한 상승세가 관측됩니다. 재고 부족(Stock-out) 방지에 집중하십시오.\n")
+        elif row['Growth_Rate'] < -5:
+            f.write(f"    - 수요 감소가 예상됩니다. 마케팅 강화를 통한 수요 진작이 필요합니다.\n")
+        else:
+            f.write(f"    - 안정적인 수요가 유지될 전망입니다. 정기 배송/구독 모델 도입을 검토해볼 수 있습니다.\n")
+            
+        f.write(f"\n")
+        
+        # Embed Forecast Plot
         plot_path = f"plots/future_forecasts/forecast_{pid}.png"
-        f.write(f"![Forecast Plot for {pid}]({plot_path})\n\n")
-        f.write("---\n\n")
+        f.write(f"![Forecast Plot]({plot_path})\n")
+        
+        # Embed Validation Plot
+        val_plot_path = f"plots/validation/validation_{pid}.png"
+        if os.path.exists(val_plot_path):
+             f.write(f"![Validation Plot]({val_plot_path})\n")
+        
+        f.write("\n---\n\n")
 
 print(f"Detailed report saved to {detailed_report_path}")
 print("\n--- Reporting Complete ---")

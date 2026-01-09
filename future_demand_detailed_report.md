@@ -1,578 +1,666 @@
-# 향후 수요 예측 상세 분석 보고서
+# 향후 수요 예측 상세 분석 보고서 (Detailed Demand Forecasting)
 
-## 1. 분석 방법론
+## 1. 분석 방법론 및 검증 (Methodology & Validation)
 - **데이터셋**: 총 매출 기준 상위 50개 상품의 주간(Weekly) 집계 매출 데이터
-- **데이터 전처리**:
-    - **집계 방식**: `WEEK_NO`별 `SALES_VALUE` 합계.
-    - **결측치 처리**: 매출이 없는 주차는 `0`으로 보간하여 시계열 연속성 유지.
-    - **분석 대상**: 전체 기간 데이터를 학습(Train)에 사용하여 예측 정확도 극대화.
+- **검증 방식 (Backtesting)**:
+    - 과거 4주 데이터를 학습에서 제외하고 예측한 뒤, 실제값과 비교하여 정확도를 측정했습니다.
+    - **전체 평균 오차 (Mean Absolute Error)**: 약 109.40 (Units)
+    - 오차가 적을수록 모델의 예측 신뢰도가 높음을 의미합니다.
 
-## 2. 모델링 상세
-### A. Prophet (Main Model)
-- **특징**: Facebook이 개발한 시계열 예측 라이브러리로, 트렌드 변화와 주기성(계절성)을 분해하여 분석.
-- **설정**:
-    - `yearly_seasonality=True`: 소매 데이터 특성상 연간 주기를 반영.
-    - `weekly_seasonality=False`: 주간 데이터이므로 주 단위 계절성은 제외.
-    - `changepoint_prior_scale`: 기본값 사용 (트렌드 변화 감지 민감도).
-- **장점**: 결측치나 이상치에 강건하며, 비선형적인 성장 추세도 유연하게 포착.
+## 2. 전략적 인사이트 (Strategic Deep Dive)
+**[데이터 기반 전략 제언]**
+본 예측 모델은 단순히 과거의 평균을 따르는 것이 아니라, 계절적 패턴(Seasonality)과 최근의 트렌드 변화(Trend Changepoints)를 모두 반영합니다. 특히 상위 5개 급성장 상품의 경우, 단순 재고 보충(Replenishment) 수준을 넘어선 공격적인 프로모션 전략이 유효할 것으로 보입니다. 반면, 하락세가 뚜렷한 상품군은 재고 회전율을 높이기 위한 할인 판매나 번들링(Bundling) 전략(Cross-Selling 리포트 참조)을 병행하여 리스크를 관리해야 합니다. 검증 단계에서 MAE가 낮게 측정된 상품들은 자동 발주(Auto-Ordering) 시스템 적용을 적극 고려하십시오.
 
-### B. SARIMA (Reference Model)
-- **특징**: 자기회귀(AR), 누적(I), 이동평균(MA)을 결합한 통계적 시계열 모델.
-- **설정 (Fast Mode)**:
-    - `auto_arima`를 통한 최적 파라미터(`p,d,q`) 자동 탐색.
-    - **Non-seasonal**: 대량 처리를 위해 계절성 파라미터(`m`) 탐색 과정을 생략하고 단기 추세 중심 예측 수행.
-- **역할**: Prophet 모델의 예측값이 통계적 추세와 크게 벗어나지 않는지 검증하는 기준선(Baseline) 활용.
-
-## 3. 상품별 상세 예측 결과
-> **참고**: 그래프는 `plots/future_forecasts/` 디렉토리에 저장되어 있습니다.
+## 3. 상품별 상세 예측 및 검증 결과
+> **설명**: 왼쪽 그래프는 향후 12주 예측, 오른쪽(또는 하단) 수치는 모델 신뢰도 지표입니다.
 
 ### COUPON/MISC ITEMS (ID: 6534178)
-- **Total Forecast (12w)**: $55,900.27
-- **Trend (Growth)**: 3.74%
-- **Models Comparison**:
-    - Prophet: $55,900.27
-    - SARIMA: $62,110.29
+- **핵심 지표**:
+    - **12주 예상 매출**: $55,900.27
+    - **성장률 (Trend)**: 3.74%
+    - **모델 신뢰도 (Medium)**: 오차율 약 28.2% (MAE: 1434.9)
+- **분석 코멘트**:
+    - 안정적인 수요가 유지될 전망입니다. 정기 배송/구독 모델 도입을 검토해볼 수 있습니다.
 
-![Forecast Plot for 6534178](plots/future_forecasts/forecast_6534178.png)
+![Forecast Plot](plots/future_forecasts/forecast_6534178.png)
+![Validation Plot](plots/validation/validation_6534178.png)
 
 ---
 
 ### COUPON/MISC ITEMS (ID: 6533889)
-- **Total Forecast (12w)**: $6,676.50
-- **Trend (Growth)**: -0.97%
-- **Models Comparison**:
-    - Prophet: $6,676.50
-    - SARIMA: $6,044.18
+- **핵심 지표**:
+    - **12주 예상 매출**: $6,676.50
+    - **성장률 (Trend)**: -0.97%
+    - **모델 신뢰도 (Medium)**: 오차율 약 26.9% (MAE: 128.3)
+- **분석 코멘트**:
+    - 안정적인 수요가 유지될 전망입니다. 정기 배송/구독 모델 도입을 검토해볼 수 있습니다.
 
-![Forecast Plot for 6533889](plots/future_forecasts/forecast_6533889.png)
+![Forecast Plot](plots/future_forecasts/forecast_6533889.png)
+![Validation Plot](plots/validation/validation_6533889.png)
 
 ---
 
 ### FUEL (ID: 6533765)
-- **Total Forecast (12w)**: $5,633.71
-- **Trend (Growth)**: 19.06%
-- **Models Comparison**:
-    - Prophet: $5,633.71
-    - SARIMA: $4,798.50
+- **핵심 지표**:
+    - **12주 예상 매출**: $5,633.71
+    - **성장률 (Trend)**: 19.06%
+    - **모델 신뢰도 (Medium)**: 오차율 약 30.9% (MAE: 108.0)
+- **분석 코멘트**:
+    - 뚜렷한 상승세가 관측됩니다. 재고 부족(Stock-out) 방지에 집중하십시오.
 
-![Forecast Plot for 6533765](plots/future_forecasts/forecast_6533765.png)
+![Forecast Plot](plots/future_forecasts/forecast_6533765.png)
+![Validation Plot](plots/validation/validation_6533765.png)
 
 ---
 
 ### COUPON/MISC ITEMS (ID: 6534166)
-- **Total Forecast (12w)**: $4,906.59
-- **Trend (Growth)**: -23.55%
-- **Models Comparison**:
-    - Prophet: $4,906.59
-    - SARIMA: $3,955.61
+- **핵심 지표**:
+    - **12주 예상 매출**: $4,906.59
+    - **성장률 (Trend)**: -23.55%
+    - **모델 신뢰도 (Low)**: 오차율 약 57.5% (MAE: 186.8)
+- **분석 코멘트**:
+    - 수요 감소가 예상됩니다. 마케팅 강화를 통한 수요 진작이 필요합니다.
 
-![Forecast Plot for 6534166](plots/future_forecasts/forecast_6534166.png)
+![Forecast Plot](plots/future_forecasts/forecast_6534166.png)
+![Validation Plot](plots/validation/validation_6534166.png)
 
 ---
 
 ### FLUID MILK PRODUCTS (ID: 1029743)
-- **Total Forecast (12w)**: $4,557.64
-- **Trend (Growth)**: -7.88%
-- **Models Comparison**:
-    - Prophet: $4,557.64
-    - SARIMA: $5,592.70
+- **핵심 지표**:
+    - **12주 예상 매출**: $4,557.64
+    - **성장률 (Trend)**: -7.88%
+    - **모델 신뢰도 (Medium)**: 오차율 약 25.8% (MAE: 131.5)
+- **분석 코멘트**:
+    - 수요 감소가 예상됩니다. 마케팅 강화를 통한 수요 진작이 필요합니다.
 
-![Forecast Plot for 1029743](plots/future_forecasts/forecast_1029743.png)
+![Forecast Plot](plots/future_forecasts/forecast_1029743.png)
+![Validation Plot](plots/validation/validation_1029743.png)
 
 ---
 
 ### FLUID MILK PRODUCTS (ID: 995242)
-- **Total Forecast (12w)**: $4,155.90
-- **Trend (Growth)**: -8.37%
-- **Models Comparison**:
-    - Prophet: $4,155.90
-    - SARIMA: $3,627.54
+- **핵심 지표**:
+    - **12주 예상 매출**: $4,155.90
+    - **성장률 (Trend)**: -8.37%
+    - **모델 신뢰도 (Low)**: 오차율 약 62.9% (MAE: 195.1)
+- **분석 코멘트**:
+    - 수요 감소가 예상됩니다. 마케팅 강화를 통한 수요 진작이 필요합니다.
 
-![Forecast Plot for 995242](plots/future_forecasts/forecast_995242.png)
+![Forecast Plot](plots/future_forecasts/forecast_995242.png)
+![Validation Plot](plots/validation/validation_995242.png)
 
 ---
 
 ### CHICKEN (ID: 916122)
-- **Total Forecast (12w)**: $3,792.96
-- **Trend (Growth)**: 4.39%
-- **Models Comparison**:
-    - Prophet: $3,792.96
-    - SARIMA: $3,440.06
+- **핵심 지표**:
+    - **12주 예상 매출**: $3,792.96
+    - **성장률 (Trend)**: 4.39%
+    - **모델 신뢰도 (Low)**: 오차율 약 68.1% (MAE: 186.8)
+- **분석 코멘트**:
+    - 안정적인 수요가 유지될 전망입니다. 정기 배송/구독 모델 도입을 검토해볼 수 있습니다.
 
-![Forecast Plot for 916122](plots/future_forecasts/forecast_916122.png)
+![Forecast Plot](plots/future_forecasts/forecast_916122.png)
+![Validation Plot](plots/validation/validation_916122.png)
 
 ---
 
 ### TROPICAL FRUIT (ID: 1082185)
-- **Total Forecast (12w)**: $3,603.75
-- **Trend (Growth)**: -6.56%
-- **Models Comparison**:
-    - Prophet: $3,603.75
-    - SARIMA: $3,848.61
+- **핵심 지표**:
+    - **12주 예상 매출**: $3,603.75
+    - **성장률 (Trend)**: -6.56%
+    - **모델 신뢰도 (High)**: 오차율 약 12.4% (MAE: 37.8)
+- **분석 코멘트**:
+    - 수요 감소가 예상됩니다. 마케팅 강화를 통한 수요 진작이 필요합니다.
 
-![Forecast Plot for 1082185](plots/future_forecasts/forecast_1082185.png)
+![Forecast Plot](plots/future_forecasts/forecast_1082185.png)
+![Validation Plot](plots/validation/validation_1082185.png)
 
 ---
 
 ### BERRIES (ID: 1127831)
-- **Total Forecast (12w)**: $3,403.56
-- **Trend (Growth)**: 42.85%
-- **Models Comparison**:
-    - Prophet: $3,403.56
-    - SARIMA: $32.80
+- **핵심 지표**:
+    - **12주 예상 매출**: $3,403.56
+    - **성장률 (Trend)**: 42.85%
+    - **모델 신뢰도 (N/A)**: 오차율 약 0.0% (MAE: 278.0)
+- **분석 코멘트**:
+    - 뚜렷한 상승세가 관측됩니다. 재고 부족(Stock-out) 방지에 집중하십시오.
 
-![Forecast Plot for 1127831](plots/future_forecasts/forecast_1127831.png)
+![Forecast Plot](plots/future_forecasts/forecast_1127831.png)
+![Validation Plot](plots/validation/validation_1127831.png)
 
 ---
 
 ### SOFT DRINKS (ID: 5569230)
-- **Total Forecast (12w)**: $3,395.59
-- **Trend (Growth)**: -0.15%
-- **Models Comparison**:
-    - Prophet: $3,395.59
-    - SARIMA: $2,782.54
+- **핵심 지표**:
+    - **12주 예상 매출**: $3,395.59
+    - **성장률 (Trend)**: -0.15%
+    - **모델 신뢰도 (Low)**: 오차율 약 64.9% (MAE: 171.3)
+- **분석 코멘트**:
+    - 안정적인 수요가 유지될 전망입니다. 정기 배송/구독 모델 도입을 검토해볼 수 있습니다.
 
-![Forecast Plot for 5569230](plots/future_forecasts/forecast_5569230.png)
+![Forecast Plot](plots/future_forecasts/forecast_5569230.png)
+![Validation Plot](plots/validation/validation_5569230.png)
 
 ---
 
 ### FLUID MILK PRODUCTS (ID: 1106523)
-- **Total Forecast (12w)**: $3,318.05
-- **Trend (Growth)**: -7.51%
-- **Models Comparison**:
-    - Prophet: $3,318.05
-    - SARIMA: $3,593.34
+- **핵심 지표**:
+    - **12주 예상 매출**: $3,318.05
+    - **성장률 (Trend)**: -7.51%
+    - **모델 신뢰도 (High)**: 오차율 약 19.5% (MAE: 61.0)
+- **분석 코멘트**:
+    - 수요 감소가 예상됩니다. 마케팅 강화를 통한 수요 진작이 필요합니다.
 
-![Forecast Plot for 1106523](plots/future_forecasts/forecast_1106523.png)
+![Forecast Plot](plots/future_forecasts/forecast_1106523.png)
+![Validation Plot](plots/validation/validation_1106523.png)
 
 ---
 
 ### BEEF (ID: 1044078)
-- **Total Forecast (12w)**: $2,969.05
-- **Trend (Growth)**: -58.26%
-- **Models Comparison**:
-    - Prophet: $2,969.05
-    - SARIMA: $2,223.11
+- **핵심 지표**:
+    - **12주 예상 매출**: $2,969.05
+    - **성장률 (Trend)**: -58.26%
+    - **모델 신뢰도 (Low)**: 오차율 약 66.6% (MAE: 126.7)
+- **분석 코멘트**:
+    - 수요 감소가 예상됩니다. 마케팅 강화를 통한 수요 진작이 필요합니다.
 
-![Forecast Plot for 1044078](plots/future_forecasts/forecast_1044078.png)
+![Forecast Plot](plots/future_forecasts/forecast_1044078.png)
+![Validation Plot](plots/validation/validation_1044078.png)
 
 ---
 
 ### BEEF (ID: 844179)
-- **Total Forecast (12w)**: $2,676.82
-- **Trend (Growth)**: 3.73%
-- **Models Comparison**:
-    - Prophet: $2,676.82
-    - SARIMA: $2,953.39
+- **핵심 지표**:
+    - **12주 예상 매출**: $2,676.82
+    - **성장률 (Trend)**: 3.73%
+    - **모델 신뢰도 (Medium)**: 오차율 약 34.7% (MAE: 107.4)
+- **분석 코멘트**:
+    - 안정적인 수요가 유지될 전망입니다. 정기 배송/구독 모델 도입을 검토해볼 수 있습니다.
 
-![Forecast Plot for 844179](plots/future_forecasts/forecast_844179.png)
+![Forecast Plot](plots/future_forecasts/forecast_844179.png)
+![Validation Plot](plots/validation/validation_844179.png)
 
 ---
 
 ### BEEF (ID: 874972)
-- **Total Forecast (12w)**: $2,480.54
-- **Trend (Growth)**: 239.99%
-- **Models Comparison**:
-    - Prophet: $2,480.54
-    - SARIMA: $1,825.12
+- **핵심 지표**:
+    - **12주 예상 매출**: $2,480.54
+    - **성장률 (Trend)**: 239.99%
+    - **모델 신뢰도 (Low)**: 오차율 약 74.5% (MAE: 109.6)
+- **분석 코멘트**:
+    - 뚜렷한 상승세가 관측됩니다. 재고 부족(Stock-out) 방지에 집중하십시오.
 
-![Forecast Plot for 874972](plots/future_forecasts/forecast_874972.png)
+![Forecast Plot](plots/future_forecasts/forecast_874972.png)
+![Validation Plot](plots/validation/validation_874972.png)
 
 ---
 
 ### PORK (ID: 12810393)
-- **Total Forecast (12w)**: $2,364.27
-- **Trend (Growth)**: -5.62%
-- **Models Comparison**:
-    - Prophet: $2,364.27
-    - SARIMA: $1,427.21
+- **핵심 지표**:
+    - **12주 예상 매출**: $2,364.27
+    - **성장률 (Trend)**: -5.62%
+    - **모델 신뢰도 (Low)**: 오차율 약 51.0% (MAE: 63.4)
+- **분석 코멘트**:
+    - 수요 감소가 예상됩니다. 마케팅 강화를 통한 수요 진작이 필요합니다.
 
-![Forecast Plot for 12810393](plots/future_forecasts/forecast_12810393.png)
+![Forecast Plot](plots/future_forecasts/forecast_12810393.png)
+![Validation Plot](plots/validation/validation_12810393.png)
 
 ---
 
 ### FLUID MILK PRODUCTS (ID: 1133018)
-- **Total Forecast (12w)**: $2,358.30
-- **Trend (Growth)**: -2.83%
-- **Models Comparison**:
-    - Prophet: $2,358.30
-    - SARIMA: $1,764.71
+- **핵심 지표**:
+    - **12주 예상 매출**: $2,358.30
+    - **성장률 (Trend)**: -2.83%
+    - **모델 신뢰도 (Low)**: 오차율 약 60.5% (MAE: 99.9)
+- **분석 코멘트**:
+    - 안정적인 수요가 유지될 전망입니다. 정기 배송/구독 모델 도입을 검토해볼 수 있습니다.
 
-![Forecast Plot for 1133018](plots/future_forecasts/forecast_1133018.png)
+![Forecast Plot](plots/future_forecasts/forecast_1133018.png)
+![Validation Plot](plots/validation/validation_1133018.png)
 
 ---
 
 ### PORK (ID: 12810391)
-- **Total Forecast (12w)**: $2,104.04
-- **Trend (Growth)**: 61.96%
-- **Models Comparison**:
-    - Prophet: $2,104.04
-    - SARIMA: $905.99
+- **핵심 지표**:
+    - **12주 예상 매출**: $2,104.04
+    - **성장률 (Trend)**: 61.96%
+    - **모델 신뢰도 (Low)**: 오차율 약 171.9% (MAE: 148.7)
+- **분석 코멘트**:
+    - 뚜렷한 상승세가 관측됩니다. 재고 부족(Stock-out) 방지에 집중하십시오.
 
-![Forecast Plot for 12810391](plots/future_forecasts/forecast_12810391.png)
+![Forecast Plot](plots/future_forecasts/forecast_12810391.png)
+![Validation Plot](plots/validation/validation_12810391.png)
 
 ---
 
 ### GRAPES (ID: 866211)
-- **Total Forecast (12w)**: $1,866.25
-- **Trend (Growth)**: -39.45%
-- **Models Comparison**:
-    - Prophet: $1,866.25
-    - SARIMA: $1,582.02
+- **핵심 지표**:
+    - **12주 예상 매출**: $1,866.25
+    - **성장률 (Trend)**: -39.45%
+    - **모델 신뢰도 (Medium)**: 오차율 약 43.7% (MAE: 64.2)
+- **분석 코멘트**:
+    - 수요 감소가 예상됩니다. 마케팅 강화를 통한 수요 진작이 필요합니다.
 
-![Forecast Plot for 866211](plots/future_forecasts/forecast_866211.png)
+![Forecast Plot](plots/future_forecasts/forecast_866211.png)
+![Validation Plot](plots/validation/validation_866211.png)
 
 ---
 
 ### SOFT DRINKS (ID: 5569471)
-- **Total Forecast (12w)**: $1,844.49
-- **Trend (Growth)**: 8.44%
-- **Models Comparison**:
-    - Prophet: $1,844.49
-    - SARIMA: $1,513.30
+- **핵심 지표**:
+    - **12주 예상 매출**: $1,844.49
+    - **성장률 (Trend)**: 8.44%
+    - **모델 신뢰도 (Low)**: 오차율 약 98.4% (MAE: 124.4)
+- **분석 코멘트**:
+    - 뚜렷한 상승세가 관측됩니다. 재고 부족(Stock-out) 방지에 집중하십시오.
 
-![Forecast Plot for 5569471](plots/future_forecasts/forecast_5569471.png)
+![Forecast Plot](plots/future_forecasts/forecast_5569471.png)
+![Validation Plot](plots/validation/validation_5569471.png)
 
 ---
 
 ### FLUID MILK PRODUCTS (ID: 1126899)
-- **Total Forecast (12w)**: $1,840.62
-- **Trend (Growth)**: -27.42%
-- **Models Comparison**:
-    - Prophet: $1,840.62
-    - SARIMA: $2,201.23
+- **핵심 지표**:
+    - **12주 예상 매출**: $1,840.62
+    - **성장률 (Trend)**: -27.42%
+    - **모델 신뢰도 (Medium)**: 오차율 약 30.2% (MAE: 58.0)
+- **분석 코멘트**:
+    - 수요 감소가 예상됩니다. 마케팅 강화를 통한 수요 진작이 필요합니다.
 
-![Forecast Plot for 1126899](plots/future_forecasts/forecast_1126899.png)
+![Forecast Plot](plots/future_forecasts/forecast_1126899.png)
+![Validation Plot](plots/validation/validation_1126899.png)
 
 ---
 
 ### SALAD BAR (ID: 1005186)
-- **Total Forecast (12w)**: $1,695.08
-- **Trend (Growth)**: -13.02%
-- **Models Comparison**:
-    - Prophet: $1,695.08
-    - SARIMA: $1,810.80
+- **핵심 지표**:
+    - **12주 예상 매출**: $1,695.08
+    - **성장률 (Trend)**: -13.02%
+    - **모델 신뢰도 (Medium)**: 오차율 약 26.0% (MAE: 38.6)
+- **분석 코멘트**:
+    - 수요 감소가 예상됩니다. 마케팅 강화를 통한 수요 진작이 필요합니다.
 
-![Forecast Plot for 1005186](plots/future_forecasts/forecast_1005186.png)
+![Forecast Plot](plots/future_forecasts/forecast_1005186.png)
+![Validation Plot](plots/validation/validation_1005186.png)
 
 ---
 
 ### FLUID MILK PRODUCTS (ID: 1070820)
-- **Total Forecast (12w)**: $1,679.85
-- **Trend (Growth)**: -3.67%
-- **Models Comparison**:
-    - Prophet: $1,679.85
-    - SARIMA: $1,726.40
+- **핵심 지표**:
+    - **12주 예상 매출**: $1,679.85
+    - **성장률 (Trend)**: -3.67%
+    - **모델 신뢰도 (High)**: 오차율 약 19.7% (MAE: 32.3)
+- **분석 코멘트**:
+    - 안정적인 수요가 유지될 전망입니다. 정기 배송/구독 모델 도입을 검토해볼 수 있습니다.
 
-![Forecast Plot for 1070820](plots/future_forecasts/forecast_1070820.png)
+![Forecast Plot](plots/future_forecasts/forecast_1070820.png)
+![Validation Plot](plots/validation/validation_1070820.png)
 
 ---
 
 ### TOMATOES (ID: 854852)
-- **Total Forecast (12w)**: $1,652.45
-- **Trend (Growth)**: 78.24%
-- **Models Comparison**:
-    - Prophet: $1,652.45
-    - SARIMA: $1,230.95
+- **핵심 지표**:
+    - **12주 예상 매출**: $1,652.45
+    - **성장률 (Trend)**: 78.24%
+    - **모델 신뢰도 (Medium)**: 오차율 약 25.2% (MAE: 25.8)
+- **분석 코멘트**:
+    - 뚜렷한 상승세가 관측됩니다. 재고 부족(Stock-out) 방지에 집중하십시오.
 
-![Forecast Plot for 854852](plots/future_forecasts/forecast_854852.png)
+![Forecast Plot](plots/future_forecasts/forecast_854852.png)
+![Validation Plot](plots/validation/validation_854852.png)
 
 ---
 
 ### GRAPES (ID: 878996)
-- **Total Forecast (12w)**: $1,583.17
-- **Trend (Growth)**: -24.39%
-- **Models Comparison**:
-    - Prophet: $1,583.17
-    - SARIMA: $1,180.74
+- **핵심 지표**:
+    - **12주 예상 매출**: $1,583.17
+    - **성장률 (Trend)**: -24.39%
+    - **모델 신뢰도 (Medium)**: 오차율 약 48.4% (MAE: 70.3)
+- **분석 코멘트**:
+    - 수요 감소가 예상됩니다. 마케팅 강화를 통한 수요 진작이 필요합니다.
 
-![Forecast Plot for 878996](plots/future_forecasts/forecast_878996.png)
+![Forecast Plot](plots/future_forecasts/forecast_878996.png)
+![Validation Plot](plots/validation/validation_878996.png)
 
 ---
 
 ### POTATOES (ID: 899624)
-- **Total Forecast (12w)**: $1,560.60
-- **Trend (Growth)**: -7.00%
-- **Models Comparison**:
-    - Prophet: $1,560.60
-    - SARIMA: $1,301.62
+- **핵심 지표**:
+    - **12주 예상 매출**: $1,560.60
+    - **성장률 (Trend)**: -7.00%
+    - **모델 신뢰도 (Medium)**: 오차율 약 46.4% (MAE: 59.0)
+- **분석 코멘트**:
+    - 수요 감소가 예상됩니다. 마케팅 강화를 통한 수요 진작이 필요합니다.
 
-![Forecast Plot for 899624](plots/future_forecasts/forecast_899624.png)
+![Forecast Plot](plots/future_forecasts/forecast_899624.png)
+![Validation Plot](plots/validation/validation_899624.png)
 
 ---
 
 ### COUPON/MISC ITEMS (ID: 6544236)
-- **Total Forecast (12w)**: $1,478.02
-- **Trend (Growth)**: 130.71%
-- **Models Comparison**:
-    - Prophet: $1,478.02
-    - SARIMA: $645.18
+- **핵심 지표**:
+    - **12주 예상 매출**: $1,478.02
+    - **성장률 (Trend)**: 130.71%
+    - **모델 신뢰도 (Low)**: 오차율 약 117.0% (MAE: 62.0)
+- **분석 코멘트**:
+    - 뚜렷한 상승세가 관측됩니다. 재고 부족(Stock-out) 방지에 집중하십시오.
 
-![Forecast Plot for 6544236](plots/future_forecasts/forecast_6544236.png)
+![Forecast Plot](plots/future_forecasts/forecast_6544236.png)
+![Validation Plot](plots/validation/validation_6544236.png)
 
 ---
 
 ### EGGS (ID: 981760)
-- **Total Forecast (12w)**: $1,432.41
-- **Trend (Growth)**: -40.79%
-- **Models Comparison**:
-    - Prophet: $1,432.41
-    - SARIMA: $1,600.11
+- **핵심 지표**:
+    - **12주 예상 매출**: $1,432.41
+    - **성장률 (Trend)**: -40.79%
+    - **모델 신뢰도 (Medium)**: 오차율 약 37.4% (MAE: 54.8)
+- **분석 코멘트**:
+    - 수요 감소가 예상됩니다. 마케팅 강화를 통한 수요 진작이 필요합니다.
 
-![Forecast Plot for 981760](plots/future_forecasts/forecast_981760.png)
+![Forecast Plot](plots/future_forecasts/forecast_981760.png)
+![Validation Plot](plots/validation/validation_981760.png)
 
 ---
 
 ### FLUID MILK PRODUCTS (ID: 908531)
-- **Total Forecast (12w)**: $1,409.14
-- **Trend (Growth)**: -12.61%
-- **Models Comparison**:
-    - Prophet: $1,409.14
-    - SARIMA: $1,059.73
+- **핵심 지표**:
+    - **12주 예상 매출**: $1,409.14
+    - **성장률 (Trend)**: -12.61%
+    - **모델 신뢰도 (Low)**: 오차율 약 72.1% (MAE: 67.2)
+- **분석 코멘트**:
+    - 수요 감소가 예상됩니다. 마케팅 강화를 통한 수요 진작이 필요합니다.
 
-![Forecast Plot for 908531](plots/future_forecasts/forecast_908531.png)
+![Forecast Plot](plots/future_forecasts/forecast_908531.png)
+![Validation Plot](plots/validation/validation_908531.png)
 
 ---
 
 ### SOFT DRINKS (ID: 8090521)
-- **Total Forecast (12w)**: $1,385.99
-- **Trend (Growth)**: 16.63%
-- **Models Comparison**:
-    - Prophet: $1,385.99
-    - SARIMA: $1,368.70
+- **핵심 지표**:
+    - **12주 예상 매출**: $1,385.99
+    - **성장률 (Trend)**: 16.63%
+    - **모델 신뢰도 (Low)**: 오차율 약 93.6% (MAE: 99.1)
+- **분석 코멘트**:
+    - 뚜렷한 상승세가 관측됩니다. 재고 부족(Stock-out) 방지에 집중하십시오.
 
-![Forecast Plot for 8090521](plots/future_forecasts/forecast_8090521.png)
+![Forecast Plot](plots/future_forecasts/forecast_8090521.png)
+![Validation Plot](plots/validation/validation_8090521.png)
 
 ---
 
 ### SOFT DRINKS (ID: 8090537)
-- **Total Forecast (12w)**: $1,385.89
-- **Trend (Growth)**: 0.36%
-- **Models Comparison**:
-    - Prophet: $1,385.89
-    - SARIMA: $1,291.12
+- **핵심 지표**:
+    - **12주 예상 매출**: $1,385.89
+    - **성장률 (Trend)**: 0.36%
+    - **모델 신뢰도 (Low)**: 오차율 약 89.5% (MAE: 105.7)
+- **분석 코멘트**:
+    - 안정적인 수요가 유지될 전망입니다. 정기 배송/구독 모델 도입을 검토해볼 수 있습니다.
 
-![Forecast Plot for 8090537](plots/future_forecasts/forecast_8090537.png)
+![Forecast Plot](plots/future_forecasts/forecast_8090537.png)
+![Validation Plot](plots/validation/validation_8090537.png)
 
 ---
 
 ### FLUID MILK PRODUCTS (ID: 1058997)
-- **Total Forecast (12w)**: $1,379.06
-- **Trend (Growth)**: -7.07%
-- **Models Comparison**:
-    - Prophet: $1,379.06
-    - SARIMA: $1,165.15
+- **핵심 지표**:
+    - **12주 예상 매출**: $1,379.06
+    - **성장률 (Trend)**: -7.07%
+    - **모델 신뢰도 (Low)**: 오차율 약 61.0% (MAE: 61.2)
+- **분석 코멘트**:
+    - 수요 감소가 예상됩니다. 마케팅 강화를 통한 수요 진작이 필요합니다.
 
-![Forecast Plot for 1058997](plots/future_forecasts/forecast_1058997.png)
+![Forecast Plot](plots/future_forecasts/forecast_1058997.png)
+![Validation Plot](plots/validation/validation_1058997.png)
 
 ---
 
 ### FLUID MILK PRODUCTS (ID: 862349)
-- **Total Forecast (12w)**: $1,304.90
-- **Trend (Growth)**: 12.54%
-- **Models Comparison**:
-    - Prophet: $1,304.90
-    - SARIMA: $1,094.79
+- **핵심 지표**:
+    - **12주 예상 매출**: $1,304.90
+    - **성장률 (Trend)**: 12.54%
+    - **모델 신뢰도 (Low)**: 오차율 약 55.6% (MAE: 50.3)
+- **분석 코멘트**:
+    - 뚜렷한 상승세가 관측됩니다. 재고 부족(Stock-out) 방지에 집중하십시오.
 
-![Forecast Plot for 862349](plots/future_forecasts/forecast_862349.png)
+![Forecast Plot](plots/future_forecasts/forecast_862349.png)
+![Validation Plot](plots/validation/validation_862349.png)
 
 ---
 
 ### POTATOES (ID: 1004906)
-- **Total Forecast (12w)**: $1,268.19
-- **Trend (Growth)**: 6.99%
-- **Models Comparison**:
-    - Prophet: $1,268.19
-    - SARIMA: $1,067.95
+- **핵심 지표**:
+    - **12주 예상 매출**: $1,268.19
+    - **성장률 (Trend)**: 6.99%
+    - **모델 신뢰도 (Medium)**: 오차율 약 44.8% (MAE: 48.3)
+- **분석 코멘트**:
+    - 뚜렷한 상승세가 관측됩니다. 재고 부족(Stock-out) 방지에 집중하십시오.
 
-![Forecast Plot for 1004906](plots/future_forecasts/forecast_1004906.png)
+![Forecast Plot](plots/future_forecasts/forecast_1004906.png)
+![Validation Plot](plots/validation/validation_1004906.png)
 
 ---
 
 ### BAKED BREAD/BUNS/ROLLS (ID: 951590)
-- **Total Forecast (12w)**: $1,226.23
-- **Trend (Growth)**: -26.64%
-- **Models Comparison**:
-    - Prophet: $1,226.23
-    - SARIMA: $1,016.61
+- **핵심 지표**:
+    - **12주 예상 매출**: $1,226.23
+    - **성장률 (Trend)**: -26.64%
+    - **모델 신뢰도 (Medium)**: 오차율 약 33.5% (MAE: 37.7)
+- **분석 코멘트**:
+    - 수요 감소가 예상됩니다. 마케팅 강화를 통한 수요 진작이 필요합니다.
 
-![Forecast Plot for 951590](plots/future_forecasts/forecast_951590.png)
+![Forecast Plot](plots/future_forecasts/forecast_951590.png)
+![Validation Plot](plots/validation/validation_951590.png)
 
 ---
 
 ### BEEF (ID: 1000753)
-- **Total Forecast (12w)**: $1,095.53
-- **Trend (Growth)**: 0.28%
-- **Models Comparison**:
-    - Prophet: $1,095.53
-    - SARIMA: $1,133.09
+- **핵심 지표**:
+    - **12주 예상 매출**: $1,095.53
+    - **성장률 (Trend)**: 0.28%
+    - **모델 신뢰도 (Low)**: 오차율 약 105.4% (MAE: 67.3)
+- **분석 코멘트**:
+    - 안정적인 수요가 유지될 전망입니다. 정기 배송/구독 모델 도입을 검토해볼 수 있습니다.
 
-![Forecast Plot for 1000753](plots/future_forecasts/forecast_1000753.png)
+![Forecast Plot](plots/future_forecasts/forecast_1000753.png)
+![Validation Plot](plots/validation/validation_1000753.png)
 
 ---
 
 ### BAKED BREAD/BUNS/ROLLS (ID: 883404)
-- **Total Forecast (12w)**: $1,065.68
-- **Trend (Growth)**: 1.45%
-- **Models Comparison**:
-    - Prophet: $1,065.68
-    - SARIMA: $1,174.13
+- **핵심 지표**:
+    - **12주 예상 매출**: $1,065.68
+    - **성장률 (Trend)**: 1.45%
+    - **모델 신뢰도 (High)**: 오차율 약 20.0% (MAE: 20.7)
+- **분석 코멘트**:
+    - 안정적인 수요가 유지될 전망입니다. 정기 배송/구독 모델 도입을 검토해볼 수 있습니다.
 
-![Forecast Plot for 883404](plots/future_forecasts/forecast_883404.png)
+![Forecast Plot](plots/future_forecasts/forecast_883404.png)
+![Validation Plot](plots/validation/validation_883404.png)
 
 ---
 
 ### CHEESE (ID: 859075)
-- **Total Forecast (12w)**: $1,059.90
-- **Trend (Growth)**: -3.67%
-- **Models Comparison**:
-    - Prophet: $1,059.90
-    - SARIMA: $951.72
+- **핵심 지표**:
+    - **12주 예상 매출**: $1,059.90
+    - **성장률 (Trend)**: -3.67%
+    - **모델 신뢰도 (Medium)**: 오차율 약 26.2% (MAE: 21.1)
+- **분석 코멘트**:
+    - 안정적인 수요가 유지될 전망입니다. 정기 배송/구독 모델 도입을 검토해볼 수 있습니다.
 
-![Forecast Plot for 859075](plots/future_forecasts/forecast_859075.png)
+![Forecast Plot](plots/future_forecasts/forecast_859075.png)
+![Validation Plot](plots/validation/validation_859075.png)
 
 ---
 
 ### MEAT - MISC (ID: 839419)
-- **Total Forecast (12w)**: $991.29
-- **Trend (Growth)**: 46.54%
-- **Models Comparison**:
-    - Prophet: $991.29
-    - SARIMA: $813.97
+- **핵심 지표**:
+    - **12주 예상 매출**: $991.29
+    - **성장률 (Trend)**: 46.54%
+    - **모델 신뢰도 (Medium)**: 오차율 약 35.1% (MAE: 27.6)
+- **분석 코멘트**:
+    - 뚜렷한 상승세가 관측됩니다. 재고 부족(Stock-out) 방지에 집중하십시오.
 
-![Forecast Plot for 839419](plots/future_forecasts/forecast_839419.png)
+![Forecast Plot](plots/future_forecasts/forecast_839419.png)
+![Validation Plot](plots/validation/validation_839419.png)
 
 ---
 
 ### PREPARED FOOD (ID: 986912)
-- **Total Forecast (12w)**: $979.08
-- **Trend (Growth)**: -18.56%
-- **Models Comparison**:
-    - Prophet: $979.08
-    - SARIMA: $1,190.51
+- **핵심 지표**:
+    - **12주 예상 매출**: $979.08
+    - **성장률 (Trend)**: -18.56%
+    - **모델 신뢰도 (Medium)**: 오차율 약 29.9% (MAE: 29.2)
+- **분석 코멘트**:
+    - 수요 감소가 예상됩니다. 마케팅 강화를 통한 수요 진작이 필요합니다.
 
-![Forecast Plot for 986912](plots/future_forecasts/forecast_986912.png)
+![Forecast Plot](plots/future_forecasts/forecast_986912.png)
+![Validation Plot](plots/validation/validation_986912.png)
 
 ---
 
 ### BEEF (ID: 1070702)
-- **Total Forecast (12w)**: $929.01
-- **Trend (Growth)**: 9.82%
-- **Models Comparison**:
-    - Prophet: $929.01
-    - SARIMA: $1,057.61
+- **핵심 지표**:
+    - **12주 예상 매출**: $929.01
+    - **성장률 (Trend)**: 9.82%
+    - **모델 신뢰도 (Low)**: 오차율 약 117.4% (MAE: 125.1)
+- **분석 코멘트**:
+    - 뚜렷한 상승세가 관측됩니다. 재고 부족(Stock-out) 방지에 집중하십시오.
 
-![Forecast Plot for 1070702](plots/future_forecasts/forecast_1070702.png)
+![Forecast Plot](plots/future_forecasts/forecast_1070702.png)
+![Validation Plot](plots/validation/validation_1070702.png)
 
 ---
 
 ### CARROTS (ID: 961554)
-- **Total Forecast (12w)**: $927.69
-- **Trend (Growth)**: -6.52%
-- **Models Comparison**:
-    - Prophet: $927.69
-    - SARIMA: $1,262.80
+- **핵심 지표**:
+    - **12주 예상 매출**: $927.69
+    - **성장률 (Trend)**: -6.52%
+    - **모델 신뢰도 (High)**: 오차율 약 17.0% (MAE: 15.9)
+- **분석 코멘트**:
+    - 수요 감소가 예상됩니다. 마케팅 강화를 통한 수요 진작이 필요합니다.
 
-![Forecast Plot for 961554](plots/future_forecasts/forecast_961554.png)
+![Forecast Plot](plots/future_forecasts/forecast_961554.png)
+![Validation Plot](plots/validation/validation_961554.png)
 
 ---
 
 ### CIGARETTES (ID: 1075368)
-- **Total Forecast (12w)**: $893.87
-- **Trend (Growth)**: -24.39%
-- **Models Comparison**:
-    - Prophet: $893.87
-    - SARIMA: $1,034.36
+- **핵심 지표**:
+    - **12주 예상 매출**: $893.87
+    - **성장률 (Trend)**: -24.39%
+    - **모델 신뢰도 (Medium)**: 오차율 약 42.9% (MAE: 39.8)
+- **분석 코멘트**:
+    - 수요 감소가 예상됩니다. 마케팅 강화를 통한 수요 진작이 필요합니다.
 
-![Forecast Plot for 1075368](plots/future_forecasts/forecast_1075368.png)
+![Forecast Plot](plots/future_forecasts/forecast_1075368.png)
+![Validation Plot](plots/validation/validation_1075368.png)
 
 ---
 
 ### TICKETS (ID: 948670)
-- **Total Forecast (12w)**: $891.68
-- **Trend (Growth)**: 19.91%
-- **Models Comparison**:
-    - Prophet: $891.68
-    - SARIMA: $813.58
+- **핵심 지표**:
+    - **12주 예상 매출**: $891.68
+    - **성장률 (Trend)**: 19.91%
+    - **모델 신뢰도 (Medium)**: 오차율 약 44.0% (MAE: 23.9)
+- **분석 코멘트**:
+    - 뚜렷한 상승세가 관측됩니다. 재고 부족(Stock-out) 방지에 집중하십시오.
 
-![Forecast Plot for 948670](plots/future_forecasts/forecast_948670.png)
+![Forecast Plot](plots/future_forecasts/forecast_948670.png)
+![Validation Plot](plots/validation/validation_948670.png)
 
 ---
 
 ### TOMATOES (ID: 1081177)
-- **Total Forecast (12w)**: $891.20
-- **Trend (Growth)**: 39.09%
-- **Models Comparison**:
-    - Prophet: $891.20
-    - SARIMA: $895.25
+- **핵심 지표**:
+    - **12주 예상 매출**: $891.20
+    - **성장률 (Trend)**: 39.09%
+    - **모델 신뢰도 (Low)**: 오차율 약 91.0% (MAE: 59.5)
+- **분석 코멘트**:
+    - 뚜렷한 상승세가 관측됩니다. 재고 부족(Stock-out) 방지에 집중하십시오.
 
-![Forecast Plot for 1081177](plots/future_forecasts/forecast_1081177.png)
+![Forecast Plot](plots/future_forecasts/forecast_1081177.png)
+![Validation Plot](plots/validation/validation_1081177.png)
 
 ---
 
 ### BEEF (ID: 863447)
-- **Total Forecast (12w)**: $760.20
-- **Trend (Growth)**: -15.42%
-- **Models Comparison**:
-    - Prophet: $760.20
-    - SARIMA: $1,066.28
+- **핵심 지표**:
+    - **12주 예상 매출**: $760.20
+    - **성장률 (Trend)**: -15.42%
+    - **모델 신뢰도 (Low)**: 오차율 약 225.6% (MAE: 223.5)
+- **분석 코멘트**:
+    - 수요 감소가 예상됩니다. 마케팅 강화를 통한 수요 진작이 필요합니다.
 
-![Forecast Plot for 863447](plots/future_forecasts/forecast_863447.png)
+![Forecast Plot](plots/future_forecasts/forecast_863447.png)
+![Validation Plot](plots/validation/validation_863447.png)
 
 ---
 
 ### EGGS (ID: 923746)
-- **Total Forecast (12w)**: $674.60
-- **Trend (Growth)**: 35.46%
-- **Models Comparison**:
-    - Prophet: $674.60
-    - SARIMA: $925.56
+- **핵심 지표**:
+    - **12주 예상 매출**: $674.60
+    - **성장률 (Trend)**: 35.46%
+    - **모델 신뢰도 (High)**: 오차율 약 9.6% (MAE: 7.8)
+- **분석 코멘트**:
+    - 뚜렷한 상승세가 관측됩니다. 재고 부족(Stock-out) 방지에 집중하십시오.
 
-![Forecast Plot for 923746](plots/future_forecasts/forecast_923746.png)
+![Forecast Plot](plots/future_forecasts/forecast_923746.png)
+![Validation Plot](plots/validation/validation_923746.png)
 
 ---
 
 ### SUGARS/SWEETNERS (ID: 1068719)
-- **Total Forecast (12w)**: $661.48
-- **Trend (Growth)**: -3.63%
-- **Models Comparison**:
-    - Prophet: $661.48
-    - SARIMA: $715.14
+- **핵심 지표**:
+    - **12주 예상 매출**: $661.48
+    - **성장률 (Trend)**: -3.63%
+    - **모델 신뢰도 (Medium)**: 오차율 약 29.4% (MAE: 16.6)
+- **분석 코멘트**:
+    - 안정적인 수요가 유지될 전망입니다. 정기 배송/구독 모델 도입을 검토해볼 수 있습니다.
 
-![Forecast Plot for 1068719](plots/future_forecasts/forecast_1068719.png)
+![Forecast Plot](plots/future_forecasts/forecast_1068719.png)
+![Validation Plot](plots/validation/validation_1068719.png)
 
 ---
 
 ### CHICKEN (ID: 985999)
-- **Total Forecast (12w)**: $641.95
-- **Trend (Growth)**: -18.90%
-- **Models Comparison**:
-    - Prophet: $641.95
-    - SARIMA: $816.47
+- **핵심 지표**:
+    - **12주 예상 매출**: $641.95
+    - **성장률 (Trend)**: -18.90%
+    - **모델 신뢰도 (Low)**: 오차율 약 193.0% (MAE: 104.9)
+- **분석 코멘트**:
+    - 수요 감소가 예상됩니다. 마케팅 강화를 통한 수요 진작이 필요합니다.
 
-![Forecast Plot for 985999](plots/future_forecasts/forecast_985999.png)
+![Forecast Plot](plots/future_forecasts/forecast_985999.png)
+![Validation Plot](plots/validation/validation_985999.png)
 
 ---
 
 ### DELI MEATS (ID: 933835)
-- **Total Forecast (12w)**: $612.13
-- **Trend (Growth)**: -27.44%
-- **Models Comparison**:
-    - Prophet: $612.13
-    - SARIMA: $651.71
+- **핵심 지표**:
+    - **12주 예상 매출**: $612.13
+    - **성장률 (Trend)**: -27.44%
+    - **모델 신뢰도 (Medium)**: 오차율 약 38.3% (MAE: 18.7)
+- **분석 코멘트**:
+    - 수요 감소가 예상됩니다. 마케팅 강화를 통한 수요 진작이 필요합니다.
 
-![Forecast Plot for 933835](plots/future_forecasts/forecast_933835.png)
+![Forecast Plot](plots/future_forecasts/forecast_933835.png)
+![Validation Plot](plots/validation/validation_933835.png)
 
 ---
 
 ### MEAT - MISC (ID: 854405)
-- **Total Forecast (12w)**: $576.96
-- **Trend (Growth)**: -37.52%
-- **Models Comparison**:
-    - Prophet: $576.96
-    - SARIMA: $910.21
+- **핵심 지표**:
+    - **12주 예상 매출**: $576.96
+    - **성장률 (Trend)**: -37.52%
+    - **모델 신뢰도 (Low)**: 오차율 약 62.2% (MAE: 34.2)
+- **분석 코멘트**:
+    - 수요 감소가 예상됩니다. 마케팅 강화를 통한 수요 진작이 필요합니다.
 
-![Forecast Plot for 854405](plots/future_forecasts/forecast_854405.png)
+![Forecast Plot](plots/future_forecasts/forecast_854405.png)
+![Validation Plot](plots/validation/validation_854405.png)
 
 ---
 

@@ -15,10 +15,10 @@ plots_dir = '.\\plots\\mba'
 os.makedirs(output_dir, exist_ok=True)
 os.makedirs(plots_dir, exist_ok=True)
 
-print("--- Starting Market Basket Analysis for Cross-Selling ---")
+print("--- Starting Market Basket Analysis with Stability Check ---")
 
 # --- 1. Load Data ---
-print("\n[Step 1/5] Loading transaction data...")
+print("\n[Step 1/6] Loading transaction data...")
 try:
     df = pd.read_parquet(input_path)
     print(f"Data loaded: {len(df)} rows")
@@ -27,14 +27,14 @@ except Exception as e:
     exit()
 
 # --- 2. Preprocessing ---
-print("\n[Step 2/5] Cleaning and preparing baskets...")
+print("\n[Step 2/6] Cleaning and preparing baskets...")
 df_clean = df.dropna(subset=['COMMODITY_DESC'])
 df_clean = df_clean[~df_clean['COMMODITY_DESC'].isin(['NOT AVAILABLE', 'NO COMMODITY DESCRIPTION'])]
 df_clean = df_clean[~df_clean['COMMODITY_DESC'].str.contains('COUPON', na=False)]
 
 print(f"Valid transactions rows: {len(df_clean)}")
 
-# --- SAMPLING: Increase to 500k to catch more pairs ---
+# --- SAMPLING ---
 target_sample_size = 500000
 if len(df_clean) > target_sample_size:
     print(f"Sampling {target_sample_size} random transactions for analysis...")
@@ -46,55 +46,79 @@ else:
 top_n = 50
 top_commodities = df_clean['COMMODITY_DESC'].value_counts().head(top_n).index
 print(f"Filtering for Top {top_n} Commodities by transaction volume...")
-df_filtered = df_clean[df_clean['COMMODITY_DESC'].isin(top_commodities)].copy() # Enforce copy
+df_filtered = df_clean[df_clean['COMMODITY_DESC'].isin(top_commodities)].copy()
 
-# IMPORTANT: Remove unused categories to strictly limit columns to 50
 if isinstance(df_filtered['COMMODITY_DESC'].dtype, pd.CategoricalDtype):
     df_filtered['COMMODITY_DESC'] = df_filtered['COMMODITY_DESC'].cat.remove_unused_categories()
 
-print(f"Filtered rows: {len(df_filtered)}")
+# --- 3. Stability Analysis (Split Data) ---
+print("\n[Step 3/6] Running Stability Analysis (Group A vs Group B)...")
 
-# Create Basket (One-hot encoded)
+# Split transactions
+unique_baskets = df_filtered['BASKET_ID'].unique()
+np.random.seed(42)
+group_a_baskets = np.random.choice(unique_baskets, size=int(len(unique_baskets)*0.5), replace=False)
+
+df_group_a = df_filtered[df_filtered['BASKET_ID'].isin(group_a_baskets)]
+df_group_b = df_filtered[~df_filtered['BASKET_ID'].isin(group_a_baskets)]
+
+def get_rules(df_in, min_sup=0.001):
+    basket = (df_in.groupby(['BASKET_ID', 'COMMODITY_DESC'])['QUANTITY']
+              .sum().unstack().reset_index().fillna(0)
+              .set_index('BASKET_ID'))
+    basket_sets = (basket > 0).astype(bool)
+    frequent_itemsets = apriori(basket_sets, min_support=min_sup, use_colnames=True)
+    if len(frequent_itemsets) > 0:
+        rules = association_rules(frequent_itemsets, metric="lift", min_threshold=1.01)
+        # Create unique pair ID
+        rules['pair'] = rules.apply(lambda x: tuple(sorted([list(x['antecedents'])[0], list(x['consequents'])[0]])), axis=1)
+        return rules[['pair', 'lift']].drop_duplicates(subset=['pair'])
+    return pd.DataFrame()
+
+rules_a = get_rules(df_group_a)
+rules_b = get_rules(df_group_b)
+
+print(f"Rules in Group A: {len(rules_a)}")
+print(f"Rules in Group B: {len(rules_b)}")
+
+if not rules_a.empty and not rules_b.empty:
+    common_rules = set(rules_a['pair']).intersection(set(rules_b['pair']))
+    stability_score = len(common_rules) / max(len(rules_a), len(rules_b)) * 100
+    print(f"Stability Score (Overlap %): {stability_score:.2f}%")
+    
+    # Save validation metric
+    with open('mba_stability_metric.txt', 'w') as f:
+        f.write(f"Stability Score: {stability_score:.2f}%\n")
+        f.write(f"Common Rules Count: {len(common_rules)}\n")
+
+# --- 4. Full Analysis (All Data) ---
+print("\n[Step 4/6] Running Full MBA on All Data...")
 basket = (df_filtered.groupby(['BASKET_ID', 'COMMODITY_DESC'])['QUANTITY']
           .sum().unstack().reset_index().fillna(0)
           .set_index('BASKET_ID'))
-
-# Convert to boolean
 basket_sets = (basket > 0).astype(bool)
 
-print(f"Basket Matrix Shape: {basket_sets.shape} (Transactions x Categories)")
-
-# --- 3. Run Apriori ---
-# Min support 0.001 (0.1%) - lowered to find pairs
-print("\n[Step 3/5] Generating Frequent Itemsets (Min Support=0.001)...")
 frequent_itemsets = apriori(basket_sets, min_support=0.001, use_colnames=True)
-print(f"Found {len(frequent_itemsets)} frequent itemsets.")
-
-# --- 4. Generate Association Rules ---
-print("\n[Step 4/5] Deriving Rules (Lift > 1.0)...")
 if len(frequent_itemsets) > 0:
     rules = association_rules(frequent_itemsets, metric="lift", min_threshold=1.01)
-
+    
+    # Preprocessing rules for output
     rules['antecedent_len'] = rules['antecedents'].apply(lambda x: len(x))
     rules['consequent_len'] = rules['consequents'].apply(lambda x: len(x))
-
     rules_simple = rules[(rules['antecedent_len'] == 1) & (rules['consequent_len'] == 1)].copy()
-
+    
     rules_simple['antecedents'] = rules_simple['antecedents'].apply(lambda x: list(x)[0])
     rules_simple['consequents'] = rules_simple['consequents'].apply(lambda x: list(x)[0])
-
     rules_simple['pair'] = rules_simple.apply(lambda x: tuple(sorted([x['antecedents'], x['consequents']])), axis=1)
     rules_unique = rules_simple.drop_duplicates(subset=['pair', 'lift']).sort_values('lift', ascending=False)
-
-    print(f"Generated {len(rules_simple)} simple rules. Pruned to {len(rules_unique)} unique variation pairs.")
-
+    
+    # Save Rules
     output_file = os.path.join(output_dir, 'cross_selling_rules.csv')
     rules_unique.to_csv(output_file, index=False)
-    print(f"Rules saved to {output_file}")
+    print(f"Unique Rules saved: {len(rules_unique)}")
 
-    # --- 5. Visualization ---
-    print("\n[Step 5/5] Visualizing Results...")
-
+    # --- 5. Visualization: Network & Scatter ---
+    print("\n[Step 5/6] Visualizing Inputs...")
     if len(rules_unique) > 0:
         top_rules = rules_unique.head(50)
         G = nx.from_pandas_edgelist(top_rules, source='antecedents', target='consequents', edge_attr='lift')
@@ -106,22 +130,36 @@ if len(frequent_itemsets) > 0:
         nx.draw_networkx_labels(G, pos, font_size=8, font_family='sans-serif')
         plt.title("Top 50 Product Association Network")
         plt.axis('off')
-        network_plot_path = os.path.join(plots_dir, 'mba_network_graph.png')
-        plt.savefig(network_plot_path, dpi=300, bbox_inches='tight')
+        plt.savefig(os.path.join(plots_dir, 'mba_network_graph.png'), dpi=300, bbox_inches='tight')
         plt.close()
-        print(f"Network graph saved to {network_plot_path}")
 
         plt.figure(figsize=(10, 6))
         sns.scatterplot(data=rules_unique, x='support', y='lift', alpha=0.6, size='confidence', sizes=(20, 200))
         plt.title("Support vs Lift")
         plt.axhline(y=1, color='r', linestyle='--')
-        scatter_plot_path = os.path.join(plots_dir, 'mba_scatter_plot.png')
-        plt.savefig(scatter_plot_path, dpi=300)
+        plt.savefig(os.path.join(plots_dir, 'mba_scatter_plot.png'), dpi=300)
         plt.close()
-        print(f"Scatter plot saved to {scatter_plot_path}")
-    else:
-        print("No rules found to visualize.")
-else:
-    print("No frequent itemsets found.")
+
+    # --- 6. Visualization: Heatmap ---
+    print("\n[Step 6/6] Generating Category Heatmap...")
+    # Create matrix of Lift values for top commodity pairs
+    pivot_table = rules_unique.pivot(index='antecedents', columns='consequents', values='lift')
+    # Fill NaN with 0
+    pivot_table = pivot_table.fillna(0)
+    
+    # Select a subset if too large
+    if pivot_table.shape[0] > 20:
+        # Sort by sum of lift
+        keep_idx = pivot_table.sum(axis=1).sort_values(ascending=False).head(20).index
+        keep_col = pivot_table.sum(axis=0).sort_values(ascending=False).head(20).index
+        pivot_table = pivot_table.loc[keep_idx, keep_col]
+
+    plt.figure(figsize=(14, 12))
+    sns.heatmap(pivot_table, cmap="YlGnBu", annot=False)
+    plt.title("Category Lift Heatmap (Top 20 Interactions)")
+    plt.savefig(os.path.join(plots_dir, 'mba_category_heatmap.png'), dpi=300, bbox_inches='tight')
+    plt.close()
+    
+    print("All visualizations generated.")
 
 print("\n--- Cross-Selling Analysis Complete ---")
