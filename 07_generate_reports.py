@@ -111,8 +111,20 @@ print("Generating Detailed Report...")
 with open(detailed_report_path, 'w', encoding='utf-8') as f:
     f.write("# 향후 수요 예측 상세 분석 보고서 (Detailed Demand Forecasting)\n\n")
     
-    f.write("## 1. 분석 방법론 및 검증 (Methodology & Validation)\n")
-    f.write("- **데이터셋**: 총 매출 기준 상위 50개 상품의 주간(Weekly) 집계 매출 데이터\n")
+    f.write("## 1. 분석 방법론 및 프로세스 (Detailed Methodology)\n")
+    f.write("### 1.1 데이터 수집 및 선정 (Data Acquisition)\n")
+    f.write("- **원천 데이터**: `transaction_data.csv` (전체 거래 내역), `product.csv` (상품 정보), `hh_demographic.csv` (가구 정보).\n")
+    f.write("- **분석 대상 선정**: 전체 상품 중 **총 매출액(Total Sales Value) 기준 상위 50개 품목**을 핵심 분석 대상으로 선정했습니다. (전체 매출의 약 20~30%를 차지하는 Key Items).\n\n")
+
+    f.write("### 1.2 데이터 전처리 프로세스 (Preprocessing Pipeline)\n")
+    f.write("1.  **시간 단위 집계 (Aggregation)**: 일별/건별 거래 데이터를 **주간(Weekly) 단위**로 합산하여 시계열 데이터 포맷(`ds`, `y`)으로 변환했습니다.\n")
+    f.write("2.  **결측치 보정 (Imputation)**: 거래가 발생하지 않은 주차(Week)는 `0`으로 채워 시계열의 연속성을 보장했습니다. 이는 모델이 '수요 없음'을 명확히 학습하게 돕습니다.\n")
+    f.write("3.  **데이터 분할 (Split)**: 모델 검증을 위해 전체 기간 중 **마지막 4주**를 테스트 데이터(Test Set)로, 그 이전 데이터를 학습 데이터(Train Set)로 분리하여 운영했습니다.\n\n")
+
+    f.write("### 1.3 모델링 및 결과 도출 (Modeling to Results)\n")
+    f.write("- **Step 1 (개별 학습)**: 각 상품별로 Prophet(트렌드/계절성)과 SARIMA(통계적 패턴) 모델을 각각 독립적으로 학습시켰습니다.\n")
+    f.write("- **Step 2 (교차 검증)**: Backtesting을 통해 산출된 MAE(평균 오차)를 기반으로 모델의 예측력이 유효한지 1차 필터링을 수행했습니다.\n")
+    f.write("- **Step 3 (최종 예측)**: 검증이 완료된 하이퍼파라미터를 적용하여, **향후 12주간의 주차별 매출**을 추론했습니다.\n")
     f.write("- **검증 방식 (Backtesting)**:\n")
     f.write(f"    - **목적**: 모델의 예측 정확도를 평가하기 위해 과거의 마지막 4주 데이터를 '미래'라고 가정하고 테스트했습니다.\n")
     f.write(f"    - **실제 예측**: 최종적으로 제공된 향후 12주 예측 결과는 **검증에 사용된 4주를 포함한 전체 데이터**를 모두 학습하여 산출되었습니다.\n")
