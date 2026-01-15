@@ -1,0 +1,1 @@
+dunnhumby.db/*.csv filter=lfs diff=lfs merge=lfs -text
