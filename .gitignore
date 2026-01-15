@@ -1,0 +1,26 @@
+
+# Data files
+*.csv
+*.zip
+*.msi
+*.xlsx
+*.PNG
+*.jpg
+
+# Models and logs
+models/
+*.joblib
+*.txt
+*.log
+
+# Python / Node
+__pycache__/
+node_modules/
+.venv/
+.env
+
+# Large datasets specifically
+Dunnhumby/archive/
+dunnhumby_integrated_data.csv
+rfm_segments.csv
+dunnhumby_rfm_segments.csv
