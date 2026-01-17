@@ -118,4 +118,70 @@ plt.ylim(0, 50)
 plt.savefig(os.path.join(nba_report_dir, 'nba_qualitative_metrics.png'))
 plt.close()
 
-print("--- 시각화 생성 완료 ---")
+# --- 1.3 TS 보강: 카테고리별 평균 오차율 (예측 양극화 증명) ---
+print("[TS] 카테고리별 오차율 분석 중...")
+product_df = pd.read_csv('Dunnhumby/archive/product.csv')
+ts_meta = ts_metrics.merge(product_df[['PRODUCT_ID', 'COMMODITY_DESC']], left_on='Product_ID', right_on='PRODUCT_ID', how='left')
+cat_error = ts_meta.groupby('COMMODITY_DESC')['Error_Ratio'].mean().sort_values().head(15)
+
+plt.figure(figsize=(12, 6))
+cat_error.plot(kind='bar', color='teal')
+plt.title('카테고리별 평균 예측 오차율 (예측 양극화 확인)', fontsize=15)
+plt.ylabel('평균 오차율 (Error Ratio)')
+plt.axhline(y=0.2, color='r', linestyle='--', label='신뢰 경계선 (20%)')
+plt.legend()
+plt.xticks(rotation=45, ha='right')
+plt.tight_layout()
+plt.savefig(os.path.join(ts_report_dir, 'ts_category_error_gap.png'))
+plt.close()
+
+# --- 2.3 MBA 보강: 규칙 안정성(CV) 분포 (황금 규칙 증명) ---
+print("[MBA] 규칙 안정성 분포 생성 중...")
+# 실제 CV 데이터가 포함된 final_rules 로드 (스크립트 실행 결과물)
+final_rules_df = pd.read_csv('final_reports/mba/dunnhumby_high_stability_mba_rules.csv')
+if 'lift_cv' in final_rules_df.columns:
+    plt.figure(figsize=(10, 6))
+    sns.histplot(final_rules_df['lift_cv'].dropna(), bins=20, kde=True, color='purple')
+    plt.axvline(x=0.1, color='r', linestyle='--', label='고안정성 기준 (10%)')
+    plt.title('추출된 연관 규칙의 안정성(CV) 분포', fontsize=15)
+    plt.xlabel('리프트 변동 계수 (Lift CV)')
+    plt.ylabel('규칙 수')
+    plt.legend()
+    plt.savefig(os.path.join(mba_report_dir, 'mba_stability_dist.png'))
+    plt.close()
+
+# --- 2.4 MBA 보강: 세그먼트별 구매 카테고리 다양성 (구매 복잡도 증명) ---
+print("[MBA] 세그먼트별 구매 복잡도 분석 중...")
+# 컬럼명 통일 (ProductID -> PRODUCT_ID)
+if 'ProductID' in df_integrated.columns:
+    df_integrated = df_integrated.rename(columns={'ProductID': 'PRODUCT_ID'})
+# 세그먼트별 장바구니당 평균 고유 카테고리 수
+basket_cat_diversity = df_integrated.merge(product_df[['PRODUCT_ID', 'COMMODITY_DESC']], on='PRODUCT_ID', how='left')
+seg_cat_counts = basket_cat_diversity.groupby(['Customer_Segment', 'BASKET_ID'])['COMMODITY_DESC'].nunique().reset_index(name='unique_cats')
+avg_seg_cat_diversity = seg_cat_counts.groupby('Customer_Segment')['unique_cats'].mean().sort_values(ascending=False)
+
+plt.figure(figsize=(10, 6))
+avg_seg_cat_diversity.plot(kind='bar', color='orange')
+plt.title('고객 세그먼트별 장바구니 내 카테고리 다양성', fontsize=15)
+plt.ylabel('평균 고유 카테고리 수')
+plt.xticks(rotation=45)
+plt.tight_layout()
+plt.savefig(os.path.join(mba_report_dir, 'mba_segment_complexity.png'))
+plt.close()
+
+# --- 3.3 NBA 보강: 소득 수준별 추천 다양성 (개인화 전략 확인) ---
+print("[NBA] 소득 수준별 추천 다양성 분석 중...")
+demo_df = pd.read_csv('Dunnhumby/archive/hh_demographic.csv')
+nba_demo_meta = nba_meta.merge(demo_df[['household_key', 'INCOME_DESC']], left_on='CustomerID', right_on='household_key', how='left')
+income_diversity = nba_demo_meta.groupby('INCOME_DESC')['COMMODITY_DESC'].nunique().sort_values(ascending=False)
+
+plt.figure(figsize=(12, 6))
+income_diversity.plot(kind='bar', color='gold')
+plt.title('가구 소득 수준별 추천 상품 카테고리 다양성', fontsize=15)
+plt.ylabel('추천된 고유 카테고리 수')
+plt.xticks(rotation=45, ha='right')
+plt.tight_layout()
+plt.savefig(os.path.join(nba_report_dir, 'nba_income_diversity_gap.png'))
+plt.close()
+
+print("--- 심층 인사이트 보강 장표 생성 완료 ---")
