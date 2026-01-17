@@ -61,7 +61,7 @@
 
 | 추천 방식별 점수 분포 | 상위 추천 카테고리 분포 | 추천 엔진 질적 지표 (다양성 등) |
 | :---: | :---: | :---: |
-| ![점수 분포](file:///c:/Users/jkoh/OneDrive/%EB%B0%94%ED%83%95%20%ED%99%94%EB%A9%B4/p2/final_reports/nba/plots/nba_score_distribution.png) | ![카테고리 분포](file:///c:/Users/jkoh/OneDrive/%EB%B0%94%ED%83%95%20%ED%99%94%EB%A9%B4/p2/final_reports/nba/plots/nba_category_diversity.png) | ![질적 지표](file:///c:/Users/jkoh/OneDrive/%EB%B0%94%ED%83%95%20%ED%99%94%EB%A9%B4/p2/final_reports/nba/plots/nba_qualitative_metrics.png) |
+| ![점수 분포](./plots/nba_score_distribution.png) | ![카테고리 분포](./plots/nba_category_diversity.png) | ![질적 지표](./plots/nba_qualitative_metrics.png) |
 
 **[지표 해석 가이드]**
 1. **점수 분포**: 하이브리드(Hybrid) 점수가 인구통계 기반(Demo) 추천보다 상향 평준화되어 있어, 개인화의 정밀도가 더 높음을 보여줍니다.

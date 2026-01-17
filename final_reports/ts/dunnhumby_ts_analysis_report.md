@@ -60,7 +60,7 @@
 
 | 모델별 오차(MAE) 분포 | 수요 예측 신뢰도 등급 비중 |
 | :---: | :---: |
-| ![오차 분포](file:///c:/Users/jkoh/OneDrive/%EB%B0%94%ED%83%95%20%ED%99%94%EB%A9%B4/p2/final_reports/ts/plots/ts_error_distribution.png) | ![신뢰도 비중](file:///c:/Users/jkoh/OneDrive/%EB%B0%94%ED%83%95%20%ED%99%94%EB%A9%B4/p2/final_reports/ts/plots/ts_confidence_pie.png) |
+| ![오차 분포](./plots/ts_error_distribution.png) | ![신뢰도 비중](./plots/ts_confidence_pie.png) |
 
 **[지표 해석 가이드]**
 1. **오차 분포**: SARIMA(파란색) 모델이 전반적으로 낮은 MAE 영역에 밀집되어 있어 대다수 품목에서 안정적인 성능을 보입니다. 반면 Prophet은 트렌드가 강한 특정 품목에서 우위를 점합니다.
@@ -71,9 +71,9 @@
 
 | 가솔린 (6534178) | 유제품 (1106523) |
 | :---: | :---: |
-| ![가솔린](file:///c:/Users/jkoh/OneDrive/%EB%B0%94%ED%83%95%20%ED%99%94%EB%A9%B4/p2/final_reports/ts/plots/forecasts/forecast_6534178.png) | ![유제품](file:///c:/Users/jkoh/OneDrive/%EB%B0%94%ED%83%95%20%ED%99%94%EB%A9%B4/p2/final_reports/ts/plots/forecasts/forecast_1106523.png) |
+| ![가솔린](./plots/forecasts/forecast_6534178.png) | ![유제품](./plots/forecasts/forecast_1106523.png) |
 | **조리식품 (1029743)** | **스낵류 (1082185)** |
-| ![조리식품](file:///c:/Users/jkoh/OneDrive/%EB%B0%94%ED%83%95%20%ED%99%94%EB%A9%B4/p2/final_reports/ts/plots/forecasts/forecast_1029743.png) | ![스낵류](file:///c:/Users/jkoh/OneDrive/%EB%B0%94%ED%83%95%20%ED%99%94%EB%A9%B4/p2/final_reports/ts/plots/forecasts/forecast_1082185.png) |
+| ![조리식품](./plots/forecasts/forecast_1029743.png) | ![스낵류](./plots/forecasts/forecast_1082185.png) |
 
 **[장표 해석]**
 - **검은 점**: 실제 판매 수치

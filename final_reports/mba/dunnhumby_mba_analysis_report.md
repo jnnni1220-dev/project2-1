@@ -65,7 +65,7 @@
 
 | 연관 규칙 향상도(Lift) 히트맵 | 세그먼트별 평균 장바구니 크기 |
 | :---: | :---: |
-| ![규칙 히트맵](file:///c:/Users/jkoh/OneDrive/%EB%B0%94%ED%83%95%20%ED%99%94%EB%A9%B4/p2/final_reports/mba/plots/mba_rule_heatmap.png) | ![바스켓 크기](file:///c:/Users/jkoh/OneDrive/%EB%B0%94%ED%83%95%20%ED%99%94%EB%A9%B4/p2/final_reports/mba/plots/mba_segment_basket_size.png) |
+| ![규칙 히트맵](./plots/mba_rule_heatmap.png) | ![바스켓 크기](./plots/mba_segment_basket_size.png) |
 
 **[지표 해석 가이드]**
 1. **히트맵**: 색상이 짙을수록 두 상품 간의 연관성(Lift)이 강력함을 의미합니다. 'Soft Drinks'와 'Frying Chicken'의 교차점은 가장 높은 신뢰도를 기록하고 있습니다.
