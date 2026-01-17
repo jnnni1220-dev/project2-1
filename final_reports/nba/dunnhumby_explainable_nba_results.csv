@@ -1,0 +1,601 @@
+﻿CustomerID,ProductID,ProductName,Score,Reason,Type
+1,981760,EGGS - X-LARGE,12.54833998777434,귀하가 과거에 구매하신 'ORANGES NAVELS ALL' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+1,899624,POTATOES RUSSET (BULK&BAG),12.129551151290098,귀하가 과거에 구매하신 'ORANGES NAVELS ALL' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+1,845208,ONIONS YELLOW (BULK&BAG),11.700389162206573,귀하가 과거에 구매하신 'ORANGES NAVELS ALL' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+1,866211,GRAPES WHITE,11.494810686161237,귀하가 과거에 구매하신 'ORANGES NAVELS ALL' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+1,878996,GRAPES RED,11.4106099494094,귀하가 과거에 구매하신 'ORANGES NAVELS ALL' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+2,981760,EGGS - X-LARGE,16.72745584620591,귀하가 과거에 구매하신 'ORANGES NAVELS ALL' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+2,845208,ONIONS YELLOW (BULK&BAG),15.621786044506281,귀하가 과거에 구매하신 'ORANGES NAVELS ALL' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+2,844179,PRIMAL,15.612393039289362,귀하가 과거에 구매하신 'ORANGES NAVELS ALL' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+2,962568,CELERY,14.961129731144544,귀하가 과거에 구매하신 'ORANGES NAVELS ALL' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+2,1044078,LEAN,14.859186983194613,귀하가 과거에 구매하신 'ORANGES NAVELS ALL' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+3,1004906,POTATOES RUSSET (BULK&BAG),19.37546978266848,귀하가 과거에 구매하신 'PASTA: CANNED' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+3,1096036,IWS SINGLE CHEESE,18.7704501157937,귀하가 과거에 구매하신 'PASTA: CANNED' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+3,981760,EGGS - X-LARGE,18.45088362437325,귀하가 과거에 구매하신 'PASTA: CANNED' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+3,1029743,FLUID MILK WHITE ONLY,18.431767449308378,귀하가 과거에 구매하신 'PASTA: CANNED' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+3,859075,SHREDDED CHEESE,17.88363219478908,귀하가 과거에 구매하신 'PASTA: CANNED' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+4,826249,HAMBURGER BUNS,5.865437313427536,귀하가 과거에 구매하신 'GRATED CHEESE' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+4,981760,EGGS - X-LARGE,5.798689664502388,귀하가 과거에 구매하신 'GRATED CHEESE' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+4,844179,PRIMAL,5.79116810795779,귀하가 과거에 구매하신 'GRATED CHEESE' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+4,859075,SHREDDED CHEESE,5.696404423716724,귀하가 과거에 구매하신 'GRATED CHEESE' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+4,1096036,IWS SINGLE CHEESE,5.674798084679676,귀하가 과거에 구매하신 'GRATED CHEESE' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+5,995242,FLUID MILK WHITE ONLY,3.841867378020854,귀하가 과거에 구매하신 'RAMEN NOODLES/RAMEN CUPS' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+5,844179,PRIMAL,3.7025810847815093,귀하가 과거에 구매하신 'RAMEN NOODLES/RAMEN CUPS' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+5,883404,MAINSTREAM WHITE BREAD,3.6954685575820387,귀하가 과거에 구매하신 'RAMEN NOODLES/RAMEN CUPS' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+5,1098066,HOT DOG BUNS,3.598026437417931,귀하가 과거에 구매하신 'RAMEN NOODLES/RAMEN CUPS' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+5,938700,CORN,3.4849031749203294,귀하가 과거에 구매하신 'RAMEN NOODLES/RAMEN CUPS' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+6,860776,CUCUMBERS,18.875318708096056,귀하가 과거에 구매하신 'ORANGES NAVELS ALL' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+6,899624,POTATOES RUSSET (BULK&BAG),18.85214852758492,귀하가 과거에 구매하신 'ORANGES NAVELS ALL' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+6,1098066,HOT DOG BUNS,18.376457997023117,귀하가 과거에 구매하신 'ORANGES NAVELS ALL' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+6,1033142,ONIONS SWEET (BULK&BAG),18.198432231308544,귀하가 과거에 구매하신 'ORANGES NAVELS ALL' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+6,979707,ONIONS SWEET (BULK&BAG),17.97873316196167,귀하가 과거에 구매하신 'ORANGES NAVELS ALL' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+7,1004906,POTATOES RUSSET (BULK&BAG),14.790159693491445,귀하가 과거에 구매하신 'ORANGES NAVELS ALL' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+7,1098066,HOT DOG BUNS,14.62193070101003,귀하가 과거에 구매하신 'ORANGES NAVELS ALL' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+7,981760,EGGS - X-LARGE,14.589673481712905,귀하가 과거에 구매하신 'ORANGES NAVELS ALL' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+7,840361,EGGS - LARGE,13.963484378523557,귀하가 과거에 구매하신 'ORANGES NAVELS ALL' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+7,883404,MAINSTREAM WHITE BREAD,13.776112402248485,귀하가 과거에 구매하신 'ORANGES NAVELS ALL' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+8,1096036,IWS SINGLE CHEESE,27.968802070177514,귀하가 과거에 구매하신 'PASTA: CANNED' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+8,866211,GRAPES WHITE,25.844252556738784,귀하가 과거에 구매하신 'PASTA: CANNED' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+8,987562,SHREDDED CHEESE,25.03890611078946,귀하가 과거에 구매하신 'PASTA: CANNED' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+8,999858,PRIMAL,24.032623226459233,귀하가 과거에 구매하신 'PASTA: CANNED' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+8,897125,GRATED CHEESE,23.697882335810338,귀하가 과거에 구매하신 'PASTA: CANNED' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+9,1004906,POTATOES RUSSET (BULK&BAG),7.224581535282193,귀하가 과거에 구매하신 'HAMBURGER BUNS' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+9,1133018,FLUID MILK WHITE ONLY,7.100631810153704,귀하가 과거에 구매하신 'HAMBURGER BUNS' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+9,844179,PRIMAL,7.097173817312827,귀하가 과거에 구매하신 'HAMBURGER BUNS' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+9,938700,CORN,7.0767026653077405,귀하가 과거에 구매하신 'HAMBURGER BUNS' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+9,981760,EGGS - X-LARGE,6.899343423325252,귀하가 과거에 구매하신 'HAMBURGER BUNS' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+10,1132770,SFT DRNK 2 LITER BTL CARB INCL,3.319070905726476,귀하가 과거에 구매하신 'CHEESE: PROCESSED BULK' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+10,1004906,POTATOES RUSSET (BULK&BAG),3.2917382118212175,귀하가 과거에 구매하신 'CHEESE: PROCESSED BULK' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+10,1098066,HOT DOG BUNS,3.26404767121031,귀하가 과거에 구매하신 'CHEESE: PROCESSED BULK' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+10,883404,MAINSTREAM WHITE BREAD,3.254173717828001,귀하가 과거에 구매하신 'CHEESE: PROCESSED BULK' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+10,1044078,LEAN,3.1794511844511955,귀하가 과거에 구매하신 'CHEESE: PROCESSED BULK' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+11,1135476,STRAWBERRIES,2.229797077810432,귀하가 과거에 구매하신 'TOMATOES HOTHOUSE ON THE VINE' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+11,866211,GRAPES WHITE,2.001252434378887,귀하가 과거에 구매하신 'TOMATOES HOTHOUSE ON THE VINE' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+11,1004906,POTATOES RUSSET (BULK&BAG),1.9843928726578877,귀하가 과거에 구매하신 'TOMATOES HOTHOUSE ON THE VINE' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+11,962568,CELERY,1.935978398876709,귀하가 과거에 구매하신 'TOMATOES HOTHOUSE ON THE VINE' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+11,1029743,FLUID MILK WHITE ONLY,1.9356494795773622,귀하가 과거에 구매하신 'TOMATOES HOTHOUSE ON THE VINE' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+12,962568,CELERY,4.633434917659944,귀하가 과거에 구매하신 'BUTTER SPRAY CRACKER (RITZ/CLU' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+12,961554,CARROTS MINI PEELED,4.089977587922737,귀하가 과거에 구매하신 'BUTTER SPRAY CRACKER (RITZ/CLU' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+12,1127831,STRAWBERRIES,4.0449822678552705,귀하가 과거에 구매하신 'BUTTER SPRAY CRACKER (RITZ/CLU' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+12,878996,GRAPES RED,3.982969921804257,귀하가 과거에 구매하신 'BUTTER SPRAY CRACKER (RITZ/CLU' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+12,1004906,POTATOES RUSSET (BULK&BAG),3.877425314817562,귀하가 과거에 구매하신 'BUTTER SPRAY CRACKER (RITZ/CLU' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+13,1098066,HOT DOG BUNS,19.362941298562976,귀하가 과거에 구매하신 'PASTA: CANNED' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+13,981760,EGGS - X-LARGE,19.238224195486453,귀하가 과거에 구매하신 'PASTA: CANNED' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+13,844179,PRIMAL,17.492844213366705,귀하가 과거에 구매하신 'PASTA: CANNED' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+13,883404,MAINSTREAM WHITE BREAD,17.288454236813433,귀하가 과거에 구매하신 'PASTA: CANNED' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+13,1044078,LEAN,16.737696998762647,귀하가 과거에 구매하신 'PASTA: CANNED' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+14,1004906,POTATOES RUSSET (BULK&BAG),19.677065269604356,귀하가 과거에 구매하신 'HAMBURGER BUNS' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+14,938700,CORN,18.254027670223078,귀하가 과거에 구매하신 'HAMBURGER BUNS' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+14,899624,POTATOES RUSSET (BULK&BAG),17.71717789018545,귀하가 과거에 구매하신 'HAMBURGER BUNS' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+14,1106523,FLUID MILK WHITE ONLY,17.301773613233948,귀하가 과거에 구매하신 'HAMBURGER BUNS' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+14,1082185,BANANAS,16.84183642594024,귀하가 과거에 구매하신 'HAMBURGER BUNS' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+15,962568,CELERY,12.126009826896906,귀하가 과거에 구매하신 'VARIETY LETTUCE' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+15,866211,GRAPES WHITE,11.770944211039447,귀하가 과거에 구매하신 'VARIETY LETTUCE' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+15,840361,EGGS - LARGE,10.99366630556193,귀하가 과거에 구매하신 'VARIETY LETTUCE' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+15,899624,POTATOES RUSSET (BULK&BAG),10.94843889221708,귀하가 과거에 구매하신 'VARIETY LETTUCE' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+15,1033142,ONIONS SWEET (BULK&BAG),10.589192815081441,귀하가 과거에 구매하신 'VARIETY LETTUCE' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+16,951590,MAINSTREAM WHITE BREAD,0.7803674589972028,귀하가 과거에 구매하신 'SW GDS:DONUTS' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+16,883404,MAINSTREAM WHITE BREAD,0.7117967734882739,귀하가 과거에 구매하신 'SW GDS:DONUTS' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+16,866211,GRAPES WHITE,0.7047083512860955,귀하가 과거에 구매하신 'SW GDS:DONUTS' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+16,1127831,STRAWBERRIES,0.6648154468602105,귀하가 과거에 구매하신 'SW GDS:DONUTS' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+16,838186,SW GDS:DONUTS,0.6241865717824413,귀하가 과거에 구매하신 'SW GDS:DONUTS' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+17,840361,EGGS - LARGE,15.799936895034858,귀하가 과거에 구매하신 'ORANGES NAVELS ALL' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+17,961554,CARROTS MINI PEELED,15.344053517570881,귀하가 과거에 구매하신 'ORANGES NAVELS ALL' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+17,952163,POTATOES RUSSET (BULK&BAG),14.898271291733877,귀하가 과거에 구매하신 'ORANGES NAVELS ALL' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+17,1081177,TOMATOES VINE RIPE BULK,14.864599074280171,귀하가 과거에 구매하신 'ORANGES NAVELS ALL' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+17,1096036,IWS SINGLE CHEESE,14.758153984269205,귀하가 과거에 구매하신 'ORANGES NAVELS ALL' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+18,1004906,POTATOES RUSSET (BULK&BAG),19.649504458395693,귀하가 과거에 구매하신 'CHEESE: PROCESSED BULK' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+18,834484,ONIONS OTHER,17.771386606248676,귀하가 과거에 구매하신 'CHEESE: PROCESSED BULK' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+18,899624,POTATOES RUSSET (BULK&BAG),16.686655455773508,귀하가 과거에 구매하신 'CHEESE: PROCESSED BULK' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+18,1105488,GRAPES RED,16.50687660417064,귀하가 과거에 구매하신 'CHEESE: PROCESSED BULK' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+18,844179,PRIMAL,16.36814757257649,귀하가 과거에 구매하신 'CHEESE: PROCESSED BULK' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+19,1071939,CREAM CHEESE,38.171581357421616,귀하가 과거에 구매하신 'ORANGES NAVELS ALL' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+19,1007195,CORN YELLOW,32.45344850142422,귀하가 과거에 구매하신 'ORANGES NAVELS ALL' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+19,1038217,SOUP CRACKERS (SALTINE/OYSTER),32.22392274764095,귀하가 과거에 구매하신 'ORANGES NAVELS ALL' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+19,1111072,CATSUP,31.564980787803854,귀하가 과거에 구매하신 'ORANGES NAVELS ALL' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+19,951590,MAINSTREAM WHITE BREAD,31.49729639889332,귀하가 과거에 구매하신 'ORANGES NAVELS ALL' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+20,844179,PRIMAL,11.856474414931263,귀하가 과거에 구매하신 'ROLLS - PORK' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+20,1098066,HOT DOG BUNS,10.887344202301293,귀하가 과거에 구매하신 'ROLLS - PORK' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+20,1004906,POTATOES RUSSET (BULK&BAG),10.802086197889546,귀하가 과거에 구매하신 'ROLLS - PORK' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+20,1029743,FLUID MILK WHITE ONLY,10.504502801630201,귀하가 과거에 구매하신 'ROLLS - PORK' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+20,995242,FLUID MILK WHITE ONLY,10.120123584238142,귀하가 과거에 구매하신 'ROLLS - PORK' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+21,826249,HAMBURGER BUNS,9.949093898819399,귀하가 과거에 구매하신 'PASTA: CANNED' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+21,1004906,POTATOES RUSSET (BULK&BAG),9.217802082165447,귀하가 과거에 구매하신 'PASTA: CANNED' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+21,859075,SHREDDED CHEESE,9.217756580037781,귀하가 과거에 구매하신 'PASTA: CANNED' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+21,844179,PRIMAL,9.03491639566145,귀하가 과거에 구매하신 'PASTA: CANNED' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+21,1133018,FLUID MILK WHITE ONLY,8.97869382769975,귀하가 과거에 구매하신 'PASTA: CANNED' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+22,899624,POTATOES RUSSET (BULK&BAG),13.658092303529404,귀하가 과거에 구매하신 'ORANGES NAVELS ALL' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+22,845208,ONIONS YELLOW (BULK&BAG),13.522171843616738,귀하가 과거에 구매하신 'ORANGES NAVELS ALL' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+22,995785,PEPPERS GREEN BELL,13.103931402325397,귀하가 과거에 구매하신 'ORANGES NAVELS ALL' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+22,860776,CUCUMBERS,13.088079116122975,귀하가 과거에 구매하신 'ORANGES NAVELS ALL' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+22,952163,POTATOES RUSSET (BULK&BAG),12.956800244039501,귀하가 과거에 구매하신 'ORANGES NAVELS ALL' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+23,1004906,POTATOES RUSSET (BULK&BAG),11.191310942383513,귀하가 과거에 구매하신 'PASTA: CANNED' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+23,826249,HAMBURGER BUNS,10.5642702931352,귀하가 과거에 구매하신 'PASTA: CANNED' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+23,962568,CELERY,10.347689755155713,귀하가 과거에 구매하신 'PASTA: CANNED' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+23,859075,SHREDDED CHEESE,10.149044297103554,귀하가 과거에 구매하신 'PASTA: CANNED' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+23,883404,MAINSTREAM WHITE BREAD,9.916583019795084,귀하가 과거에 구매하신 'PASTA: CANNED' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+24,981760,EGGS - X-LARGE,16.460219143976648,귀하가 과거에 구매하신 'HAMBURGER BUNS' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+24,1029743,FLUID MILK WHITE ONLY,16.3219085529198,귀하가 과거에 구매하신 'HAMBURGER BUNS' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+24,844179,PRIMAL,16.055737920110527,귀하가 과거에 구매하신 'HAMBURGER BUNS' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+24,1004906,POTATOES RUSSET (BULK&BAG),15.865570317707856,귀하가 과거에 구매하신 'HAMBURGER BUNS' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+24,899624,POTATOES RUSSET (BULK&BAG),14.792826286562768,귀하가 과거에 구매하신 'HAMBURGER BUNS' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+25,899624,POTATOES RUSSET (BULK&BAG),17.14356868933551,귀하가 과거에 구매하신 'ROLLS - PORK' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+25,840361,EGGS - LARGE,16.70411722346935,귀하가 과거에 구매하신 'ROLLS - PORK' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+25,1096036,IWS SINGLE CHEESE,16.367212299040375,귀하가 과거에 구매하신 'ROLLS - PORK' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+25,962568,CELERY,15.793118751122034,귀하가 과거에 구매하신 'ROLLS - PORK' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+25,1136257,SHREDDED CHEESE,15.52607465664651,귀하가 과거에 구매하신 'ROLLS - PORK' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+26,1098066,HOT DOG BUNS,17.327024008235743,귀하가 과거에 구매하신 'MAINSTREAM' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+26,844179,PRIMAL,16.828557260483613,귀하가 과거에 구매하신 'MAINSTREAM' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+26,1044078,LEAN,16.333073610599588,귀하가 과거에 구매하신 'MAINSTREAM' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+26,899624,POTATOES RUSSET (BULK&BAG),16.27872295148423,귀하가 과거에 구매하신 'MAINSTREAM' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+26,883404,MAINSTREAM WHITE BREAD,15.551170547640414,귀하가 과거에 구매하신 'MAINSTREAM' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+27,859075,SHREDDED CHEESE,6.730846250048404,귀하가 과거에 구매하신 'MARGARINE  STICK' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+27,1124729,CANDY BARS (SINGLES)(INCLUDING,6.668064424515659,귀하가 과거에 구매하신 'MARGARINE  STICK' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+27,1080414,CANDY BARS (SINGLES)(INCLUDING,6.49392748524527,귀하가 과거에 구매하신 'MARGARINE  STICK' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+27,1098066,HOT DOG BUNS,6.408599380554211,귀하가 과거에 구매하신 'MARGARINE  STICK' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+27,1004906,POTATOES RUSSET (BULK&BAG),6.371360705140073,귀하가 과거에 구매하신 'MARGARINE  STICK' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+28,1082185,BANANAS,6.2764766840517865,귀하가 과거에 구매하신 'VARIETY LETTUCE' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+28,962568,CELERY,5.60320642090667,귀하가 과거에 구매하신 'VARIETY LETTUCE' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+28,1004906,POTATOES RUSSET (BULK&BAG),5.4850481933662465,귀하가 과거에 구매하신 'VARIETY LETTUCE' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+28,961554,CARROTS MINI PEELED,5.467985399543905,귀하가 과거에 구매하신 'VARIETY LETTUCE' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+28,866211,GRAPES WHITE,5.464273851575702,귀하가 과거에 구매하신 'VARIETY LETTUCE' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+29,1098066,HOT DOG BUNS,9.971797110292409,귀하가 과거에 구매하신 'HAMBURGER BUNS' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+29,844179,PRIMAL,9.439138518361046,귀하가 과거에 구매하신 'HAMBURGER BUNS' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+29,1004906,POTATOES RUSSET (BULK&BAG),9.040327302840277,귀하가 과거에 구매하신 'HAMBURGER BUNS' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+29,1068719,SUGAR,8.646940104580143,귀하가 과거에 구매하신 'HAMBURGER BUNS' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+29,1136257,SHREDDED CHEESE,8.473967416079283,귀하가 과거에 구매하신 'HAMBURGER BUNS' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+30,1004906,POTATOES RUSSET (BULK&BAG),8.573564343331608,귀하가 과거에 구매하신 'MARGARINE  STICK' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+30,1082185,BANANAS,8.22493724960516,귀하가 과거에 구매하신 'MARGARINE  STICK' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+30,1029743,FLUID MILK WHITE ONLY,7.588889877067208,귀하가 과거에 구매하신 'MARGARINE  STICK' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+30,899624,POTATOES RUSSET (BULK&BAG),7.448137165834716,귀하가 과거에 구매하신 'MARGARINE  STICK' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+30,987562,SHREDDED CHEESE,7.332695328605842,귀하가 과거에 구매하신 'MARGARINE  STICK' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+31,899624,POTATOES RUSSET (BULK&BAG),15.503116278153893,귀하가 과거에 구매하신 'MAINSTREAM' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+31,995242,FLUID MILK WHITE ONLY,14.788699046705622,귀하가 과거에 구매하신 'MAINSTREAM' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+31,1071939,CREAM CHEESE,14.751251118159095,귀하가 과거에 구매하신 'MAINSTREAM' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+31,1098066,HOT DOG BUNS,14.728590099271429,귀하가 과거에 구매하신 'MAINSTREAM' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+31,878996,GRAPES RED,14.706238901138734,귀하가 과거에 구매하신 'MAINSTREAM' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+32,866211,GRAPES WHITE,12.295250754511764,귀하가 과거에 구매하신 'MARGARINE  STICK' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+32,834484,ONIONS OTHER,11.954813004281995,귀하가 과거에 구매하신 'MARGARINE  STICK' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+32,1033142,ONIONS SWEET (BULK&BAG),11.801993162136064,귀하가 과거에 구매하신 'MARGARINE  STICK' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+32,979707,ONIONS SWEET (BULK&BAG),11.716399275307136,귀하가 과거에 구매하신 'MARGARINE  STICK' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+32,859075,SHREDDED CHEESE,11.499266055148432,귀하가 과거에 구매하신 'MARGARINE  STICK' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+33,883404,MAINSTREAM WHITE BREAD,10.711717430630772,귀하가 과거에 구매하신 'HAMBURGER BUNS' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+33,859075,SHREDDED CHEESE,10.703221949772058,귀하가 과거에 구매하신 'HAMBURGER BUNS' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+33,1004906,POTATOES RUSSET (BULK&BAG),10.52215175293685,귀하가 과거에 구매하신 'HAMBURGER BUNS' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+33,844179,PRIMAL,10.302242412932237,귀하가 과거에 구매하신 'HAMBURGER BUNS' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+33,995242,FLUID MILK WHITE ONLY,9.89994385933406,귀하가 과거에 구매하신 'HAMBURGER BUNS' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+34,1098066,HOT DOG BUNS,8.429580402677033,귀하가 과거에 구매하신 'MAINSTREAM' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+34,844179,PRIMAL,7.542418672676419,귀하가 과거에 구매하신 'MAINSTREAM' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+34,995242,FLUID MILK WHITE ONLY,7.284001807196852,귀하가 과거에 구매하신 'MAINSTREAM' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+34,899624,POTATOES RUSSET (BULK&BAG),7.199764202485943,귀하가 과거에 구매하신 'MAINSTREAM' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+34,859075,SHREDDED CHEESE,7.132729306563186,귀하가 과거에 구매하신 'MAINSTREAM' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+35,995242,FLUID MILK WHITE ONLY,9.789757496403547,귀하가 과거에 구매하신 'CHEESE: PROCESSED BULK' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+35,883404,MAINSTREAM WHITE BREAD,9.642312427744542,귀하가 과거에 구매하신 'CHEESE: PROCESSED BULK' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+35,1098066,HOT DOG BUNS,9.418993437320008,귀하가 과거에 구매하신 'CHEESE: PROCESSED BULK' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+35,1106523,FLUID MILK WHITE ONLY,9.026295892349815,귀하가 과거에 구매하신 'CHEESE: PROCESSED BULK' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+35,1004906,POTATOES RUSSET (BULK&BAG),9.016600021913419,귀하가 과거에 구매하신 'CHEESE: PROCESSED BULK' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+36,1004906,POTATOES RUSSET (BULK&BAG),18.53261137509313,귀하가 과거에 구매하신 'MAINSTREAM' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+36,844179,PRIMAL,17.209651168928705,귀하가 과거에 구매하신 'MAINSTREAM' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+36,859075,SHREDDED CHEESE,16.847991822409526,귀하가 과거에 구매하신 'MAINSTREAM' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+36,899624,POTATOES RUSSET (BULK&BAG),16.35088923959583,귀하가 과거에 구매하신 'MAINSTREAM' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+36,845208,ONIONS YELLOW (BULK&BAG),15.477411076178923,귀하가 과거에 구매하신 'MAINSTREAM' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+37,1082185,BANANAS,9.353841517094159,귀하가 과거에 구매하신 'MUSHROOMS WHITE SLICED PKG' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+37,1004906,POTATOES RUSSET (BULK&BAG),7.930395636737955,귀하가 과거에 구매하신 'MUSHROOMS WHITE SLICED PKG' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+37,1033142,ONIONS SWEET (BULK&BAG),7.826983713794972,귀하가 과거에 구매하신 'MUSHROOMS WHITE SLICED PKG' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+37,1105488,GRAPES RED,7.520910924815601,귀하가 과거에 구매하신 'MUSHROOMS WHITE SLICED PKG' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+37,834484,ONIONS OTHER,7.500892274278872,귀하가 과거에 구매하신 'MUSHROOMS WHITE SLICED PKG' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+38,1127831,STRAWBERRIES,2.541154745772991,귀하가 과거에 구매하신 'GRAPES WHITE' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+38,878996,GRAPES RED,2.4932760513333574,귀하가 과거에 구매하신 'GRAPES WHITE' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+38,962568,CELERY,2.316487701376962,귀하가 과거에 구매하신 'GRAPES WHITE' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+38,1105488,GRAPES RED,2.2709330995024457,귀하가 과거에 구매하신 'GRAPES WHITE' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+38,820165,ORANGES NAVELS ALL,2.245972955894073,귀하가 과거에 구매하신 'GRAPES WHITE' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+39,1004906,POTATOES RUSSET (BULK&BAG),24.59414048176841,귀하가 과거에 구매하신 'PASTA: CANNED' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+39,1029743,FLUID MILK WHITE ONLY,21.602984906588482,귀하가 과거에 구매하신 'PASTA: CANNED' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+39,899624,POTATOES RUSSET (BULK&BAG),21.44150187129548,귀하가 과거에 구매하신 'PASTA: CANNED' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+39,1096036,IWS SINGLE CHEESE,20.991839502059303,귀하가 과거에 구매하신 'PASTA: CANNED' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+39,878996,GRAPES RED,20.67448648845788,귀하가 과거에 구매하신 'PASTA: CANNED' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+40,981760,EGGS - X-LARGE,24.94881300212609,귀하가 과거에 구매하신 'ORANGES NAVELS ALL' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+40,979707,ONIONS SWEET (BULK&BAG),23.122213428226708,귀하가 과거에 구매하신 'ORANGES NAVELS ALL' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+40,844179,PRIMAL,22.62445113224767,귀하가 과거에 구매하신 'ORANGES NAVELS ALL' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+40,1081177,TOMATOES VINE RIPE BULK,22.045096637719904,귀하가 과거에 구매하신 'ORANGES NAVELS ALL' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+40,1029743,FLUID MILK WHITE ONLY,21.736563866167387,귀하가 과거에 구매하신 'ORANGES NAVELS ALL' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+41,1004906,POTATOES RUSSET (BULK&BAG),8.343687266440185,귀하가 과거에 구매하신 'ORANGES NAVELS ALL' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+41,961554,CARROTS MINI PEELED,8.097171138302619,귀하가 과거에 구매하신 'ORANGES NAVELS ALL' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+41,840361,EGGS - LARGE,7.9795043580821385,귀하가 과거에 구매하신 'ORANGES NAVELS ALL' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+41,844179,PRIMAL,7.9667219337508834,귀하가 과거에 구매하신 'ORANGES NAVELS ALL' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+41,1098066,HOT DOG BUNS,7.960635146147344,귀하가 과거에 구매하신 'ORANGES NAVELS ALL' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+42,859075,SHREDDED CHEESE,7.549360193419778,귀하가 과거에 구매하신 'ORANGES NAVELS ALL' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+42,1098066,HOT DOG BUNS,7.046633710851704,귀하가 과거에 구매하신 'ORANGES NAVELS ALL' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+42,1004906,POTATOES RUSSET (BULK&BAG),6.994119276053482,귀하가 과거에 구매하신 'ORANGES NAVELS ALL' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+42,826249,HAMBURGER BUNS,6.746015585580706,귀하가 과거에 구매하신 'ORANGES NAVELS ALL' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+42,844179,PRIMAL,6.666163014271182,귀하가 과거에 구매하신 'ORANGES NAVELS ALL' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+43,981760,EGGS - X-LARGE,7.89674069284057,귀하가 과거에 구매하신 'HAMBURGER BUNS' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+43,1098066,HOT DOG BUNS,7.640297853746011,귀하가 과거에 구매하신 'HAMBURGER BUNS' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+43,899624,POTATOES RUSSET (BULK&BAG),7.52098501325478,귀하가 과거에 구매하신 'HAMBURGER BUNS' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+43,1068719,SUGAR,7.485489189190421,귀하가 과거에 구매하신 'HAMBURGER BUNS' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+43,1082185,BANANAS,7.330734322656407,귀하가 과거에 구매하신 'HAMBURGER BUNS' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+44,1004906,POTATOES RUSSET (BULK&BAG),11.856055553293979,귀하가 과거에 구매하신 'MARGARINE  STICK' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+44,1044078,LEAN,11.470237524284023,귀하가 과거에 구매하신 'MARGARINE  STICK' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+44,844179,PRIMAL,11.263393708312307,귀하가 과거에 구매하신 'MARGARINE  STICK' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+44,859075,SHREDDED CHEESE,11.033592444499783,귀하가 과거에 구매하신 'MARGARINE  STICK' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+44,899624,POTATOES RUSSET (BULK&BAG),10.72103830762216,귀하가 과거에 구매하신 'MARGARINE  STICK' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+45,1098066,HOT DOG BUNS,4.398275634173516,귀하가 과거에 구매하신 'STUFFING MIXES' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+45,1029743,FLUID MILK WHITE ONLY,4.396601768602253,귀하가 과거에 구매하신 'STUFFING MIXES' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+45,1133018,FLUID MILK WHITE ONLY,4.247353835209762,귀하가 과거에 구매하신 'STUFFING MIXES' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+45,1068719,SUGAR,4.186595723027019,귀하가 과거에 구매하신 'STUFFING MIXES' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+45,844179,PRIMAL,4.115093256213251,귀하가 과거에 구매하신 'STUFFING MIXES' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+46,961554,CARROTS MINI PEELED,24.568994774767344,귀하가 과거에 구매하신 'PASTA: CANNED' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+46,844179,PRIMAL,24.22506351858537,귀하가 과거에 구매하신 'PASTA: CANNED' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+46,840361,EGGS - LARGE,23.938620358003824,귀하가 과거에 구매하신 'PASTA: CANNED' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+46,859075,SHREDDED CHEESE,22.72886625140116,귀하가 과거에 구매하신 'PASTA: CANNED' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+46,5568378,TORTILLA/NACHO CHIPS,22.17995243275405,귀하가 과거에 구매하신 'PASTA: CANNED' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+47,1082185,BANANAS,13.610740757883324,귀하가 과거에 구매하신 'ORANGES NAVELS ALL' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+47,1004906,POTATOES RUSSET (BULK&BAG),13.188283761386986,귀하가 과거에 구매하신 'ORANGES NAVELS ALL' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+47,1098066,HOT DOG BUNS,11.934237393787654,귀하가 과거에 구매하신 'ORANGES NAVELS ALL' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+47,1029743,FLUID MILK WHITE ONLY,11.60614557851608,귀하가 과거에 구매하신 'ORANGES NAVELS ALL' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+47,840361,EGGS - LARGE,11.526959930096853,귀하가 과거에 구매하신 'ORANGES NAVELS ALL' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+48,840361,EGGS - LARGE,6.935143811054273,귀하가 과거에 구매하신 'CHOICE BEEF' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+48,1098066,HOT DOG BUNS,6.906504814386738,귀하가 과거에 구매하신 'CHOICE BEEF' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+48,826249,HAMBURGER BUNS,6.858381208617795,귀하가 과거에 구매하신 'CHOICE BEEF' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+48,899624,POTATOES RUSSET (BULK&BAG),6.815433854464986,귀하가 과거에 구매하신 'CHOICE BEEF' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+48,962568,CELERY,6.766951855449767,귀하가 과거에 구매하신 'CHOICE BEEF' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+49,826249,HAMBURGER BUNS,23.919906730650233,귀하가 과거에 구매하신 'ORANGES NAVELS ALL' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+49,899624,POTATOES RUSSET (BULK&BAG),23.104540974735862,귀하가 과거에 구매하신 'ORANGES NAVELS ALL' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+49,995242,FLUID MILK WHITE ONLY,22.58265340633753,귀하가 과거에 구매하신 'ORANGES NAVELS ALL' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+49,961554,CARROTS MINI PEELED,22.072187223745825,귀하가 과거에 구매하신 'ORANGES NAVELS ALL' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+49,866211,GRAPES WHITE,21.239966367422934,귀하가 과거에 구매하신 'ORANGES NAVELS ALL' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+50,1098066,HOT DOG BUNS,4.987996880458417,귀하가 과거에 구매하신 'SOFT DRINK POWDER POUCHES' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+50,1068719,SUGAR,4.747743863310323,귀하가 과거에 구매하신 'SOFT DRINK POWDER POUCHES' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+50,1096036,IWS SINGLE CHEESE,4.73854075163159,귀하가 과거에 구매하신 'SOFT DRINK POWDER POUCHES' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+50,826249,HAMBURGER BUNS,4.73102221933037,귀하가 과거에 구매하신 'SOFT DRINK POWDER POUCHES' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+50,999971,MAINSTREAM WHITE BREAD,4.66631655379056,귀하가 과거에 구매하신 'SOFT DRINK POWDER POUCHES' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+51,1098066,HOT DOG BUNS,16.583862178498062,귀하가 과거에 구매하신 'ORANGES NAVELS ALL' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+51,859075,SHREDDED CHEESE,14.14103228401058,귀하가 과거에 구매하신 'ORANGES NAVELS ALL' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+51,962568,CELERY,13.731829857277917,귀하가 과거에 구매하신 'ORANGES NAVELS ALL' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+51,1106523,FLUID MILK WHITE ONLY,13.565115061899114,귀하가 과거에 구매하신 'ORANGES NAVELS ALL' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+51,845208,ONIONS YELLOW (BULK&BAG),13.519150123591437,귀하가 과거에 구매하신 'ORANGES NAVELS ALL' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+52,845208,ONIONS YELLOW (BULK&BAG),20.995836256238967,귀하가 과거에 구매하신 'EGGS - JUMBO' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+52,866211,GRAPES WHITE,20.335665260354283,귀하가 과거에 구매하신 'EGGS - JUMBO' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+52,826249,HAMBURGER BUNS,19.726960565143,귀하가 과거에 구매하신 'EGGS - JUMBO' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+52,952163,POTATOES RUSSET (BULK&BAG),19.681781942301654,귀하가 과거에 구매하신 'EGGS - JUMBO' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+52,844179,PRIMAL,19.661493133474764,귀하가 과거에 구매하신 'EGGS - JUMBO' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+53,962568,CELERY,8.389115770743851,귀하가 과거에 구매하신 'EGGS - JUMBO' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+53,1004906,POTATOES RUSSET (BULK&BAG),7.745613331047716,귀하가 과거에 구매하신 'EGGS - JUMBO' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+53,981760,EGGS - X-LARGE,7.497856378290595,귀하가 과거에 구매하신 'EGGS - JUMBO' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+53,840361,EGGS - LARGE,7.198751712705333,귀하가 과거에 구매하신 'EGGS - JUMBO' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+53,995785,PEPPERS GREEN BELL,7.066530088478531,귀하가 과거에 구매하신 'EGGS - JUMBO' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+54,1029743,FLUID MILK WHITE ONLY,2.300601286062435,귀하가 과거에 구매하신 'MAINSTREAM WHITE BREAD' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+54,1098066,HOT DOG BUNS,1.9790089756974336,귀하가 과거에 구매하신 'MAINSTREAM WHITE BREAD' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+54,826249,HAMBURGER BUNS,1.8923896314808832,귀하가 과거에 구매하신 'MAINSTREAM WHITE BREAD' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+54,1106523,FLUID MILK WHITE ONLY,1.887471513159477,귀하가 과거에 구매하신 'MAINSTREAM WHITE BREAD' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+54,938700,CORN,1.8835672168856499,귀하가 과거에 구매하신 'MAINSTREAM WHITE BREAD' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+55,981760,EGGS - X-LARGE,6.845522469469824,귀하가 과거에 구매하신 'MARGARINE  STICK' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+55,1044078,LEAN,6.5999670333765215,귀하가 과거에 구매하신 'MARGARINE  STICK' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+55,826249,HAMBURGER BUNS,6.584344666647777,귀하가 과거에 구매하신 'MARGARINE  STICK' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+55,1029743,FLUID MILK WHITE ONLY,6.376383691808328,귀하가 과거에 구매하신 'MARGARINE  STICK' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+55,844179,PRIMAL,6.239809070143176,귀하가 과거에 구매하신 'MARGARINE  STICK' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+56,962568,CELERY,22.637806064870126,귀하가 과거에 구매하신 'ORANGES NAVELS ALL' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+56,840361,EGGS - LARGE,21.035116409066976,귀하가 과거에 구매하신 'ORANGES NAVELS ALL' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+56,845208,ONIONS YELLOW (BULK&BAG),20.810849606261343,귀하가 과거에 구매하신 'ORANGES NAVELS ALL' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+56,1029743,FLUID MILK WHITE ONLY,20.76540601518808,귀하가 과거에 구매하신 'ORANGES NAVELS ALL' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+56,866211,GRAPES WHITE,20.579011521310775,귀하가 과거에 구매하신 'ORANGES NAVELS ALL' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+57,1098066,HOT DOG BUNS,11.82605414170279,귀하가 과거에 구매하신 'GRATED CHEESE' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+57,899624,POTATOES RUSSET (BULK&BAG),11.565696043862067,귀하가 과거에 구매하신 'GRATED CHEESE' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+57,962568,CELERY,11.485305632929627,귀하가 과거에 구매하신 'GRATED CHEESE' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+57,1029743,FLUID MILK WHITE ONLY,11.339688773693066,귀하가 과거에 구매하신 'GRATED CHEESE' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+57,844179,PRIMAL,11.104758289433997,귀하가 과거에 구매하신 'GRATED CHEESE' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+58,1004906,POTATOES RUSSET (BULK&BAG),24.80818432020763,귀하가 과거에 구매하신 'MAINSTREAM' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+58,878996,GRAPES RED,23.26359909845096,귀하가 과거에 구매하신 'MAINSTREAM' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+58,845208,ONIONS YELLOW (BULK&BAG),23.095739447097383,귀하가 과거에 구매하신 'MAINSTREAM' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+58,866211,GRAPES WHITE,22.887490042108773,귀하가 과거에 구매하신 'MAINSTREAM' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+58,899624,POTATOES RUSSET (BULK&BAG),21.131233444315786,귀하가 과거에 구매하신 'MAINSTREAM' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+59,844179,PRIMAL,14.724410066174574,귀하가 과거에 구매하신 'ROLLS - PORK' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+59,859075,SHREDDED CHEESE,13.635741479355325,귀하가 과거에 구매하신 'ROLLS - PORK' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+59,1029743,FLUID MILK WHITE ONLY,13.18209073300602,귀하가 과거에 구매하신 'ROLLS - PORK' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+59,1068719,SUGAR,13.178262694521994,귀하가 과거에 구매하신 'ROLLS - PORK' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+59,1071939,CREAM CHEESE,13.1061102805703,귀하가 과거에 구매하신 'ROLLS - PORK' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+60,1082185,BANANAS,2.9712430548850404,귀하가 과거에 구매하신 'NON-CRBNTD DRNKING/MNERAL WATE' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+60,859075,SHREDDED CHEESE,2.8116525378373614,귀하가 과거에 구매하신 'NON-CRBNTD DRNKING/MNERAL WATE' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+60,1004906,POTATOES RUSSET (BULK&BAG),2.746519263175283,귀하가 과거에 구매하신 'NON-CRBNTD DRNKING/MNERAL WATE' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+60,995242,FLUID MILK WHITE ONLY,2.6753376834867635,귀하가 과거에 구매하신 'NON-CRBNTD DRNKING/MNERAL WATE' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+60,962568,CELERY,2.636666061274565,귀하가 과거에 구매하신 'NON-CRBNTD DRNKING/MNERAL WATE' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+61,1077555,COTTAGE CHEESE,1.8211005390352946,귀하가 과거에 구매하신 'BREAST - BONELESS(IQF)' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+61,1027569,CARDS EVERYDAY,1.6707697836742168,귀하가 과거에 구매하신 'BREAST - BONELESS(IQF)' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+61,852856,CARDS EVERYDAY,1.6402851787995312,귀하가 과거에 구매하신 'BREAST - BONELESS(IQF)' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+61,8090537,SOFT DRINKS 12/18&15PK CAN CAR,1.527823457918991,귀하가 과거에 구매하신 'BREAST - BONELESS(IQF)' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+61,1136257,SHREDDED CHEESE,1.5245378856922547,귀하가 과거에 구매하신 'BREAST - BONELESS(IQF)' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+63,913210,NON-CRBNTD DRNKING/MNERAL WATE,0.9802339143447455,귀하가 과거에 구매하신 'NON-CRBNTD DRNKING/MNERAL WATE' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+63,1134522,SNACK CAKE - MULTI PACK,0.8904143942942115,귀하가 과거에 구매하신 'NON-CRBNTD DRNKING/MNERAL WATE' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+63,928049,SNACK CAKE - MULTI PACK,0.825290651701924,귀하가 과거에 구매하신 'NON-CRBNTD DRNKING/MNERAL WATE' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+63,5592931,SUGAR,0.8032485416161322,귀하가 과거에 구매하신 'NON-CRBNTD DRNKING/MNERAL WATE' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+63,941741,SNACK CAKE - MULTI PACK,0.7573911908901573,귀하가 과거에 구매하신 'NON-CRBNTD DRNKING/MNERAL WATE' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+64,899624,POTATOES RUSSET (BULK&BAG),23.125607943772657,귀하가 과거에 구매하신 'MARGARINE  STICK' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+64,844179,PRIMAL,22.661577905696213,귀하가 과거에 구매하신 'MARGARINE  STICK' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+64,938700,CORN,21.818577301180035,귀하가 과거에 구매하신 'MARGARINE  STICK' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+64,883404,MAINSTREAM WHITE BREAD,21.80703378604073,귀하가 과거에 구매하신 'MARGARINE  STICK' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+64,1029743,FLUID MILK WHITE ONLY,21.662133136638573,귀하가 과거에 구매하신 'MARGARINE  STICK' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+65,883404,MAINSTREAM WHITE BREAD,9.612024244445259,귀하가 과거에 구매하신 'HAMBURGER BUNS' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+65,1096036,IWS SINGLE CHEESE,9.590696961589092,귀하가 과거에 구매하신 'HAMBURGER BUNS' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+65,1071939,CREAM CHEESE,9.532297948785386,귀하가 과거에 구매하신 'HAMBURGER BUNS' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+65,844179,PRIMAL,9.46623291306349,귀하가 과거에 구매하신 'HAMBURGER BUNS' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+65,899624,POTATOES RUSSET (BULK&BAG),9.389423045976262,귀하가 과거에 구매하신 'HAMBURGER BUNS' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+66,883404,MAINSTREAM WHITE BREAD,8.75445924731924,귀하가 과거에 구매하신 'HAMBURGER BUNS' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+66,1096036,IWS SINGLE CHEESE,8.50412911843326,귀하가 과거에 구매하신 'HAMBURGER BUNS' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+66,1068719,SUGAR,8.489723908965537,귀하가 과거에 구매하신 'HAMBURGER BUNS' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+66,1044078,LEAN,8.29745948023388,귀하가 과거에 구매하신 'HAMBURGER BUNS' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+66,952163,POTATOES RUSSET (BULK&BAG),7.972528521035279,귀하가 과거에 구매하신 'HAMBURGER BUNS' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+67,845208,ONIONS YELLOW (BULK&BAG),31.836921304081542,귀하가 과거에 구매하신 'ORANGES NAVELS ALL' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+67,952163,POTATOES RUSSET (BULK&BAG),30.271328766413543,귀하가 과거에 구매하신 'ORANGES NAVELS ALL' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+67,938700,CORN,29.401994513488034,귀하가 과거에 구매하신 'ORANGES NAVELS ALL' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+67,12810393,ENHANCED,26.857673603066104,귀하가 과거에 구매하신 'ORANGES NAVELS ALL' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+67,897125,GRATED CHEESE,26.704139187509348,귀하가 과거에 구매하신 'ORANGES NAVELS ALL' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+68,1096036,IWS SINGLE CHEESE,32.29538928179637,귀하가 과거에 구매하신 'CHEESE: PROCESSED BULK' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+68,1136257,SHREDDED CHEESE,30.800576141039574,귀하가 과거에 구매하신 'CHEESE: PROCESSED BULK' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+68,1127831,STRAWBERRIES,27.427721083824753,귀하가 과거에 구매하신 'CHEESE: PROCESSED BULK' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+68,980727,CATSUP,25.955892819078066,귀하가 과거에 구매하신 'CHEESE: PROCESSED BULK' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+68,965766,IWS SINGLE CHEESE,25.559412278690093,귀하가 과거에 구매하신 'CHEESE: PROCESSED BULK' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+69,1136257,SHREDDED CHEESE,28.998782014568558,귀하가 과거에 구매하신 'ORANGES NAVELS ALL' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+69,961554,CARROTS MINI PEELED,27.76569199235124,귀하가 과거에 구매하신 'ORANGES NAVELS ALL' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+69,910032,PREMIUM - MEAT,27.590154313053294,귀하가 과거에 구매하신 'ORANGES NAVELS ALL' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+69,898068,CATSUP,26.53149064892824,귀하가 과거에 구매하신 'ORANGES NAVELS ALL' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+69,918335,SHREDDED CHEESE,25.986351215252228,귀하가 과거에 구매하신 'ORANGES NAVELS ALL' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+70,925514,CANDY BARS (SINGLES)(INCLUDING,2.124808935602011,귀하가 과거에 구매하신 'NEWSPAPER' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+70,839147,CANDY BARS (SINGLES)(INCLUDING,2.003810170810782,귀하가 과거에 구매하신 'NEWSPAPER' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+70,1080414,CANDY BARS (SINGLES)(INCLUDING,1.9929594503837325,귀하가 과거에 구매하신 'NEWSPAPER' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+70,986394,CANDY BARS (SINGLES)(INCLUDING,1.8608842101523688,귀하가 과거에 구매하신 'NEWSPAPER' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+70,1022872,CANDY BARS (SINGLES)(INCLUDING,1.8451466427414527,귀하가 과거에 구매하신 'NEWSPAPER' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+71,883404,MAINSTREAM WHITE BREAD,15.995376923327544,귀하가 과거에 구매하신 'PASTA: CANNED' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+71,1096036,IWS SINGLE CHEESE,15.671513254253973,귀하가 과거에 구매하신 'PASTA: CANNED' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+71,962568,CELERY,15.64967122462648,귀하가 과거에 구매하신 'PASTA: CANNED' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+71,923746,EGGS - LARGE,15.462310411340423,귀하가 과거에 구매하신 'PASTA: CANNED' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+71,961554,CARROTS MINI PEELED,15.065398095412409,귀하가 과거에 구매하신 'PASTA: CANNED' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+72,981760,EGGS - X-LARGE,26.88711302996486,귀하가 과거에 구매하신 'CHEESE: PROCESSED BULK' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+72,899624,POTATOES RUSSET (BULK&BAG),25.44893120650584,귀하가 과거에 구매하신 'CHEESE: PROCESSED BULK' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+72,845208,ONIONS YELLOW (BULK&BAG),24.79936789337658,귀하가 과거에 구매하신 'CHEESE: PROCESSED BULK' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+72,859075,SHREDDED CHEESE,24.33292162315425,귀하가 과거에 구매하신 'CHEESE: PROCESSED BULK' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+72,1029743,FLUID MILK WHITE ONLY,24.021206077955192,귀하가 과거에 구매하신 'CHEESE: PROCESSED BULK' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+73,1004906,POTATOES RUSSET (BULK&BAG),6.595057863438099,귀하가 과거에 구매하신 'HAMBURGER BUNS' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+73,1029743,FLUID MILK WHITE ONLY,6.390759451045044,귀하가 과거에 구매하신 'HAMBURGER BUNS' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+73,981760,EGGS - X-LARGE,6.363479187461714,귀하가 과거에 구매하신 'HAMBURGER BUNS' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+73,1106523,FLUID MILK WHITE ONLY,6.233571860644682,귀하가 과거에 구매하신 'HAMBURGER BUNS' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+73,995242,FLUID MILK WHITE ONLY,6.098740826477946,귀하가 과거에 구매하신 'HAMBURGER BUNS' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+74,844179,PRIMAL,16.801456148002956,귀하가 과거에 구매하신 'ORANGES NAVELS ALL' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+74,840361,EGGS - LARGE,16.610349261626208,귀하가 과거에 구매하신 'ORANGES NAVELS ALL' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+74,1098066,HOT DOG BUNS,16.546942033192483,귀하가 과거에 구매하신 'ORANGES NAVELS ALL' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+74,826249,HAMBURGER BUNS,15.732266699371868,귀하가 과거에 구매하신 'ORANGES NAVELS ALL' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+74,952163,POTATOES RUSSET (BULK&BAG),15.16496490110773,귀하가 과거에 구매하신 'ORANGES NAVELS ALL' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+75,1029743,FLUID MILK WHITE ONLY,2.7090664001937133,귀하가 과거에 구매하신 'NON-CRBNTD DRNKING/MNERAL WATE' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+75,1106523,FLUID MILK WHITE ONLY,2.434230782116616,귀하가 과거에 구매하신 'NON-CRBNTD DRNKING/MNERAL WATE' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+75,893018,IWS SINGLE CHEESE,2.136604679788837,귀하가 과거에 구매하신 'NON-CRBNTD DRNKING/MNERAL WATE' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+75,1044078,LEAN,2.1005933192954847,귀하가 과거에 구매하신 'NON-CRBNTD DRNKING/MNERAL WATE' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+75,1098066,HOT DOG BUNS,2.077819137025774,귀하가 과거에 구매하신 'NON-CRBNTD DRNKING/MNERAL WATE' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+76,1004906,POTATOES RUSSET (BULK&BAG),6.498818025266344,귀하가 과거에 구매하신 'CHOICE BEEF' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+76,979707,ONIONS SWEET (BULK&BAG),6.314102559697778,귀하가 과거에 구매하신 'CHOICE BEEF' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+76,961554,CARROTS MINI PEELED,6.19876188140461,귀하가 과거에 구매하신 'CHOICE BEEF' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+76,962568,CELERY,6.194871052010373,귀하가 과거에 구매하신 'CHOICE BEEF' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+76,834484,ONIONS OTHER,5.9856004538092495,귀하가 과거에 구매하신 'CHOICE BEEF' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+77,995242,FLUID MILK WHITE ONLY,23.57222534850731,귀하가 과거에 구매하신 'MAINSTREAM' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+77,844179,PRIMAL,23.46150476708357,귀하가 과거에 구매하신 'MAINSTREAM' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+77,1068719,SUGAR,23.355771376571454,귀하가 과거에 구매하신 'MAINSTREAM' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+77,962568,CELERY,23.2440495874191,귀하가 과거에 구매하신 'MAINSTREAM' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+77,1044078,LEAN,23.08468154883412,귀하가 과거에 구매하신 'MAINSTREAM' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+78,1044078,LEAN,7.7201753925880805,귀하가 과거에 구매하신 'SFT DRNK SNGL SRV BTL CARB (EX' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+78,826249,HAMBURGER BUNS,7.670874532374958,귀하가 과거에 구매하신 'SFT DRNK SNGL SRV BTL CARB (EX' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+78,1004906,POTATOES RUSSET (BULK&BAG),7.410059591321128,귀하가 과거에 구매하신 'SFT DRNK SNGL SRV BTL CARB (EX' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+78,1068719,SUGAR,7.338820843700063,귀하가 과거에 구매하신 'SFT DRNK SNGL SRV BTL CARB (EX' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+78,1096036,IWS SINGLE CHEESE,7.067829802097431,귀하가 과거에 구매하신 'SFT DRNK SNGL SRV BTL CARB (EX' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+79,1098066,HOT DOG BUNS,15.377007812842864,귀하가 과거에 구매하신 'PASTA: CANNED' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+79,961554,CARROTS MINI PEELED,14.970177157715197,귀하가 과거에 구매하신 'PASTA: CANNED' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+79,844179,PRIMAL,14.744786297787748,귀하가 과거에 구매하신 'PASTA: CANNED' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+79,1127831,STRAWBERRIES,13.811127192350822,귀하가 과거에 구매하신 'PASTA: CANNED' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+79,883404,MAINSTREAM WHITE BREAD,13.773193961656242,귀하가 과거에 구매하신 'PASTA: CANNED' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+80,1004906,POTATOES RUSSET (BULK&BAG),28.914485820704492,귀하가 과거에 구매하신 'ORANGES NAVELS ALL' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+80,1068719,SUGAR,24.50855119593289,귀하가 과거에 구매하신 'ORANGES NAVELS ALL' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+80,962568,CELERY,24.16339521825815,귀하가 과거에 구매하신 'ORANGES NAVELS ALL' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+80,845208,ONIONS YELLOW (BULK&BAG),24.075483406998227,귀하가 과거에 구매하신 'ORANGES NAVELS ALL' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+80,1136257,SHREDDED CHEESE,23.109437120855716,귀하가 과거에 구매하신 'ORANGES NAVELS ALL' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+81,826249,HAMBURGER BUNS,27.490607301728485,귀하가 과거에 구매하신 'MAINSTREAM' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+81,899624,POTATOES RUSSET (BULK&BAG),25.537229507299685,귀하가 과거에 구매하신 'MAINSTREAM' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+81,5568378,TORTILLA/NACHO CHIPS,25.347421382174833,귀하가 과거에 구매하신 'MAINSTREAM' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+81,938700,CORN,24.57388436213373,귀하가 과거에 구매하신 'MAINSTREAM' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+81,1136257,SHREDDED CHEESE,24.39704855912372,귀하가 과거에 구매하신 'MAINSTREAM' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+82,948650,CHOICE BEEF,3.1232360376115222,귀하가 과거에 구매하신 'CHOICE BEEF' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+82,823990,CHOICE BEEF,2.7615670473553053,귀하가 과거에 구매하신 'CHOICE BEEF' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+82,1082185,BANANAS,2.445507446899083,귀하가 과거에 구매하신 'CHOICE BEEF' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+82,844179,PRIMAL,2.3536189264455616,귀하가 과거에 구매하신 'CHOICE BEEF' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+82,962568,CELERY,2.348225188655198,귀하가 과거에 구매하신 'CHOICE BEEF' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+83,1033142,ONIONS SWEET (BULK&BAG),7.621276204996086,귀하가 과거에 구매하신 'ORANGES NAVELS ALL' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+83,952163,POTATOES RUSSET (BULK&BAG),7.242583535305828,귀하가 과거에 구매하신 'ORANGES NAVELS ALL' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+83,834484,ONIONS OTHER,7.24018564236175,귀하가 과거에 구매하신 'ORANGES NAVELS ALL' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+83,961554,CARROTS MINI PEELED,7.162713709199328,귀하가 과거에 구매하신 'ORANGES NAVELS ALL' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+83,995785,PEPPERS GREEN BELL,6.560106881101393,귀하가 과거에 구매하신 'ORANGES NAVELS ALL' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+84,883404,MAINSTREAM WHITE BREAD,8.161989597076465,귀하가 과거에 구매하신 'MARGARINE  STICK' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+84,1098066,HOT DOG BUNS,7.7974392685446965,귀하가 과거에 구매하신 'MARGARINE  STICK' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+84,981760,EGGS - X-LARGE,7.614276172666022,귀하가 과거에 구매하신 'MARGARINE  STICK' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+84,1068719,SUGAR,7.481158793578482,귀하가 과거에 구매하신 'MARGARINE  STICK' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+84,826249,HAMBURGER BUNS,7.437918990072465,귀하가 과거에 구매하신 'MARGARINE  STICK' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+85,1098066,HOT DOG BUNS,25.0694928807962,귀하가 과거에 구매하신 'CHEESE: PROCESSED BULK' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+85,899624,POTATOES RUSSET (BULK&BAG),24.16114745652855,귀하가 과거에 구매하신 'CHEESE: PROCESSED BULK' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+85,1029743,FLUID MILK WHITE ONLY,23.010449744815592,귀하가 과거에 구매하신 'CHEESE: PROCESSED BULK' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+85,987562,SHREDDED CHEESE,22.63120790704789,귀하가 과거에 구매하신 'CHEESE: PROCESSED BULK' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+85,845208,ONIONS YELLOW (BULK&BAG),22.604671008526925,귀하가 과거에 구매하신 'CHEESE: PROCESSED BULK' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+86,899624,POTATOES RUSSET (BULK&BAG),16.598736081016654,귀하가 과거에 구매하신 'CHEESE: PROCESSED BULK' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+86,1033142,ONIONS SWEET (BULK&BAG),15.139185327464242,귀하가 과거에 구매하신 'CHEESE: PROCESSED BULK' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+86,883404,MAINSTREAM WHITE BREAD,15.086522504944183,귀하가 과거에 구매하신 'CHEESE: PROCESSED BULK' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+86,1068719,SUGAR,14.814638545929252,귀하가 과거에 구매하신 'CHEESE: PROCESSED BULK' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+86,1044078,LEAN,14.516835528507842,귀하가 과거에 구매하신 'CHEESE: PROCESSED BULK' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+87,1033142,ONIONS SWEET (BULK&BAG),2.213401659448201,귀하가 과거에 구매하신 'ONIONS YELLOW (BULK&BAG)' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+87,834484,ONIONS OTHER,1.9585029856692497,귀하가 과거에 구매하신 'ONIONS YELLOW (BULK&BAG)' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+87,1004906,POTATOES RUSSET (BULK&BAG),1.8718862755557355,귀하가 과거에 구매하신 'ONIONS YELLOW (BULK&BAG)' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+87,865178,CELERY,1.7608336305245331,귀하가 과거에 구매하신 'ONIONS YELLOW (BULK&BAG)' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+87,1082185,BANANAS,1.7298953048426247,귀하가 과거에 구매하신 'ONIONS YELLOW (BULK&BAG)' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+88,859075,SHREDDED CHEESE,31.980618445606193,귀하가 과거에 구매하신 'ORANGES NAVELS ALL' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+88,899624,POTATOES RUSSET (BULK&BAG),30.871254813426606,귀하가 과거에 구매하신 'ORANGES NAVELS ALL' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+88,938700,CORN,29.66181198466367,귀하가 과거에 구매하신 'ORANGES NAVELS ALL' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+88,866211,GRAPES WHITE,28.84808110215327,귀하가 과거에 구매하신 'ORANGES NAVELS ALL' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+88,845208,ONIONS YELLOW (BULK&BAG),28.663047975607157,귀하가 과거에 구매하신 'ORANGES NAVELS ALL' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+89,1022097,CARDS EVERYDAY,2.67927367953359,귀하가 과거에 구매하신 'CARDS EVERYDAY' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+89,1135476,STRAWBERRIES,2.545559953135388,귀하가 과거에 구매하신 'CARDS EVERYDAY' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+89,866211,GRAPES WHITE,2.3415589594691326,귀하가 과거에 구매하신 'CARDS EVERYDAY' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+89,962568,CELERY,2.269728059567787,귀하가 과거에 구매하신 'CARDS EVERYDAY' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+89,878996,GRAPES RED,2.2008619887422958,귀하가 과거에 구매하신 'CARDS EVERYDAY' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+90,1127831,STRAWBERRIES,2.630791545564328,귀하가 과거에 구매하신 'CARDS EVERYDAY' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+90,981760,EGGS - X-LARGE,2.5122326290640746,귀하가 과거에 구매하신 'CARDS EVERYDAY' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+90,878996,GRAPES RED,2.3985981763447763,귀하가 과거에 구매하신 'CARDS EVERYDAY' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+90,1029743,FLUID MILK WHITE ONLY,2.3061338874954913,귀하가 과거에 구매하신 'CARDS EVERYDAY' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+90,840361,EGGS - LARGE,2.2967624177939117,귀하가 과거에 구매하신 'CARDS EVERYDAY' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+91,1004906,POTATOES RUSSET (BULK&BAG),10.617428219825653,귀하가 과거에 구매하신 'MUSHROOMS WHITE SLICED PKG' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+91,1136257,SHREDDED CHEESE,10.223775461453151,귀하가 과거에 구매하신 'MUSHROOMS WHITE SLICED PKG' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+91,1096036,IWS SINGLE CHEESE,9.744109028000567,귀하가 과거에 구매하신 'MUSHROOMS WHITE SLICED PKG' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+91,883404,MAINSTREAM WHITE BREAD,9.706995517457734,귀하가 과거에 구매하신 'MUSHROOMS WHITE SLICED PKG' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+91,844179,PRIMAL,9.560709292451167,귀하가 과거에 구매하신 'MUSHROOMS WHITE SLICED PKG' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+92,1004906,POTATOES RUSSET (BULK&BAG),15.311125712249586,귀하가 과거에 구매하신 'ORANGES NAVELS ALL' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+92,1033142,ONIONS SWEET (BULK&BAG),13.663892718605492,귀하가 과거에 구매하신 'ORANGES NAVELS ALL' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+92,840361,EGGS - LARGE,13.330271731689288,귀하가 과거에 구매하신 'ORANGES NAVELS ALL' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+92,1105488,GRAPES RED,12.789710904926462,귀하가 과거에 구매하신 'ORANGES NAVELS ALL' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+92,1029743,FLUID MILK WHITE ONLY,12.385708534635796,귀하가 과거에 구매하신 'ORANGES NAVELS ALL' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+93,961554,CARROTS MINI PEELED,4.843994261095427,귀하가 과거에 구매하신 'REGULAR GARDEN' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+93,866211,GRAPES WHITE,4.6931884638800225,귀하가 과거에 구매하신 'REGULAR GARDEN' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+93,1105488,GRAPES RED,4.6673103371935385,귀하가 과거에 구매하신 'REGULAR GARDEN' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+93,1127831,STRAWBERRIES,4.5596162683643975,귀하가 과거에 구매하신 'REGULAR GARDEN' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+93,981760,EGGS - X-LARGE,4.465007743151934,귀하가 과거에 구매하신 'REGULAR GARDEN' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+94,1004906,POTATOES RUSSET (BULK&BAG),5.7784903136069765,귀하가 과거에 구매하신 'HAMBURGER BUNS' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+94,1033142,ONIONS SWEET (BULK&BAG),5.762497966227157,귀하가 과거에 구매하신 'HAMBURGER BUNS' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+94,845208,ONIONS YELLOW (BULK&BAG),5.097046303885844,귀하가 과거에 구매하신 'HAMBURGER BUNS' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+94,834484,ONIONS OTHER,5.014856917317319,귀하가 과거에 구매하신 'HAMBURGER BUNS' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+94,962568,CELERY,5.000086630360055,귀하가 과거에 구매하신 'HAMBURGER BUNS' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+95,1081177,TOMATOES VINE RIPE BULK,24.665491173601062,귀하가 과거에 구매하신 'EGGS - JUMBO' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+95,860776,CUCUMBERS,24.53208023312911,귀하가 과거에 구매하신 'EGGS - JUMBO' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+95,859075,SHREDDED CHEESE,24.147867157870408,귀하가 과거에 구매하신 'EGGS - JUMBO' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+95,938700,CORN,23.698837667294132,귀하가 과거에 구매하신 'EGGS - JUMBO' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+95,5568378,TORTILLA/NACHO CHIPS,22.997154272561595,귀하가 과거에 구매하신 'EGGS - JUMBO' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+96,962568,CELERY,8.917679257213873,귀하가 과거에 구매하신 'SOUR CREAMS' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+96,840361,EGGS - LARGE,8.736768256297813,귀하가 과거에 구매하신 'SOUR CREAMS' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+96,1033142,ONIONS SWEET (BULK&BAG),8.724444578222807,귀하가 과거에 구매하신 'SOUR CREAMS' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+96,834484,ONIONS OTHER,8.718708146013105,귀하가 과거에 구매하신 'SOUR CREAMS' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+96,860776,CUCUMBERS,8.536224221320985,귀하가 과거에 구매하신 'SOUR CREAMS' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+97,883404,MAINSTREAM WHITE BREAD,29.442285875199012,귀하가 과거에 구매하신 'MAINSTREAM' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+97,1068719,SUGAR,28.79804733159925,귀하가 과거에 구매하신 'MAINSTREAM' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+97,952163,POTATOES RUSSET (BULK&BAG),27.18208945131769,귀하가 과거에 구매하신 'MAINSTREAM' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+97,994928,EGGS - MEDIUM,24.929233228432295,귀하가 과거에 구매하신 'MAINSTREAM' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+97,898068,CATSUP,24.87785915799145,귀하가 과거에 구매하신 'MAINSTREAM' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+98,826249,HAMBURGER BUNS,18.463840846208583,귀하가 과거에 구매하신 'ORANGES NAVELS ALL' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+98,899624,POTATOES RUSSET (BULK&BAG),17.621897691944465,귀하가 과거에 구매하신 'ORANGES NAVELS ALL' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+98,1029743,FLUID MILK WHITE ONLY,17.348038379485292,귀하가 과거에 구매하신 'ORANGES NAVELS ALL' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+98,1096036,IWS SINGLE CHEESE,17.159926395157413,귀하가 과거에 구매하신 'ORANGES NAVELS ALL' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+98,1106523,FLUID MILK WHITE ONLY,16.84152962941682,귀하가 과거에 구매하신 'ORANGES NAVELS ALL' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+99,840361,EGGS - LARGE,28.806870506000756,귀하가 과거에 구매하신 'CHEESE: PROCESSED BULK' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+99,961554,CARROTS MINI PEELED,28.72948569531698,귀하가 과거에 구매하신 'CHEESE: PROCESSED BULK' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+99,1081177,TOMATOES VINE RIPE BULK,27.706714504328726,귀하가 과거에 구매하신 'CHEESE: PROCESSED BULK' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+99,938700,CORN,27.184819093629194,귀하가 과거에 구매하신 'CHEESE: PROCESSED BULK' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+99,1136257,SHREDDED CHEESE,26.97184489173948,귀하가 과거에 구매하신 'CHEESE: PROCESSED BULK' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+100,1098066,HOT DOG BUNS,10.074946305434542,귀하가 과거에 구매하신 'HAMBURGER BUNS' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+100,859075,SHREDDED CHEESE,9.252129687294323,귀하가 과거에 구매하신 'HAMBURGER BUNS' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+100,844179,PRIMAL,9.146531224557268,귀하가 과거에 구매하신 'HAMBURGER BUNS' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+100,1096036,IWS SINGLE CHEESE,8.91958358027906,귀하가 과거에 구매하신 'HAMBURGER BUNS' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+100,1004906,POTATOES RUSSET (BULK&BAG),8.824945678465275,귀하가 과거에 구매하신 'HAMBURGER BUNS' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+101,981760,EGGS - X-LARGE,21.87332567054983,귀하가 과거에 구매하신 'CHEESE: PROCESSED BULK' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+101,883404,MAINSTREAM WHITE BREAD,21.076854779602805,귀하가 과거에 구매하신 'CHEESE: PROCESSED BULK' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+101,1029743,FLUID MILK WHITE ONLY,21.064140335361575,귀하가 과거에 구매하신 'CHEESE: PROCESSED BULK' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+101,5568378,TORTILLA/NACHO CHIPS,19.924359619930996,귀하가 과거에 구매하신 'CHEESE: PROCESSED BULK' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+101,1096036,IWS SINGLE CHEESE,19.834797746535486,귀하가 과거에 구매하신 'CHEESE: PROCESSED BULK' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+1,981760,EGGS - X-LARGE,12.54833998777434,귀하가 과거에 구매하신 'ORANGES NAVELS ALL' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+1,899624,POTATOES RUSSET (BULK&BAG),12.129551151290098,귀하가 과거에 구매하신 'ORANGES NAVELS ALL' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+1,845208,ONIONS YELLOW (BULK&BAG),11.700389162206573,귀하가 과거에 구매하신 'ORANGES NAVELS ALL' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+1,866211,GRAPES WHITE,11.494810686161237,귀하가 과거에 구매하신 'ORANGES NAVELS ALL' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+1,878996,GRAPES RED,11.4106099494094,귀하가 과거에 구매하신 'ORANGES NAVELS ALL' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+7,1004906,POTATOES RUSSET (BULK&BAG),14.790159693491445,귀하가 과거에 구매하신 'ORANGES NAVELS ALL' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+7,1098066,HOT DOG BUNS,14.62193070101003,귀하가 과거에 구매하신 'ORANGES NAVELS ALL' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+7,981760,EGGS - X-LARGE,14.589673481712905,귀하가 과거에 구매하신 'ORANGES NAVELS ALL' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+7,840361,EGGS - LARGE,13.963484378523557,귀하가 과거에 구매하신 'ORANGES NAVELS ALL' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+7,883404,MAINSTREAM WHITE BREAD,13.776112402248485,귀하가 과거에 구매하신 'ORANGES NAVELS ALL' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+8,1096036,IWS SINGLE CHEESE,27.968802070177514,귀하가 과거에 구매하신 'PASTA: CANNED' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+8,866211,GRAPES WHITE,25.844252556738784,귀하가 과거에 구매하신 'PASTA: CANNED' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+8,987562,SHREDDED CHEESE,25.03890611078946,귀하가 과거에 구매하신 'PASTA: CANNED' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+8,999858,PRIMAL,24.032623226459233,귀하가 과거에 구매하신 'PASTA: CANNED' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+8,897125,GRATED CHEESE,23.697882335810338,귀하가 과거에 구매하신 'PASTA: CANNED' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+13,1098066,HOT DOG BUNS,19.362941298562976,귀하가 과거에 구매하신 'PASTA: CANNED' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+13,981760,EGGS - X-LARGE,19.238224195486453,귀하가 과거에 구매하신 'PASTA: CANNED' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+13,844179,PRIMAL,17.492844213366705,귀하가 과거에 구매하신 'PASTA: CANNED' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+13,883404,MAINSTREAM WHITE BREAD,17.288454236813433,귀하가 과거에 구매하신 'PASTA: CANNED' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+13,1044078,LEAN,16.737696998762647,귀하가 과거에 구매하신 'PASTA: CANNED' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+16,951590,MAINSTREAM WHITE BREAD,0.7803674589972028,귀하가 과거에 구매하신 'SW GDS:DONUTS' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+16,883404,MAINSTREAM WHITE BREAD,0.7117967734882739,귀하가 과거에 구매하신 'SW GDS:DONUTS' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+16,866211,GRAPES WHITE,0.7047083512860955,귀하가 과거에 구매하신 'SW GDS:DONUTS' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+16,1127831,STRAWBERRIES,0.6648154468602105,귀하가 과거에 구매하신 'SW GDS:DONUTS' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+16,838186,SW GDS:DONUTS,0.6241865717824413,귀하가 과거에 구매하신 'SW GDS:DONUTS' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+17,840361,EGGS - LARGE,15.799936895034858,귀하가 과거에 구매하신 'ORANGES NAVELS ALL' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+17,961554,CARROTS MINI PEELED,15.344053517570881,귀하가 과거에 구매하신 'ORANGES NAVELS ALL' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+17,952163,POTATOES RUSSET (BULK&BAG),14.898271291733877,귀하가 과거에 구매하신 'ORANGES NAVELS ALL' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+17,1081177,TOMATOES VINE RIPE BULK,14.864599074280171,귀하가 과거에 구매하신 'ORANGES NAVELS ALL' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+17,1096036,IWS SINGLE CHEESE,14.758153984269205,귀하가 과거에 구매하신 'ORANGES NAVELS ALL' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+18,1004906,POTATOES RUSSET (BULK&BAG),19.649504458395693,귀하가 과거에 구매하신 'CHEESE: PROCESSED BULK' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+18,834484,ONIONS OTHER,17.771386606248676,귀하가 과거에 구매하신 'CHEESE: PROCESSED BULK' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+18,899624,POTATOES RUSSET (BULK&BAG),16.686655455773508,귀하가 과거에 구매하신 'CHEESE: PROCESSED BULK' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+18,1105488,GRAPES RED,16.50687660417064,귀하가 과거에 구매하신 'CHEESE: PROCESSED BULK' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+18,844179,PRIMAL,16.36814757257649,귀하가 과거에 구매하신 'CHEESE: PROCESSED BULK' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+19,1071939,CREAM CHEESE,38.171581357421616,귀하가 과거에 구매하신 'ORANGES NAVELS ALL' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+19,1007195,CORN YELLOW,32.45344850142422,귀하가 과거에 구매하신 'ORANGES NAVELS ALL' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+19,1038217,SOUP CRACKERS (SALTINE/OYSTER),32.22392274764095,귀하가 과거에 구매하신 'ORANGES NAVELS ALL' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+19,1111072,CATSUP,31.564980787803854,귀하가 과거에 구매하신 'ORANGES NAVELS ALL' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+19,951590,MAINSTREAM WHITE BREAD,31.49729639889332,귀하가 과거에 구매하신 'ORANGES NAVELS ALL' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+20,844179,PRIMAL,11.856474414931263,귀하가 과거에 구매하신 'ROLLS - PORK' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+20,1098066,HOT DOG BUNS,10.887344202301293,귀하가 과거에 구매하신 'ROLLS - PORK' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+20,1004906,POTATOES RUSSET (BULK&BAG),10.802086197889546,귀하가 과거에 구매하신 'ROLLS - PORK' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+20,1029743,FLUID MILK WHITE ONLY,10.504502801630201,귀하가 과거에 구매하신 'ROLLS - PORK' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+20,995242,FLUID MILK WHITE ONLY,10.120123584238142,귀하가 과거에 구매하신 'ROLLS - PORK' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+22,899624,POTATOES RUSSET (BULK&BAG),13.658092303529404,귀하가 과거에 구매하신 'ORANGES NAVELS ALL' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+22,845208,ONIONS YELLOW (BULK&BAG),13.522171843616738,귀하가 과거에 구매하신 'ORANGES NAVELS ALL' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+22,995785,PEPPERS GREEN BELL,13.103931402325397,귀하가 과거에 구매하신 'ORANGES NAVELS ALL' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+22,860776,CUCUMBERS,13.088079116122975,귀하가 과거에 구매하신 'ORANGES NAVELS ALL' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+22,952163,POTATOES RUSSET (BULK&BAG),12.956800244039501,귀하가 과거에 구매하신 'ORANGES NAVELS ALL' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+25,899624,POTATOES RUSSET (BULK&BAG),17.14356868933551,귀하가 과거에 구매하신 'ROLLS - PORK' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+25,840361,EGGS - LARGE,16.70411722346935,귀하가 과거에 구매하신 'ROLLS - PORK' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+25,1096036,IWS SINGLE CHEESE,16.367212299040375,귀하가 과거에 구매하신 'ROLLS - PORK' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+25,962568,CELERY,15.793118751122034,귀하가 과거에 구매하신 'ROLLS - PORK' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+25,1136257,SHREDDED CHEESE,15.52607465664651,귀하가 과거에 구매하신 'ROLLS - PORK' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+27,859075,SHREDDED CHEESE,6.730846250048404,귀하가 과거에 구매하신 'MARGARINE  STICK' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+27,1124729,CANDY BARS (SINGLES)(INCLUDING,6.668064424515659,귀하가 과거에 구매하신 'MARGARINE  STICK' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+27,1080414,CANDY BARS (SINGLES)(INCLUDING,6.49392748524527,귀하가 과거에 구매하신 'MARGARINE  STICK' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+27,1098066,HOT DOG BUNS,6.408599380554211,귀하가 과거에 구매하신 'MARGARINE  STICK' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+27,1004906,POTATOES RUSSET (BULK&BAG),6.371360705140073,귀하가 과거에 구매하신 'MARGARINE  STICK' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+31,899624,POTATOES RUSSET (BULK&BAG),15.503116278153893,귀하가 과거에 구매하신 'MAINSTREAM' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+31,995242,FLUID MILK WHITE ONLY,14.788699046705622,귀하가 과거에 구매하신 'MAINSTREAM' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+31,1071939,CREAM CHEESE,14.751251118159095,귀하가 과거에 구매하신 'MAINSTREAM' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+31,1098066,HOT DOG BUNS,14.728590099271429,귀하가 과거에 구매하신 'MAINSTREAM' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+31,878996,GRAPES RED,14.706238901138734,귀하가 과거에 구매하신 'MAINSTREAM' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+39,1004906,POTATOES RUSSET (BULK&BAG),24.59414048176841,귀하가 과거에 구매하신 'PASTA: CANNED' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+39,1029743,FLUID MILK WHITE ONLY,21.602984906588482,귀하가 과거에 구매하신 'PASTA: CANNED' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+39,899624,POTATOES RUSSET (BULK&BAG),21.44150187129548,귀하가 과거에 구매하신 'PASTA: CANNED' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+39,1096036,IWS SINGLE CHEESE,20.991839502059303,귀하가 과거에 구매하신 'PASTA: CANNED' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+39,878996,GRAPES RED,20.67448648845788,귀하가 과거에 구매하신 'PASTA: CANNED' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+40,981760,EGGS - X-LARGE,24.94881300212609,귀하가 과거에 구매하신 'ORANGES NAVELS ALL' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+40,979707,ONIONS SWEET (BULK&BAG),23.122213428226708,귀하가 과거에 구매하신 'ORANGES NAVELS ALL' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+40,844179,PRIMAL,22.62445113224767,귀하가 과거에 구매하신 'ORANGES NAVELS ALL' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+40,1081177,TOMATOES VINE RIPE BULK,22.045096637719904,귀하가 과거에 구매하신 'ORANGES NAVELS ALL' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+40,1029743,FLUID MILK WHITE ONLY,21.736563866167387,귀하가 과거에 구매하신 'ORANGES NAVELS ALL' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+42,859075,SHREDDED CHEESE,7.549360193419778,귀하가 과거에 구매하신 'ORANGES NAVELS ALL' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+42,1098066,HOT DOG BUNS,7.046633710851704,귀하가 과거에 구매하신 'ORANGES NAVELS ALL' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+42,1004906,POTATOES RUSSET (BULK&BAG),6.994119276053482,귀하가 과거에 구매하신 'ORANGES NAVELS ALL' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+42,826249,HAMBURGER BUNS,6.746015585580706,귀하가 과거에 구매하신 'ORANGES NAVELS ALL' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+42,844179,PRIMAL,6.666163014271182,귀하가 과거에 구매하신 'ORANGES NAVELS ALL' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+43,981760,EGGS - X-LARGE,7.89674069284057,귀하가 과거에 구매하신 'HAMBURGER BUNS' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+43,1098066,HOT DOG BUNS,7.640297853746011,귀하가 과거에 구매하신 'HAMBURGER BUNS' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+43,899624,POTATOES RUSSET (BULK&BAG),7.52098501325478,귀하가 과거에 구매하신 'HAMBURGER BUNS' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+43,1068719,SUGAR,7.485489189190421,귀하가 과거에 구매하신 'HAMBURGER BUNS' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+43,1082185,BANANAS,7.330734322656407,귀하가 과거에 구매하신 'HAMBURGER BUNS' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+46,961554,CARROTS MINI PEELED,24.568994774767344,귀하가 과거에 구매하신 'PASTA: CANNED' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+46,844179,PRIMAL,24.22506351858537,귀하가 과거에 구매하신 'PASTA: CANNED' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+46,840361,EGGS - LARGE,23.938620358003824,귀하가 과거에 구매하신 'PASTA: CANNED' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+46,859075,SHREDDED CHEESE,22.72886625140116,귀하가 과거에 구매하신 'PASTA: CANNED' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+46,5568378,TORTILLA/NACHO CHIPS,22.17995243275405,귀하가 과거에 구매하신 'PASTA: CANNED' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+48,840361,EGGS - LARGE,6.935143811054273,귀하가 과거에 구매하신 'CHOICE BEEF' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+48,1098066,HOT DOG BUNS,6.906504814386738,귀하가 과거에 구매하신 'CHOICE BEEF' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+48,826249,HAMBURGER BUNS,6.858381208617795,귀하가 과거에 구매하신 'CHOICE BEEF' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+48,899624,POTATOES RUSSET (BULK&BAG),6.815433854464986,귀하가 과거에 구매하신 'CHOICE BEEF' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+48,962568,CELERY,6.766951855449767,귀하가 과거에 구매하신 'CHOICE BEEF' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+49,826249,HAMBURGER BUNS,23.919906730650233,귀하가 과거에 구매하신 'ORANGES NAVELS ALL' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+49,899624,POTATOES RUSSET (BULK&BAG),23.104540974735862,귀하가 과거에 구매하신 'ORANGES NAVELS ALL' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+49,995242,FLUID MILK WHITE ONLY,22.58265340633753,귀하가 과거에 구매하신 'ORANGES NAVELS ALL' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+49,961554,CARROTS MINI PEELED,22.072187223745825,귀하가 과거에 구매하신 'ORANGES NAVELS ALL' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid
+49,866211,GRAPES WHITE,21.239966367422934,귀하가 과거에 구매하신 'ORANGES NAVELS ALL' 품목과 구매 연관성 및 상품 특성이 매우 유사합니다.,Hybrid

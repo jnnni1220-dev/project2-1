@@ -80,9 +80,56 @@
 ## 💡 5. 비즈니스 인사이트 및 액션 플랜
 
 ### 5.1 핵심 인사이트 (심층 분석)
-연관규칙 분석 결과에서 가장 주목할 부분은 '안정성 지수(Stability Score)'가 74.8%로 매우 높게 나타났다는 점입니다. 특히 'SOFT DRINKS'와 'FRYING CHICKEN' 사이의 강력한 양의 상관관계(Lift 1.85)는 전체 데이터를 5개 그룹으로 나누어 검토했을 때도 변동 계수(CV)가 0.06 수준에 그쳐, 본 규칙이 계절이나 표본 편향에 상관없이 Dunnhumby 고객의 고착화된 구매 패턴임을 통계적으로 증명했습니다. 위 **[연관 규칙 향상도 히트맵]**을 보면 핵심 번들이 타 조합 대비 압도적인 색 농도를 보임을 확인할 수 있습니다.
 
-또한 RFM 세그먼트별 분석을 통해 발견된 'Potential Loyalists'의 고단가 육류 및 프리미엄 소스 번들링 패턴은 주목할 만한 마케팅 포인트입니다. 이들은 일반 고객 대비 식재료의 품격이나 조리 테마에 대한 관심도가 2.2배 높게 나타나며, **[고객 세그먼트별 평균 장바구니 구매 품목 수]** 차트에서 보듯 VIP 그룹 다음으로 높은 구매 밀도를 보입니다. 이들의 장바구니를 점진적으로 확장시키는 것이 'Champions'로의 전환을 유도하는 트리거가 될 수 있습니다. 반면 'At Risk' 고객군은 우유나 빵과 같은 기초 생필품만을 개별 구매하여 방문 시간을 최소화하는 경향을 보이므로, 이들에게는 결제 시점에 장바구니 연관성이 높은 서브 품목의 즉시 할인을 제안하는 '바구니 크기 확장(Basket Expansion)' 전략이 즉각적인 매출 방어 효과를 낼 것으로 기대됩니다.
+<details>
+<summary><b>📊 Slide 1: 규칙 안정성(Stability) 총괄 지표</b></summary>
+
+![안정성 분포](./plots/mba_stability_dist.png)
+
+- **핵심 발견**: 본 분석의 **안정성 지수(Stability Score)는 74.8%**로, 추출된 연관 규칙의 대다수가 매우 견고함을 보여줍니다.
+- **통계적 의미**: 데이터를 5개 그룹으로 나누어 반복 검증했을 때도 지표가 흔들리지 않았음을 뜻합니다.
+
+</details>
+
+<details>
+<summary><b>🔍 Slide 2: [신뢰 검증] 규칙 안정성(CV) 분포</b></summary>
+
+![안정성 분포](./plots/mba_stability_dist.png)
+
+- **지표 해설**: 리프트 변동 계수(Lift CV)가 빨간 점선(0.1) 미만에 대부분 몰려 있는 것은, 표본이 바뀌어도 일관된 **'황금 규칙'**들이 대거 발굴되었음을 입증합니다.
+
+</details>
+
+<details>
+<summary><b>🧩 Slide 3: [복잡도 분석] 세그먼트별 카테고리 다양성</b></summary>
+
+![구매 복잡도](./plots/mba_segment_complexity.png)
+
+- **핵심 발견**: **Potential Loyalists** 그룹은 Champions 다음으로 가장 다양한 카테고리를 한 번에 구매합니다. 
+- **인사이트**: 이들은 매장의 다양한 품목을 탐색하고 있으므로, 카테고리 간 연관 쿠폰을 통해 'Lock-in'을 유도하기에 가장 적합한 타겟입니다.
+
+</details>
+
+<details>
+<summary><b>🗺️ Slide 4: [연관성 지도] 상위 10개 규칙 히트맵</b></summary>
+
+![규칙 히트맵](./plots/mba_rule_heatmap.png)
+
+- **지표 해설**: 색상이 짙은 파란색에 가까울수록 강력한 동반 구매 경향을 보입니다. **'SOFT DRINKS'와 'FRYING CHICKEN'** 조합이 핵심 번들로 확인되었습니다.
+
+</details>
+
+<details>
+<summary><b>🛒 Slide 5: [구매력 검증] 세그먼트별 바스켓 크기</b></summary>
+
+![바스켓 크기](./plots/mba_segment_basket_size.png)
+
+- **핵심 발견**: **Champions** 고객은 한 번 방문 시 타 고객 대비 2배 이상의 품목을 구매합니다. 
+- **전략**: 고단가 신상품을 우선 노출하는 프리미엄 큐레이션이 효과적입니다.
+
+</details>
+
+위 분석 결과를 종합하면, Dunnhumby 매장은 고도의 통계적 안정성을 갖춘 연관 규칙을 보유하고 있으며, 특히 중위권 고객(Potential Loyalists)의 장바구니 확장 잠재력이 매우 높음을 알 수 있습니다.
 
 ### 5.2 액션 플랜
 | 액션 | 대상 세그먼트 | 우선순위 | 기대 효과 |
@@ -101,7 +148,7 @@
 - **Sequence Analysis**: PrefixSpan 알고리즘을 통한 가구별 구매 시퀀스 분석으로 고객 여정(Customer Journey) 지도 구축 권장.
 
 ## 📚 7. 참조
-- **분석 스크립트**: `dunnhumby_refined_mba_analysis.py`
+- **분석 스크립트**: [dunnhumby_refined_mba_analysis.py](../../dunnhumby_refined_mba_analysis.py)
 - **시각화**: `mba_advanced_metrics.txt` (요약 지표 데이터)
 - **데이터 출력**: [dunnhumby_high_stability_mba_rules.csv](dunnhumby_high_stability_mba_rules.csv)
 - **작성일**: 2026-01-15 14:00

@@ -1,0 +1,3 @@
+Recommendation Diversity (Category): 1.00%
+Sample Customers Analyzed: 100
+Hybrid Weights: CF(0.7), CB(0.3)

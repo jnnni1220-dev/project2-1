@@ -72,6 +72,6 @@
 - **Causal Inference**: 개입(Intervention) 분석을 통한 판촉 활동의 순 증분 효과(Incremental Lift) 측정 권장.
 
 ## 📚 7. 참조
-- **상세 보고서**: [시계열](file:///c:/Users/jkoh/OneDrive/바탕 화면/p2/final_reports/ts/dunnhumby_ts_analysis_report.md), [장바구니](file:///c:/Users/jkoh/OneDrive/바탕 화면/p2/final_reports/mba/dunnhumby_mba_analysis_report.md), [추천](file:///c:/Users/jkoh/OneDrive/바탕 화면/p2/final_reports/nba/dunnhumby_nba_analysis_report.md)
+- **상세 보고서**: [시계열](./ts/dunnhumby_ts_analysis_report.md), [장바구니](./mba/dunnhumby_mba_analysis_report.md), [추천](./nba/dunnhumby_nba_analysis_report.md)
 - **분석 시스템**: `dunnhumby_refined_..._analysis.py` 군
-- **최종 검수일**: 2026-01-15 (전 소목차 및 구조 준수 확인)
+- **최종 검수일**: 2026-01-17 (전 소목차 및 구조 준수 확인)

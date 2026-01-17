@@ -1,0 +1,11 @@
+Stability Score: 74.80%
+Average Lift CV: 0.0616
+Total Rules: 106280
+
+[Temporal Samples - Q4 2021]
+                              antecedents                                  consequents  antecedent support  consequent support  support  confidence       lift  representativity  leverage  conviction  zhangs_metric   jaccard  certainty  kulczynski
+17848  (TOILET TISSUE, ALL FAMILY CEREAL)            (PAPER TOWELS & HOLDERS, BANANAS)             0.00775             0.01635   0.0021    0.270968  16.572951               1.0  0.001973    1.349254       0.947000  0.095455   0.258850    0.199704
+17845   (PAPER TOWELS & HOLDERS, BANANAS)           (TOILET TISSUE, ALL FAMILY CEREAL)             0.01635             0.00775   0.0021    0.128440  16.572951               1.0  0.001973    1.138476       0.955280  0.095455   0.121633    0.199704
+17847            (TOILET TISSUE, BANANAS)  (PAPER TOWELS & HOLDERS, ALL FAMILY CEREAL)             0.01855             0.00720   0.0021    0.113208  15.723270               1.0  0.001966    1.119540       0.954099  0.088795   0.106776    0.202437
+
+[Segment Bundles - Champions]
