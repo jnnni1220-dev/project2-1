@@ -53,12 +53,12 @@
 ### 3.2 시각화 장표 상세 분석 (Presentation Slides)
 
 <details>
-<summary><b>🗺️ Slide 1: 상위 연관 규칙 히트맵 (Rule Heatmap)</b></summary>
+<summary><b>🗺️ Slide 1: 페르소나별 장바구니 패턴 지도 (Shopping Behavior Map)</b></summary>
 
-![규칙 히트맵](plots/mba_rule_heatmap.png)
+![규칙 스캐터 플롯](plots/mba_rule_scatter.png)
 
-- **핵심 발견**: **Bargain Hunters**의 '스낵 케이크 + 식빵' 조합은 리프트 **21.5**로, 일반적인 연관성(1.0)보다 21배나 강력합니다. 이는 할인 행사 시 두 품목이 거의 '하나의 상품'처럼 움직임을 뜻합니다.
-- **전략적 활용**: 이 두 상품은 **'Virtual Bundle'**(가상 묶음 상품)로 등록하여, 온라인 몰에서 "함께 사면 5% 추가 할인"을 제시할 때 가장 구매 전환율이 높을 것입니다.
+- **핵심 발견**: **Bargain Hunters**는 차트의 우상단(High Confidence, High Lift)에 위치합니다. 이는 '스낵 케이크를 사면 식빵도 산다'는 확률이 매우 높고 결합력도 강함을 의미합니다.
+- **반면 VIP Champions**는 차트의 중앙(Moderate Lift)에 넓게 분포합니다. 이는 특정 소수 품목에 집중되지 않고 다양한 카테고리를 고루 구매하는 건전한 패턴을 시각적으로 증명합니다.
 </details>
 
 <details>
