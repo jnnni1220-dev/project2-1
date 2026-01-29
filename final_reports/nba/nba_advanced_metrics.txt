@@ -1,4 +1,4 @@
-추천 다양성 (Category Diversity): 45.45%
-추천 의외성 (Serendipity Score): 0.00%
+추천 다양성 (Category Diversity): 63.64%
+추천 의외성 (Serendipity Score): 52.83%
 분석 고객 수: 120
 엔진 구성: Hybrid CF(0.6) + CBF(0.4) + Demographic Popularity
