@@ -24,7 +24,7 @@
 ### 1.2 핵심 질문 및 데이터 기반 해답 (Key Business Questions & Answers)
 
 > **Q1: "재고 부족(Stock-out)으로 인해 핵심 고객의 구매 루틴이 깨질 위험이 가장 큰 품목은 무엇인가?"**
-> - **Answer (Data Fact)**: **Occasional Buyers**의 경우, 방문의 15.2%가 오직 **'Pasta'** 하나에 의존하고 있습니다. 이 품목이 품절되면 그들의 방문 목적 자체가 사라집니다. 반면 **VIP Champions**는 특정 상품 의존도가 낮아(Top Item Risk < 5%), 대체재 구매로 이어질 확률이 높습니다. 
+> - **Answer (Data Fact)**: **Bargain Hunters**와 **Loyal Shoppers**의 경우, 방문의 약 **26~31%**가 **'Fluid Milk(우유)'** 구매를 수반합니다. 이 핵심 품목이 품절되면 장바구니 구심점이 사라져 방문 취소로 이어질 확률이 매우 높습니다. 반면 **New/Light Users**는 특정 품목 의존도가 낮아(Risk < 20%) 상대적으로 영향이 적습니다. 
 > - **Evidence**: [Stock-out Risk Chart](plots/deep_dive/q1_stockout_risk.png)
 
 > **Q2: "고객의 방문 주기가 시계열 예측 범위를 벗어났을 때, 이를 어떻게 '이탈 징후'로 조기 감지할 것인가?"**
@@ -95,8 +95,8 @@
 
 ![재고 리스크](plots/deep_dive/q1_stockout_risk.png)
 
-- **핵심 발견**: **Occasional Buyers**와 **New/Light Users**는 특정 '루틴 상품'(파스타, 시리얼 등)에 대한 의존도가 매우 높습니다. 
-- **Business Impact**: 이들에게 해당 상품의 품절은 단순한 '구매 포기'가 아니라, **'매장 방문 중단'**으로 직결됩니다. 이 'Routine Items'은 마진율이 낮더라도 절대 품절되어서는 안 되는 '미끼 상품'으로 관리되어야 합니다.
+- **핵심 발견**: 모든 페르소나에서 **'Fluid Milk(우유)'**가 구매 루틴의 가장 강력한 앵커(20~30% 방문 점유율)로 나타났습니다. 
+- **Business Impact**: 우유와 같은 '초저관여 생필품'은 고객을 매장으로 끌어들이는 **'강력한 자석'**입니다. 이 품목의 결품은 매장 전체의 신뢰도 저하와 직결되므로, [Stage 3]의 예측 모델을 통해 재고 보충 우선순위 1순위로 관리되어야 합니다.
 </details>
 
 <details>

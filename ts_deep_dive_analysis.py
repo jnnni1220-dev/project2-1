@@ -18,6 +18,10 @@ print("Loading data...")
 df = pd.read_csv('dunnhumby_integrated_data.csv')
 df['OrderDate'] = pd.to_datetime(df['OrderDate'])
 
+# NEW: Filter out Non-Grocery items (Fuel, etc.) to focus on retail products
+df = df[~df['ProductName'].str.contains('GASOLINE', na=False, case=False)]
+df = df[~df['Category'].str.contains('FUEL', na=False, case=False)]
+
 # Load persona mapping if available (or re-derive simple version for speed)
 # Ideally we load 'dunnhumby_persona_segments.csv' if it exists. 
 # Checking logic:
