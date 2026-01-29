@@ -22,10 +22,10 @@ df = df[~df['Category'].str.contains('FUEL', na=False, case=False)]
 segs = pd.read_csv('dunnhumby_persona_segments.csv')
 df = df.merge(segs[['CustomerID', 'persona']], on='CustomerID', how='inner')
 
-# 2. Collect Rules for Top Personas
+# 2. Collect Rules for ALL Personas
 metrics = []
-# Focus on distinctive personas for the chart
-target_personas = ['Bargain Hunters', 'VIP Champions', 'Occasional Buyers', 'New/Light Users']
+# Analyze all personas in the dataset
+target_personas = df['persona'].unique()
 
 for persona in target_personas:
     print(f"Processing {persona}...")
