@@ -28,17 +28,17 @@
 > **Q1: "재고 부족으로 인해 핵심 고객의 구매 루틴이 깨질 위험이 가장 큰 품목은 무엇인가?" (시계열 연관성)**
 > - **Answer (Data Fact)**: 모든 페르소나의 최다 빈도 구매 품목은 **'Fluid Milk'**이나, 이조차도 구매 주기 변동성(Regularity CV)이 **1.5 이상**으로 매우 불규칙합니다.
 > - **Time Series Insight**: 이는 단순한 주기(Rule-based)로는 예측이 불가능함을 의미하며, **Prophet과 같은 시계열 모델**이 선형 추세와 계절성을 학습해야만 재고 방어가 가능함을 역설적으로 증명합니다.
-> - **Evidence**: [Regularity Analysis Chart](plots/deep_dive/q1_stockout_risk.png)
+> - **Evidence**: [Regularity Analysis Chart (2020.01~2021.12)](plots/deep_dive/q1_stockout_risk.png)
 
 > **Q2: "고객의 방문 주기가 시계열 예측 범위를 벗어났을 때, 이를 어떻게 '이탈 징후'로 조기 감지할 것인가?"**
 > - **Answer (Forecast Model Logic)**: 우리는 **Prophet 모델**이 생성한 **95% 신뢰 구간(Confidence Interval)**의 하한선(Lower Bound)을 이탈 기준점으로 설정했습니다.
 > - **Data Fact**: **At-Risk** 그룹의 실제 방문 빈도는 이 예측 하한선보다 **-3.6회** 더 낮게 관측되었습니다. 이는 통계적으로 유의미한 'Anomaly(이상 징후)'입니다.
-> - **Evidence**: [Churn Signal Chart](plots/deep_dive/q2_churn_signal.png)
+> - **Evidence**: [Churn Signal Chart (2021.11~2021.12)](plots/deep_dive/q2_churn_signal.png)
 
 > **Q3: "페르소나별로 구매 주기의 견고함(Stabilization Index)은 어떻게 다르며, 이를 마케팅 예산 스케줄링에 어떻게 반영할 것인가?"**
 > - **Answer (Forecast Accuracy)**: 안정성 지수(Stabilization Index)는 시계열 모델의 **예측 정확도(1 - MAPE)**와 양의 상관관계를 가집니다.
 > - **Budget Strategy**: VIP와 같이 변동성이 큰(안정성 낮은) 그룹은 **Zone B(Defense)**로 분류하여 '방어성 예산'을, 예측이 정확한 Occasional 그룹에는 '자동화 예산(Automated Trigger)'을 배정하여 리소스를 최적화합니다.
-> - **Evidence**: [Budget Map](plots/deep_dive/q3_budget_map.png)
+> - **Evidence**: [Budget Map (2020.01~2021.12)](plots/deep_dive/q3_budget_map.png)
 
 ---
 
@@ -46,7 +46,7 @@
 
 ### 2.1 수요 예측 및 루틴 검증 알고리즘 (Final Model: Prophet)
 
-**[Evidence: Prophet vs SARIMA 모델 경합 결과]**
+**[Evidence: Prophet vs SARIMA 모델 경합 결과 (Period: 2020.01 ~ 2021.12)]**
 ![모델 경합 승리](plots/deep_dive/model_comparison_victory.png)
 
 #### 🧪 모델 경합 및 검증 프로세스 (Model Competition Workflow)
@@ -100,7 +100,7 @@ graph TD
 <details>
 <summary><b>📉 Slide 1: VIP의 낮은 안정성 점수에 대한 역설 (The Variance of Volume)</b></summary>
 
-![예측 시각화](plots/ts_persona_forecast.png)
+![예측 시각화 (2020.01~2021.12)](plots/ts_persona_forecast.png)
 
 - **핵심 발견**: **VIP Champions**의 안정성 점수(46.4%)가 낮은 것은 그들이 '불안정'해서가 아닌, **'고빈도 방문에 따른 데이터 노이즈'**의 결과입니다.
 - **So-What?**: 하지만 시계열 예측이 어렵다는 점에서 이들은 **Zone B(Defense)** 리스크 그룹으로 분류됩니다. "언제 올지 모르니 항상 풍족한 혜택(Promo)을 상시 유지하라"는 것이 이들의 변동성을 충성도로 치환하는 해법입니다.
@@ -109,7 +109,7 @@ graph TD
 <details>
 <summary><b>🚨 Slide 2: [At-Risk] 진짜 위험 신호 감지</b></summary>
 
-![신뢰구간](plots/ts_confidence_interval.png)
+![신뢰구간 (2020.01~2021.12)](plots/ts_confidence_interval.png)
 
 - **Data Fact**: **At-Risk** 그룹은 43.2%로 가장 낮은 안정성을 보입니다. 이는 단순히 방문이 줄어드는 것을 넘어, 방문 주기 자체가 완전히 무너졌음을(Chaos) 의미합니다.
 - **Action**: 이들에게는 '정기 배송'이나 '요일 지정 쿠폰' 같은 **강제적인 루틴 형성 장치**가 시급합니다.
@@ -118,7 +118,7 @@ graph TD
 <details>
 <summary><b>📉 Slide 3: 안정성과 예측 오차의 상관관계 (Model Reliability)</b></summary>
 
-![오차 분포](plots/ts_error_distribution.png)
+![오차 분포 (2020.01~2021.12)](plots/ts_error_distribution.png)
 
 - **분석**: 안정성 지수(Stability Index)가 높은 그룹일수록 예측 오차(Error)가 낮아지는 강한 음의 상관관계를 보입니다. 
 - **비즈니스 가치**: Occasional Buyer나 Bargain Hunter 같은 간헐적 방문객도 데이터 패턴만 확실하다면 AI 예측을 통해 재고 낭비를 획기적으로 줄일 수 있음을 증명합니다.
@@ -129,7 +129,7 @@ graph TD
 <details>
 <summary><b>🚨 Q1 Validation: 불규칙한 구매 주기와 시계열 예측의 필요성 (Regularity Analysis)</b></summary>
 
-![재고 리스크](plots/deep_dive/q1_stockout_risk.png)
+![재고 리스크 (2020.01~2021.12)](plots/deep_dive/q1_stockout_risk.png)
 
 #### 1. 분석 방법론 (분석 원리)
 - **데이터**: 우유처럼 자주 사는 물건들을 고객들이 며칠 간격으로 사는지 조사했습니다.
@@ -148,7 +148,7 @@ graph TD
 <details>
 <summary><b>📉 Q2 Validation: 이탈 징후의 조기 경보 (Churn Detection)</b></summary>
 
-![이탈 신호](plots/deep_dive/q2_churn_signal.png)
+![이탈 신호 (Recent: 2021.11~2021.12)](plots/deep_dive/q2_churn_signal.png)
 
 #### 1. 분석 방법론 (분석 원리)
 - **이탈 신호 포착**: 고객의 평소 방문 습관을 인공지능이 학습한 뒤, **'습관에서 크게 벗어나는 상황'**이 발생하면 경고를 울리도록 했습니다.
@@ -170,7 +170,7 @@ graph TD
 <details>
 <summary><b>💰 Q3 Validation: 안정성 지수 기반 예산 최적화 (Budget Allocation)</b></summary>
 
-![예산 지도](plots/deep_dive/q3_budget_map.png)
+![예산 지도 (2020.01~2021.12)](plots/deep_dive/q3_budget_map.png)
 
 #### 1. 분석 방법론 (Methodology & Data)
 - **Analytical Logic (Strategic Matrix)**:

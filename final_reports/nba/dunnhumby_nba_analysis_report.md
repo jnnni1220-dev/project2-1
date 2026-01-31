@@ -64,10 +64,10 @@
 #### 🔍 핵심 분석 결과 (1,000자 이상의 Deep Dive Insight)
 
 **[Evidence 1: 페르소나별 다양성(Entropy) 비교 차트]**
-![다양성 비교](plots/nba_diversity_score_comparison.png)
+![다양성 비교 (2020.01~2021.12)](plots/nba_diversity_score_comparison.png)
 
 **[Evidence 2: 페르소나별 재구매율(Precision) 비교 차트]**
-![재구매율 비교](plots/nba_retention_rate_comparison.png)
+![재구매율 비교 (2020.01~2021.12)](plots/nba_retention_rate_comparison.png)
 
 위 두 차트는 Q1(다양성)과 Q2(재구매율) 핵심 질문에 대한 시각적 해답입니다.
 1.  **다양성(Entropy)**: 파란색 막대의 **VIP(35.4%)**가 가장 넓은 탐색 범위를 가진 반면, 붉은색 막대의 **Bargain Hunters(32.4%)**는 할인 상품에 갇혀 시야가 좁아진 것을 확인할 수 있습니다.
@@ -92,7 +92,7 @@
 <details>
 <summary><b>📊 Slide 1: 페르소나별 탐색 다양성 스펙트럼 (Diversity Score)</b></summary>
 
-![점수 분포](plots/nba_score_distribution.png)
+![점수 분포 (2020.01~2021.12)](plots/nba_score_distribution.png)
 
 #### 1. 분석 방법론 (분석 원리)
 - **데이터 출처**: 2년치 전체 거래 데이터를 사용하여 분석했습니다.
@@ -113,7 +113,7 @@
 <details>
 <summary><b>🎯 Slide 2: [Bargain Hunters] 할인이 만든 필터 버블 (Filter Bubble)</b></summary>
 
-![소득별 다양성](plots/nba_income_diversity_gap.png)
+![소득별 다양성 (2020.01~2021.12)](plots/nba_income_diversity_gap.png)
 
 #### 1. 분석 방법론 (분석 원리)
 - **데이터 출처**: 매장에서의 행동 양식이 뚜렷하게 구분되는 세 그룹 **'VIP Champions'**, **'Regular Shoppers'**, **'Bargain Hunters'**를 비교 분석했습니다.
@@ -138,7 +138,7 @@
 <details>
 <summary><b>🥗 Slide 3: 추천 엔진의 질적 지표 (Diversity & Serendipity)</b></summary>
 
-![질적 지표](plots/nba_qualitative_metrics.png)
+![질적 지표 (2020.01~2021.12)](plots/nba_qualitative_metrics.png)
 
 #### 1. 분석 방법론 (Methodology & Data)
 - **Data Source**: 최근 6개월간의 구매 데이터(`dunnhumby_integrated_data.csv`)를 학습 세트로, 마지막 1개월을 테스트 세트로 분리하여 추천 모델의 성능을 평가했습니다.

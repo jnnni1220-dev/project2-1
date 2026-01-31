@@ -79,7 +79,7 @@
 <details>
 <summary><b>🗺️ Slide 1: 페르소나별 장바구니 패턴 지도 (Shopping Behavior Map)</b></summary>
 
-![규칙 스캐터 플롯](plots/mba_rule_scatter.png)
+![규칙 스캐터 플롯 (2020.01~2021.12)](plots/mba_rule_scatter.png)
 
 #### 1. 분석 방법론 (Methodology & Data)
 - **Data Source**: 전체 거래 데이터에서 각 페르소나별로 트랜잭션을 분리한 후, `mlxtend` 라이브러리의 **Apriori 알고리즘**을 수행했습니다.
@@ -107,7 +107,7 @@
 <details>
 <summary><b>🧩 Slide 3: 할인에 의한 장바구니 확장 효과 (Spillover Effect)</b></summary>
 
-![할인 효과](plots/dunnhumby_discount_effect_comparison.png)
+![할인 효과 (2020.01~2021.12)](plots/dunnhumby_discount_effect_comparison.png)
 
 #### 1. 분석 방법론 (분석 원리)
 - **비교 분석**: 전체 쇼핑 중 **'할인 상품이 포함된 장바구니'**와 **'일반 장바구니'**를 나누어 비교했습니다. 
