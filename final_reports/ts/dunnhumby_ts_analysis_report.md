@@ -148,7 +148,7 @@
 
 #### 1. 분석 방법론 (Methodology & Data)
 - **Analytical Logic (Strategic Matrix)**:
-    - **X축: 안정성 지수 (Stability Index)**: 고객의 방문 주기 예측 가능성. 100점에 가까울수록 매주 정해진 시간에 방문하는 '시계 같은 고객'입니다.
+    - **X축: 안정성 지수 (Stability Index)**: 고객의 방문 주기 예측 가능성. **실제 구매 트랜잭션 발생 간격(Inter-Purchase Time)**을 기준으로 산정되었습니다. 100점에 가까울수록 매주 정해진 시간에 구매를 위해 방문하는 '시계 같은 고객'입니다.
     - **Y축: 평균 가치 (Avg. Monetary)**: 인당 평균 구매액. 우리 매장의 매출 실적에 기여하는 정도를 나타냅니다.
     - **Bubble Size**: 각 페르소나에 속한 고객의 머릿수(Count)를 의미합니다.
 - **4대 전략 존 (Four Strategic Zones)**:

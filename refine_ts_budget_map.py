@@ -33,58 +33,69 @@ plot_df = stability.merge(value_metrics, on='persona', how='inner')
 stab_mid = 50
 val_mid = plot_df['Avg_Value'].median()
 
-# 3. Plotting with Collision Avoidance
+# 3. Plotting with Absolute Collision Avoidance
 plt.figure(figsize=(16, 10))
 
 # Bubble transparency increased to see through overlaps
 ax = sns.scatterplot(data=plot_df, x='stability_index', y='Avg_Value', 
                 size='Customer_Count', hue='persona', 
-                sizes=(300, 3000), alpha=0.5, palette='tab10')
+                sizes=(400, 4000), alpha=0.4, palette='tab10')
 
 # Quadrant Lines
-plt.axvline(stab_mid, color='black', linestyle='--', alpha=0.2)
-plt.axhline(val_mid, color='black', linestyle='--', alpha=0.2)
+plt.axvline(stab_mid, color='black', linestyle='--', alpha=0.1)
+plt.axhline(val_mid, color='black', linestyle='--', alpha=0.1)
 
-# Strategic Zone Labels (Moved to corners to avoid overlap with data points)
-plt.text(62, 5000, "Zone A: Maintenance\n(High Value / High Stability)", 
-         fontsize=13, fontweight='bold', color='green', ha='center', alpha=0.5)
+# Strategic Zone Labels (Moved to extreme corners)
+plt.text(65, 8000, "Zone A: Maintenance\n(High Value / High Stability)", 
+         fontsize=14, fontweight='bold', color='green', ha='center', alpha=0.4)
 
-plt.text(38, 5000, "Zone B: Defense\n(High Value / Low Stability)", 
-         fontsize=13, fontweight='bold', color='red', ha='center', alpha=0.5)
+plt.text(38, 8000, "Zone B: Defense\n(High Value / Low Stability)", 
+         fontsize=14, fontweight='bold', color='red', ha='center', alpha=0.4)
 
-plt.text(62, 100, "Zone C: Upsell\n(Low Value / High Stability)", 
-         fontsize=13, fontweight='bold', color='blue', ha='center', alpha=0.5)
+plt.text(65, -100, "Zone C: Upsell\n(Low Value / High Stability)", 
+         fontsize=14, fontweight='bold', color='blue', ha='center', alpha=0.4)
 
-plt.text(38, 100, "Zone D: Observation\n(Low Value / Low Stability)", 
-         fontsize=13, fontweight='bold', color='gray', ha='center', alpha=0.5)
+plt.text(38, -100, "Zone D: Observation\n(Low Value / Low Stability)", 
+         fontsize=14, fontweight='bold', color='gray', ha='center', alpha=0.4)
 
-# 4-Tier Vertical Staggering for Labels (Proximity-Aware)
-plot_df_sorted = plot_df.sort_values('stability_index')
-y_offsets = [-200, -500, 450, 800] # Distinct vertical tracks for labels
+# Manual Staggering based on real data clusters
+# Cluster 1: At-Risk, Loyal, VIP (X=43~46)
+# Cluster 2: New/Light, Occasional, Bargain (X=57~58)
+manual_offsets = {
+    'VIP Champions': (0, 1000),     # Top center
+    'Loyal Shoppers': (-5, 0),      # Far left
+    'At-Risk': (0, -1000),          # Bottom center
+    'Regular Shoppers': (3, 600),   # Top right
+    'Bargain Hunters': (5, 0),      # Far right
+    'Occasional Buyers': (0, 500),  # Top
+    'New/Light Users': (0, -600)    # Bottom
+}
 
-for i, row in plot_df_sorted.reset_index(drop=True).iterrows():
-    y_off = y_offsets[i % len(y_offsets)]
+for i, row in plot_df.iterrows():
+    p = row['persona']
+    x_off, y_off = manual_offsets.get(p, (0, 0))
     
     plt.annotate(
-        f"{row['persona']}",
+        f"[{p}]\nValue: ${row['Avg_Value']:.0f}",
         xy=(row['stability_index'], row['Avg_Value']),
-        xytext=(row['stability_index'], row['Avg_Value'] + y_off),
-        fontsize=10, weight='bold', ha='center',
-        bbox=dict(boxstyle="round,pad=0.3", fc="white", ec="gray", alpha=0.9),
-        arrowprops=dict(arrowstyle="->", connectionstyle="arc3,rad=0.0", color='gray', alpha=0.4)
+        xytext=(row['stability_index'] + x_off, row['Avg_Value'] + y_off),
+        fontsize=11, weight='bold', ha='center',
+        bbox=dict(boxstyle="round,pad=0.4", fc="white", ec="gray", alpha=1.0, lw=1.5),
+        arrowprops=dict(arrowstyle="-|>", connectionstyle="arc3,rad=0.1", color='black', lw=1),
+        zorder=10
     )
 
-plt.title('Time Series 기반 마케팅 예산 최적화 지도 (Strategic Budget Map)', fontsize=22, fontweight='bold', pad=30)
-plt.xlabel('방문 안정성 지수 (Predictability / Stability Index)', fontsize=15)
-plt.ylabel('인당 평균 구매액 (Average Monetary Value)', fontsize=15)
-plt.grid(True, linestyle=':', alpha=0.5)
+plt.title('Time Series 기반 마케팅 예산 최적화 지도 (Strategic Budget Map)', fontsize=24, fontweight='bold', pad=40)
+plt.xlabel('방문 안정성 지수 (Predictability / Stability Index)', fontsize=16)
+plt.ylabel('인당 평균 구매액 (Average Monetary Value)', fontsize=16)
+plt.grid(True, linestyle=':', alpha=0.4)
 
-# Zoom out slightly for clearer margins
-plt.xlim(plot_df['stability_index'].min() - 5, plot_df['stability_index'].max() + 5)
-plt.ylim(-500, plot_df['Avg_Value'].max() + 1500)
+# Margin expansion for clear labels
+plt.xlim(30, 75)
+plt.ylim(-1000, 9500)
 
 # Legend adjustment
-plt.legend(title='Persona Segment', bbox_to_anchor=(1.01, 1), loc='upper left', fontsize=11)
+plt.legend(title='Persona Segment', bbox_to_anchor=(1.01, 1), loc='upper left', fontsize=12)
 plt.tight_layout()
 plt.savefig('final_reports/ts/plots/deep_dive/q3_budget_map.png')
 print("Saved tactical budget map to final_reports/ts/plots/deep_dive/q3_budget_map.png")
