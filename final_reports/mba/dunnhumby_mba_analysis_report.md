@@ -19,7 +19,7 @@
 ## 📌 1. 분석 개요 (Market Basket Objective)
 
 ### 1.1 분석 목적 (Objective)
-단순한 상품 구매를 넘어, **"고객의 장바구니(Basket)가 어떻게 구성되는가?"**를 파악합니다. 상품 간의 연관성(Lift)을 정밀하게 규명하여, 매장 내 진열 최적화 및 타겟팅된 번들 프로모션을 통해 고객 여정의 '맥락'을 고정(Context Fixation)하는 데 목적이 있습니다.
+단순한 상품 구매를 넘어, **"고객의 장바구니(Basket)가 어떻게 구성되는가?"**를 파악합니다. **총 102주(약 24개월: 2020.01 ~ 2021.12)의 트랜잭션 데이터**를 기반으로 상품 간의 연관성(Lift)을 정밀하게 규명하여, 매장 내 진열 최적화 및 타겟팅된 번들 프로모션을 통해 고객 여정의 '맥락'을 고정(Context Fixation)하는 데 목적이 있습니다.
 
 ### 1.2 핵심 질문 및 데이터 기반 해답 (Key Business Questions & Answers)
 
@@ -42,8 +42,10 @@
 
 ## 🔬 2. 분석 방법론 (Methodology)
 
-### 2.1 연관 분석 모델링 (Technical Logic)
-- **Algorithm**: Apriori 및 Association Rules 기법 활용.
+#### 1. 장바구니 분석 고도화 (Advanced Association Rules)
+- **Data Period**: 2020년 1월부터 2021년 12월까지 **총 102주간**의 누적 트랜잭션.
+- **Support & Lift Filtering**: 전체 거래 중 일정 비율 이상 동시에 발생하는 '진성 연관 상품'만 추출.
+- **Segmented Analysis**: 7개 페르소나별로 장바구니 패턴의 차이를 정량화.
 - **Metric (Lift)**: A 상품 구매 시 B 상품을 살 확률이 전체 평균 대비 얼마나 높아지는지를 측정. (Lift가 높을수록 우연이 아닌 강력한 맥락에 의한 동시 구매임)
 - **Cross-Validation**: 데이터를 5개 그룹으로 나누어 반복 검증(Sub-sampling)함으로써 규칙의 **안정성(Stability Index 74.8%)**을 확보했습니다.
 
