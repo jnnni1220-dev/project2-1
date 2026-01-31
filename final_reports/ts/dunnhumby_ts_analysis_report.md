@@ -49,6 +49,17 @@
 **[Evidence: Prophet vs SARIMA 모델 경합 결과]**
 ![모델 경합 승리](plots/deep_dive/model_comparison_victory.png)
 
+#### 🧪 모델 경합 및 검증 프로세스 (Model Competition Workflow)
+```mermaid
+graph TD
+    A["[Data Preparation]<br/>2년간의 시계열 데이터 가공"] --> B["[Data Split]<br/>8:2 학습/검증 데이터 분할"]
+    B --> C1["[SARIMA Training]<br/>선형 추세 및 계절성 학습"]
+    B --> C2["[Prophet Training]<br/>비선형 노이즈 및 랜덤성 학습"]
+    C1 --> D1["[Robustness Check]<br/>과적합(Overfitting) 여부 검토"]
+    C2 --> D2["[Interval Reliability]<br/>신뢰 구간 정교함 검토"]
+    D1 & D2 --> E["[Model Selection]<br/>이탈 감지에 최적화된 Prophet 최종 승리"]
+```
+
 #### 🔄 분석 프로세스 (Analysis Flowchart)
 1.  **[Step 1: Historical Learning]**: 2년간의 페르소나별 구매 트랜잭션을 Prophet 모델에 입력하여 요일별/계절별 기저 패턴을 학습합니다.
 2.  **[Step 2: Churn Baseline]**: 학습된 패턴을 바탕으로 미래 13주의 '정상 구매 범위(95% Confidence Interval)'를 생성합니다.
