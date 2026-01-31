@@ -60,39 +60,44 @@ for persona in target_personas:
 plot_df = pd.DataFrame(metrics)
 
 # 3. Plot Scatter: Confidence (X) vs Lift (Y)
-plt.figure(figsize=(14, 8))
+plt.figure(figsize=(16, 9))
 sns.scatterplot(data=plot_df, x='confidence', y='lift', hue='persona', 
-                style='persona', s=180, alpha=0.7, palette='tab10')
+                style='persona', s=200, alpha=0.6, palette='tab10')
 
-# Annotation with overlap prevention (Simple heuristic: alternating offsets)
-from matplotlib.patches import Rectangle
+# Advanced Annotation: Sort by X-axis (Confidence) and stagger vertically across 4 tiers
+top_points = []
+for persona in plot_df['persona'].unique():
+    p_data = plot_df[plot_df['persona'] == persona].sort_values('lift', ascending=False).iloc[0]
+    top_points.append(p_data)
 
-persona_list = sorted(plot_df['persona'].unique())
-for i, persona in enumerate(persona_list):
-    top_rule = plot_df[plot_df['persona'] == persona].sort_values('lift', ascending=False).iloc[0]
-    
-    # Alternate anchor position to reduce overlap
-    y_off = 0.15 if i % 2 == 0 else -0.25
-    x_off = 0.005
+# Sort points by Confidence to manage horizontal density
+top_points_sorted = sorted(top_points, key=lambda x: x['confidence'])
+
+# 4-Tier Staggering Logic
+y_offsets = [0.8, -1.2, 0.4, -0.8] # Alternating vertical positions
+
+for i, pt in enumerate(top_points_sorted):
+    y_off = y_offsets[i % len(y_offsets)]
+    x_off = 0 # No horizontal shift needed if staggered vertically
     
     plt.annotate(
-        f"[{persona[:10]}]\n{top_rule['antecedents']} \u2192 {top_rule['consequents']}",
-        xy=(top_rule['confidence'], top_rule['lift']),
-        xytext=(top_rule['confidence'] + x_off, top_rule['lift'] + y_off),
-        fontsize=9, weight='bold',
-        bbox=dict(boxstyle="round,pad=0.3", fc="white", ec="gray", alpha=0.8),
-        arrowprops=dict(arrowstyle="->", connectionstyle="arc3,rad=0.1", color='gray')
+        f"[{pt['persona'][:12]}]\n{pt['antecedents']} \u2192 {pt['consequents']}",
+        xy=(pt['confidence'], pt['lift']),
+        xytext=(pt['confidence'], pt['lift'] + y_off),
+        fontsize=9, weight='bold', ha='center',
+        bbox=dict(boxstyle="round,pad=0.3", fc="white", ec="gray", alpha=0.85),
+        arrowprops=dict(arrowstyle="->", connectionstyle="arc3,rad=0.1", color='gray', alpha=0.6)
     )
 
-# Region Annotations (Conceptual)
-plt.text(0.7, 15, "Target: Filter Bubble\n(Locked-in Rules)", fontsize=12, color='red', weight='bold', alpha=0.6)
-plt.text(0.15, 2, "Target: Omni-Explorer Area\n(Loose Synergy)", fontsize=12, color='blue', weight='bold', alpha=0.6)
+# Region Annotations (Conceptual) - Adjusted positions for better visibility
+plt.text(0.75, 16, "Target: Filter Bubble\n(Locked-in Rules)", fontsize=13, color='#c0392b', weight='bold', alpha=0.7)
+plt.text(0.1, 1, "Target: Omni-Explorer Area\n(Loose Synergy)", fontsize=13, color='#2980b9', weight='bold', alpha=0.7)
 
-plt.title('Persona Shopping Behavior Map: Confidence vs Lift', fontsize=18, fontweight='bold', pad=20)
-plt.xlabel('Confidence (Probability of Purchase)', fontsize=13)
-plt.ylabel('Lift (Synergy Strength)', fontsize=13)
-plt.grid(True, linestyle='--', alpha=0.5)
-plt.legend(bbox_to_anchor=(1.02, 1), loc='upper left', borderaxespad=0.)
+plt.title('Persona Shopping Behavior Map: Confidence vs Lift', fontsize=20, fontweight='bold', pad=25)
+plt.xlabel('Confidence (Probability of Purchase)', fontsize=14)
+plt.ylabel('Lift (Synergy Strength)', fontsize=14)
+plt.grid(True, linestyle='--', alpha=0.4)
+plt.legend(bbox_to_anchor=(1.01, 1), loc='upper left', borderaxespad=0., fontsize=11)
 plt.tight_layout()
 plt.savefig('final_reports/mba/plots/mba_rule_scatter.png')
 print("Saved scatter plot to final_reports/mba/plots/mba_rule_scatter.png")
