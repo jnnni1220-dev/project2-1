@@ -45,9 +45,20 @@
 ## 🔬 2. 분석 방법론 (Methodology)
 
 ### 2.1 수요 예측 및 루틴 검증 알고리즘 (Final Model: Prophet)
-- **Prophet Algorithm (WINNER)**: 본 분석의 최종 모델로 채택되었습니다. 리테일 특유의 비선형적 노이즈와 '공휴일 효과' 등을 가장 유연하게 학습하며, 특히 **Q2의 이탈 징후 감지**를 위한 95% 신뢰 구간 생성에서 SARIMA보다 압도적인 안정성을 보였습니다.
-- **SARIMA Model (Benchmark)**: 초기 경합 단계에서 규칙성이 매우 높은 '루틴 상품'들에 대해 비교 용도로 사용되었으나, 페르소나별 복합 패턴 학습 능력이 Prophet 대비 낮아 최종 분석에서는 벤치마크 지표로만 활용되었습니다.
-- **Stabilization Index**: 실제 구매가 Prophet 모델의 신뢰 구간(95% Confidence Interval) 내에 속하는 비율을 점수화하여 '루틴의 견고함'을 측정했습니다.
+
+**[Evidence: Prophet vs SARIMA 모델 경합 결과]**
+![모델 경합 승리](plots/deep_dive/model_comparison_victory.png)
+
+#### 🔄 분석 프로세스 (Analysis Flowchart)
+1.  **[Step 1: Historical Learning]**: 2년간의 페르소나별 구매 트랜잭션을 Prophet 모델에 입력하여 요일별/계절별 기저 패턴을 학습합니다.
+2.  **[Step 2: Churn Baseline]**: 학습된 패턴을 바탕으로 미래 13주의 '정상 구매 범위(95% Confidence Interval)'를 생성합니다.
+3.  **[Step 3: Drift Detection]**: 실제 구매가 예측된 신뢰구간 하한선을 이탈(Drift)하는 순간을 '이탈 이상 징후'로 실시간 감지합니다.
+4.  **[Step 4: Strategic Feedback]**: 감지된 이탈 위험도와 안정성 점수를 결합하여 **Zone B(Defense)** 또는 **Zone C(Upsell)** 예산 전략으로 피드백합니다.
+
+#### 🏁 모델 선정 근거
+- **Prophet Algorithm (WINNER)**: 위 차트에서 보듯, SARIMA(적색 점선)는 리테일 특유의 불규칙한 노이즈에 과적합(Overfitting)되어 구간이 심하게 요동치는 반면, **Prophet(청색 실선)**은 안정적으로 중심 추세를 잡아냅니다. 특히 Q2의 이탈 감지를 위한 **신뢰 구간(청색 영역)**이 SARIMA보다 훨씬 정교하고 현실적입니다.
+- **SARIMA Model (Benchmark)**: 초기 경합 단계에서 비교 용도로 사용되었으나, 복합적인 페르소나 행동을 처리하기에는 유연성이 부족하여 최종 분석에서는 제외되었습니다.
+- **Stabilization Index**: 실제 구매가 Prophet 모델의 신뢰 구간 내에 속하는 비율을 점수화하여 '루틴의 견고함'을 측정했습니다.
 
 ---
 
