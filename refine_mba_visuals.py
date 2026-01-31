@@ -60,23 +60,39 @@ for persona in target_personas:
 plot_df = pd.DataFrame(metrics)
 
 # 3. Plot Scatter: Confidence (X) vs Lift (Y)
-# Interpretation: Top Right = "Golden Rules" (High certainty + High Synergy)
-plt.figure(figsize=(12, 7))
+plt.figure(figsize=(14, 8))
 sns.scatterplot(data=plot_df, x='confidence', y='lift', hue='persona', 
-                style='persona', s=150, alpha=0.8, palette='deep')
+                style='persona', s=180, alpha=0.7, palette='tab10')
 
-# Annotation for top rule of each persona
-for persona in plot_df['persona'].unique():
+# Annotation with overlap prevention (Simple heuristic: alternating offsets)
+from matplotlib.patches import Rectangle
+
+persona_list = sorted(plot_df['persona'].unique())
+for i, persona in enumerate(persona_list):
     top_rule = plot_df[plot_df['persona'] == persona].sort_values('lift', ascending=False).iloc[0]
-    plt.text(top_rule['confidence']+0.01, top_rule['lift'], 
-             f"{top_rule['antecedents']} -> {top_rule['consequents']}", 
-             fontsize=9, weight='bold')
+    
+    # Alternate anchor position to reduce overlap
+    y_off = 0.15 if i % 2 == 0 else -0.25
+    x_off = 0.005
+    
+    plt.annotate(
+        f"[{persona[:10]}]\n{top_rule['antecedents']} \u2192 {top_rule['consequents']}",
+        xy=(top_rule['confidence'], top_rule['lift']),
+        xytext=(top_rule['confidence'] + x_off, top_rule['lift'] + y_off),
+        fontsize=9, weight='bold',
+        bbox=dict(boxstyle="round,pad=0.3", fc="white", ec="gray", alpha=0.8),
+        arrowprops=dict(arrowstyle="->", connectionstyle="arc3,rad=0.1", color='gray')
+    )
 
-plt.title('Persona Shopping Behavior Map: Confidence vs Lift', fontsize=16)
-plt.xlabel('Confidence (Probability of Purchase)', fontsize=12)
-plt.ylabel('Lift (Synergy Strength)', fontsize=12)
-plt.grid(True, linestyle='--')
-plt.legend(bbox_to_anchor=(1.05, 1), loc='upper left')
+# Region Annotations (Conceptual)
+plt.text(0.7, 15, "Target: Filter Bubble\n(Locked-in Rules)", fontsize=12, color='red', weight='bold', alpha=0.6)
+plt.text(0.15, 2, "Target: Omni-Explorer Area\n(Loose Synergy)", fontsize=12, color='blue', weight='bold', alpha=0.6)
+
+plt.title('Persona Shopping Behavior Map: Confidence vs Lift', fontsize=18, fontweight='bold', pad=20)
+plt.xlabel('Confidence (Probability of Purchase)', fontsize=13)
+plt.ylabel('Lift (Synergy Strength)', fontsize=13)
+plt.grid(True, linestyle='--', alpha=0.5)
+plt.legend(bbox_to_anchor=(1.02, 1), loc='upper left', borderaxespad=0.)
 plt.tight_layout()
 plt.savefig('final_reports/mba/plots/mba_rule_scatter.png')
 print("Saved scatter plot to final_reports/mba/plots/mba_rule_scatter.png")
